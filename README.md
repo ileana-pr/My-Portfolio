@@ -2,6 +2,13 @@
 
 A modern, responsive portfolio website built with Next.js, TypeScript, and Tailwind CSS.
 
+## 🌐 Live Deployments
+
+- **GitHub Pages** (Public): [https://ileana-pr.github.io/My-Portfolio/](https://ileana-pr.github.io/My-Portfolio/)
+- **Vercel** (CLI - may require login): [https://portfolio-fs890dqku-ileanas-projects.vercel.app](https://portfolio-fs890dqku-ileanas-projects.vercel.app)
+
+> **Note**: The GitHub Pages deployment is fully public and accessible to everyone. The Vercel CLI deployment may require authentication - for a public Vercel deployment, import the GitHub repository directly through the Vercel dashboard.
+
 ## 🚀 Features
 
 - **Modern Design**: Clean, professional layout with dark mode support
@@ -62,6 +69,12 @@ npm run dev
 3. Import your repository
 4. Deploy with one click!
 
+### Deploy to GitHub Pages
+
+```bash
+npm run deploy:github
+```
+
 ### Other Deployment Options
 
 - **Netlify**: Connect your GitHub repo for automatic deployments
@@ -95,6 +108,8 @@ npm run dev
 - `npm run build` - Build for production
 - `npm run start` - Start production server
 - `npm run lint` - Run ESLint
+- `npm run deploy:github` - Deploy to GitHub Pages
+- `npm run deploy:vercel` - Deploy to Vercel
 
 ## 📄 License
 
