@@ -184,9 +184,6 @@ export default function CodingPage() {
               <p className="text-slate-600 dark:text-slate-300 mb-3">
                 Working on AI agents and chatbots. This is where I&apos;m most excited to learn and build.
               </p>
-              <p className="text-sm text-slate-500 dark:text-slate-400">
-                Examples: GreenThumb, FCC Bot
-              </p>
             </div>
 
             {/* Service Card 2 */}
@@ -196,10 +193,7 @@ export default function CodingPage() {
                 <h3 className="text-xl font-bold text-slate-900 dark:text-white">Web Applications</h3>
               </div>
               <p className="text-slate-600 dark:text-slate-300 mb-3">
-                Building web apps with React, Next.js, and Python. Learning as I go, building real projects.
-              </p>
-              <p className="text-sm text-slate-500 dark:text-slate-400">
-                This portfolio is one example!
+                Building web apps with React, Next.js, and Python. Learning as I go, building real projects.(This portfolio is one example!)
               </p>
             </div>
 
@@ -212,9 +206,6 @@ export default function CodingPage() {
               <p className="text-slate-600 dark:text-slate-300 mb-3">
                 Exploring blockchain and web3. Built hackathon projects and contributed to open-source.
               </p>
-              <p className="text-sm text-slate-500 dark:text-slate-400">
-                Hackathons: ETH Denver 2025
-              </p>
             </div>
 
             {/* Service Card 4 */}
@@ -226,9 +217,6 @@ export default function CodingPage() {
               <p className="text-slate-600 dark:text-slate-300 mb-3">
                 Writing guides and docs to help other developers. I love making complex things understandable.
               </p>
-              <p className="text-sm text-slate-500 dark:text-slate-400">
-                Examples: Coding Playbook, ElizaOS guides
-              </p>
             </div>
           </div>
         </div>
@@ -236,14 +224,14 @@ export default function CodingPage() {
 
       {/* Featured Projects Section */}
       <section id="projects" className="relative z-10 py-32">
-        <div className="max-w-6xl mx-auto px-6">
+kjjjj         <div className="max-w-7xl mx-auto px-6">
           <div className="flex items-center gap-3 mb-12">
             <div className="w-12 h-0.5 bg-purple-600 dark:bg-purple-400" />
-            <h2 className="text-4xl md:text-5xl font-bold text-slate-900 dark:text-white">Featured Projects</h2>
+            <h2 className="text-4xl md:text-5xl font-bold text-slate k-900 dark:text-white">Featured Projects and Contributions</h2>
           </div>
-          
+
           {/* Project Cards */}
-          <div className="grid md:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
             {/* Micah Ministries Project */}
             <div className="bg-white dark:bg-slate-800 rounded-lg p-8 border border-slate-200 dark:border-slate-700 hover:border-purple-500 dark:hover:border-purple-400 hover:shadow-xl transition-all">
               <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-4">Micah Ministries</h3>
@@ -256,7 +244,8 @@ export default function CodingPage() {
                 <span className="px-3 py-1 rounded-md text-sm font-medium bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 border border-purple-200 dark:border-purple-700">PHP</span>
                 <span className="px-3 py-1 rounded-md text-sm font-medium bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 border border-purple-200 dark:border-purple-700">MySQL</span>
                 <span className="px-3 py-1 rounded-md text-sm font-medium bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 border border-purple-200 dark:border-purple-700">JavaScript</span>
-                <span className="px-3 py-1 rounded-md text-sm font-medium bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 border border-purple-200 dark:border-purple-700">Full-Stack</span>
+                <span className="px-3 py-1 rounded-md text-sm font-medium bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 border border-purple-200 dark:border-purple-700">CSS</span>
+                <span className="px-3 py-1 rounded-md text-sm font-medium bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 border border-purple-200 dark:border-purple-700">HTML</span>
               </div>
               <a 
                 href="https://github.com/ivy864/micah-ministries" 
@@ -275,36 +264,29 @@ export default function CodingPage() {
                 Built an AI-powered assistant to help with urban farming and cultivation. 
                 Designed to make sustainable farming more accessible.
               </p>
-              <div className="flex flex-wrap gap-2 mb-4">
+              <div className="flex flex-wrap gap-2 mb-5">
                 <span className="px-3 py-1 rounded-md text-sm font-medium bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 border border-purple-200 dark:border-purple-700">AI</span>
                 <span className="px-3 py-1 rounded-md text-sm font-medium bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 border border-purple-200 dark:border-purple-700">Python</span>
                 <span className="px-3 py-1 rounded-md text-sm font-medium bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 border border-purple-200 dark:border-purple-700">ETH Denver 2025</span>
               </div>
-              <div className="text-sm text-purple-600 dark:text-purple-400 font-medium">
+              <div className="text-sm text-purple-600 dark:text-purple-400 font-medium mb-4">
                 🏆 Top 10 in AI community track at ETH Denver 2025 hackathon
               </div>
+              <a 
+                href="https://github.com/ileana-pr/greenthumb-V0.1" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-purple-600 dark:text-purple-400 hover:text-purple-700 dark:hover:text-purple-300 underline text-sm font-medium inline-flex items-center gap-1"
+              >
+                View on GitHub →
+              </a>
             </div>
 
-            {/* FCC Bot Project */}
-            <div className="bg-white dark:bg-slate-800 rounded-lg p-8 border border-slate-200 dark:border-slate-700 hover:border-purple-500 dark:hover:border-purple-400 hover:shadow-xl transition-all">
-              <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-4">FCC Bot</h3>
-              <p className="text-slate-600 dark:text-slate-300 mb-4 leading-relaxed">
-                Developed an AI agent to assist the US Federal Communications Commission 
-                in improving the safety and reliability of the Emergency Alert System.
-              </p>
-              <div className="flex flex-wrap gap-2">
-                <span className="px-3 py-1 rounded-md text-sm font-medium bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 border border-purple-200 dark:border-purple-700">AI Agent</span>
-                <span className="px-3 py-1 rounded-md text-sm font-medium bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 border border-purple-200 dark:border-purple-700">Python</span>
-                <span className="px-3 py-1 rounded-md text-sm font-medium bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 border border-purple-200 dark:border-purple-700">Government Tech</span>
-              </div>
-            </div>
-
-            {/*Projects *
+            {/* OpenSource Contributions */}
             <div className="bg-white dark:bg-slate-800 rounded-lg p-8 border border-slate-200 dark:border-slate-700 hover:border-purple-500 dark:hover:border-purple-400 hover:shadow-xl transition-all">
               <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-4">OpenSource Contributions</h3>
               <p className="text-slate-600 dark:text-slate-300 mb-4 leading-relaxed">
-                Built plugins and documentation for the ElizaOS ecosystem, 
-                making it easier for developers to build AI agents.
+                Contributing to open-source projects through code, documentation, and bug reporting to improve developer experiences.
               </p>
               <div className="space-y-2 mb-4">
                 <div className="text-sm">
@@ -322,16 +304,45 @@ export default function CodingPage() {
                 <div className="text-sm">
                   <span className="text-slate-900 dark:text-white font-medium">News Plugin</span>
                   <span className="text-slate-500 dark:text-slate-400"> - Fetch latest news on any topic</span>
+                  <a 
+                    href="https://github.com/elizaOS/eliza/commit/cb587b44f89ad8558acf88f11a8f82ab901a1389" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="text-purple-600 dark:text-purple-400 hover:text-purple-700 dark:hover:text-purple-300 underline ml-2"
+                  >
+                    View commit →
+                  </a>
                 </div>
                 <div className="text-sm">
                   <span className="text-slate-900 dark:text-white font-medium">WSL Installation Guide</span>
                   <span className="text-slate-500 dark:text-slate-400"> - Developer onboarding resource</span>
+                  <a 
+                    href="https://github.com/elizaOS/eliza/commit/de1236bdc264a7b3a93863e00964de7abff32baa" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="text-purple-600 dark:text-purple-400 hover:text-purple-700 dark:hover:text-purple-300 underline ml-2"
+                  >
+                    View commit →
+                  </a>
+                </div>
+                <div className="text-sm">
+                  <span className="text-slate-900 dark:text-white font-medium">Decentraland Godot Explorer</span>
+                  <span className="text-slate-500 dark:text-slate-400"> - Bug reports and issue tracking</span>
+                  <a 
+                    href="https://github.com/decentraland/godot-explorer/issues?q=is%3Aissue%20type%3ABug%20author%3A%40me" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="text-purple-600 dark:text-purple-400 hover:text-purple-700 dark:hover:text-purple-300 underline ml-2 whitespace-nowrap inline-block"
+                  >
+                    View issues →
+                  </a>
                 </div>
               </div>
               <div className="flex flex-wrap gap-2">
                 <span className="px-3 py-1 rounded-md text-sm font-medium bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 border border-purple-200 dark:border-purple-700">Open Source</span>
                 <span className="px-3 py-1 rounded-md text-sm font-medium bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 border border-purple-200 dark:border-purple-700">Documentation</span>
                 <span className="px-3 py-1 rounded-md text-sm font-medium bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 border border-purple-200 dark:border-purple-700">ElizaOS</span>
+                <span className="px-3 py-1 rounded-md text-sm font-medium bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 border border-purple-200 dark:border-purple-700">Decentraland</span>
               </div>
             </div>
 
@@ -424,18 +435,15 @@ export default function CodingPage() {
             <div className="w-12 h-0.5 bg-purple-600 dark:bg-purple-400" />
             <h2 className="text-4xl md:text-5xl font-bold text-slate-900 dark:text-white">Let&apos;s Connect</h2>
           </div>
-          
+
           {/* Availability Status */}
-          <div className="mb-8 bg-white dark:bg-slate-800 rounded-lg p-6 border border-slate-200 dark:border-slate-700">
-            <div className="flex items-center gap-4 mb-4">
-              <div className="w-3 h-3 rounded-full bg-green-500 animate-pulse" />
-              <div>
-                <p className="text-lg font-semibold text-slate-900 dark:text-white">Available for opportunities</p>
-                <p className="text-sm text-slate-600 dark:text-slate-400">Freelance & Full-time positions</p>
-              </div>
+          <div className="mb-8 text-center">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-purple-100 dark:bg-purple-900/30 border border-purple-200 dark:border-purple-700">
+              <div className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
+              <span className="text-sm font-medium text-purple-700 dark:text-purple-300">Available for opportunities</span>
             </div>
           </div>
-          
+
           {/* Call to Action */}
           <div className="mb-8 text-center">
             <p className="text-xl text-slate-700 dark:text-slate-200 mb-2 font-medium">
