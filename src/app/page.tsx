@@ -92,7 +92,7 @@ export default function Home() {
           
           {/* Name and Title */}
           <h1 className="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white mb-3">
-            Ileana Perez
+            GM
           </h1>
           <p className="text-lg text-slate-600 dark:text-slate-300 mb-12">
             Click below to see what I&apos;m up to. 
