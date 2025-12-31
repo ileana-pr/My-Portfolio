@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import ScrollToTop from '@/components/ScrollToTop';
 
 export default function CodingPage() {
   const [isDarkMode, setIsDarkMode] = useState(false);
@@ -37,7 +38,7 @@ export default function CodingPage() {
   };
 
   return (
-    <div className="min-h-screen relative overflow-hidden bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 dark:from-slate-900 dark:via-slate-800 dark:to-indigo-900" style={{ fontFamily: "'Courier New', monospace" }}>
+    <div className="min-h-screen relative overflow-hidden bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 dark:from-slate-900 dark:via-slate-800 dark:to-indigo-900">
       {/* Animated gradient background */}
       <div className="absolute inset-0 animate-gradient" />
       {/* Dot pattern overlay */}
@@ -75,459 +76,397 @@ export default function CodingPage() {
         </div>
       </nav>
 
-      {/* Hero Section */}
-      <div className="relative z-10 pt-32 pb-16 px-4 sm:px-6 lg:px-8">
+      {/* Hero Section - Full Viewport */}
+      <div className="relative z-10 min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           
           {/* Value proposition */}
           <h1 className="text-4xl md:text-5xl font-bold mb-4 text-slate-900 dark:text-white" style={{ textShadow: '2px 2px 4px rgba(0,0,0,0.1)' }}>
             Hello World!
           </h1>
-          <p className="text-xl md:text-2xl mb-11 text-slate-700 dark:text-slate-200">
+          <p className="text-xl md:text-2xl mb-8 text-slate-700 dark:text-slate-200">
             My name is Ileana, and I&apos;m a recent CS grad building full-stack web apps and AI projects
           </p>
          
 
           {/* CTA buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-4">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <a
               href="#contact"
-              className="px-8 py-4 bg-white text-purple-600 font-bold rounded-lg hover:bg-purple-50 transition-all shadow-lg hover:shadow-xl transform hover:scale-105"
-              style={{ fontFamily: "'Courier New', monospace" }}
+              className="px-8 py-4 bg-white dark:bg-slate-800 text-purple-600 dark:text-purple-400 font-bold rounded-lg hover:bg-purple-50 dark:hover:bg-purple-900/20 transition-all shadow-lg hover:shadow-xl transform hover:scale-105"
             >
-              &gt; Let&apos;s Build Something
+              Let&apos;s Build Something
             </a>
             <a
               href="#projects"
               className="px-8 py-4 bg-transparent border-2 border-purple-600 dark:border-purple-400 text-purple-600 dark:text-purple-300 font-bold rounded-lg hover:bg-purple-50 dark:hover:bg-purple-900/20 transition-all"
-              style={{ fontFamily: "'Courier New', monospace" }}
             >
-              &gt; View My Work
+              View My Work
             </a>
           </div>
         </div>
       </div>
-      {/* Main Content */}
-      <div className="relative z-10 pb-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-3xl mx-auto" style={{ background: '#363636', padding: '20px', borderRadius: '10px', boxShadow: '0 0 20px rgba(0,0,0,0.3)' }}>
+      {/* Tech Stack Section */}
+      <section className="relative z-10 py-32">
+        <div className="max-w-6xl mx-auto px-6">
+          <div className="flex items-center gap-3 mb-12">
+            <div className="w-12 h-0.5 bg-purple-600 dark:bg-purple-400" />
+            <h2 className="text-4xl md:text-5xl font-bold text-slate-900 dark:text-white">Tech Stack</h2>
+          </div>
 
-          <h2 className="text-2xl font-bold mb-6 text-white">🚀 Tech Stack</h2>
-          
-          {/* Visual Skills Display */}
-          <div className="mb-8" style={{ background: '#1e1e1e', padding: '20px', borderRadius: '8px', border: '1px solid #333' }}>
-            <div className="flex items-center gap-2 mb-4" style={{ color: '#888' }}>
-              <span className="text-xs">$</span>
-              <span className="text-sm" style={{ fontFamily: "'Courier New', monospace" }}>cat skills.json</span>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {/* Languages */}
+            <div className="bg-white dark:bg-slate-800 rounded-lg p-6 border border-slate-200 dark:border-slate-700 hover:shadow-lg transition-all">
+              <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-4">Languages</h3>
+              <div className="flex flex-wrap gap-2">
+                {['Python', 'Java', 'JavaScript', 'HTML', 'CSS', 'SQL'].map((lang) => (
+                  <span key={lang} className="px-3 py-1.5 rounded-md text-sm font-medium bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 border border-purple-200 dark:border-purple-700">
+                    {lang}
+                  </span>
+                ))}
+              </div>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              {/* Languages */}
-              <div>
-                <div className="text-xs text-slate-400 mb-2" style={{ fontFamily: "'Courier New', monospace" }}>{'// languages'}</div>
-                <div className="flex flex-wrap gap-2">
-                  {['Python', 'Java', 'JavaScript', 'HTML', 'CSS', 'SQL'].map((lang) => (
-                    <span key={lang} className="px-3 py-1.5 rounded text-sm font-medium" style={{ background: '#2a2a2a', color: '#00ff9d', border: '1px solid #00ff9d40' }}>
-                      {lang}
-                    </span>
-                  ))}
-                </div>
+            
+            {/* Frameworks */}
+            <div className="bg-white dark:bg-slate-800 rounded-lg p-6 border border-slate-200 dark:border-slate-700 hover:shadow-lg transition-all">
+              <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-4">Frameworks</h3>
+              <div className="flex flex-wrap gap-2">
+                {['React', 'Next.js', 'Tailwind CSS', 'Django'].map((framework) => (
+                  <span key={framework} className="px-3 py-1.5 rounded-md text-sm font-medium bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 border border-purple-200 dark:border-purple-700">
+                    {framework}
+                  </span>
+                ))}
               </div>
-              
-              {/* Frameworks */}
-              <div>
-                <div className="text-xs text-slate-400 mb-2" style={{ fontFamily: "'Courier New', monospace" }}>{'// frameworks'}</div>
-                <div className="flex flex-wrap gap-2">
-                  {['React', 'Next.js', 'Tailwind CSS', 'Django'].map((framework) => (
-                    <span key={framework} className="px-3 py-1.5 rounded text-sm font-medium" style={{ background: '#2a2a2a', color: '#00ff9d', border: '1px solid #00ff9d40' }}>
-                      {framework}
-                    </span>
-                  ))}
-                </div>
+            </div>
+            
+            {/* Tools */}
+            <div className="bg-white dark:bg-slate-800 rounded-lg p-6 border border-slate-200 dark:border-slate-700 hover:shadow-lg transition-all">
+              <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-4">Tools</h3>
+              <div className="flex flex-wrap gap-2">
+                {['Git', 'GitHub', 'VSCode', 'Cursor'].map((tool) => (
+                  <span key={tool} className="px-3 py-1.5 rounded-md text-sm font-medium bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 border border-purple-200 dark:border-purple-700">
+                    {tool}
+                  </span>
+                ))}
               </div>
-              
-              {/* Tools */}
-              <div>
-                <div className="text-xs text-slate-400 mb-2" style={{ fontFamily: "'Courier New', monospace" }}>{'// tools'}</div>
-                <div className="flex flex-wrap gap-2">
-                  {['Git', 'GitHub', 'VSCode', 'Cursor'].map((tool) => (
-                    <span key={tool} className="px-3 py-1.5 rounded text-sm font-medium" style={{ background: '#2a2a2a', color: '#00ff9d', border: '1px solid #00ff9d40' }}>
-                      {tool}
-                    </span>
-                  ))}
-                </div>
-              </div>
-              
-              {/* Databases */}
-              <div>
-                <div className="text-xs text-slate-400 mb-2" style={{ fontFamily: "'Courier New', monospace" }}>{'// databases'}</div>
-                <div className="flex flex-wrap gap-2">
-                  {['MySQL', 'PostgreSQL'].map((db) => (
-                    <span key={db} className="px-3 py-1.5 rounded text-sm font-medium" style={{ background: '#2a2a2a', color: '#00ff9d', border: '1px solid #00ff9d40' }}>
-                      {db}
-                    </span>
-                  ))}
-                </div>
+            </div>
+            
+            {/* Databases */}
+            <div className="bg-white dark:bg-slate-800 rounded-lg p-6 border border-slate-200 dark:border-slate-700 hover:shadow-lg transition-all">
+              <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-4">Databases</h3>
+              <div className="flex flex-wrap gap-2">
+                {['MySQL', 'PostgreSQL'].map((db) => (
+                  <span key={db} className="px-3 py-1.5 rounded-md text-sm font-medium bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 border border-purple-200 dark:border-purple-700">
+                    {db}
+                  </span>
+                ))}
               </div>
             </div>
           </div>
+        </div>
+      </section>
 
-          {/* Services Section */}
-          <h2 className="text-2xl font-bold mb-6 text-white">⚡ What I&apos;m Building & Learning</h2>
+      {/* What I'm Building Section */}
+      <section id="what-im-building" className="relative z-10 py-32 bg-slate-50/50 dark:bg-slate-900/30">
+        <div className="max-w-6xl mx-auto px-6">
+          <div className="flex items-center gap-3 mb-12">
+            <div className="w-12 h-0.5 bg-purple-600 dark:bg-purple-400" />
+            <h2 className="text-4xl md:text-5xl font-bold text-slate-900 dark:text-white">What I&apos;m Building & Learning</h2>
+          </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {/* Service Card 1 */}
-            <div className="border border-slate-600 rounded-lg p-5 hover:border-purple-500 transition-colors" style={{ background: '#2a2a2a' }}>
-              <div className="flex items-center gap-2 mb-3">
-                <span className="text-lg">🤖</span>
-                <h3 className="text-lg font-bold text-white">AI-Powered Solutions</h3>
+            <div className="bg-white dark:bg-slate-800 rounded-lg p-6 border border-slate-200 dark:border-slate-700 hover:border-purple-500 dark:hover:border-purple-400 hover:shadow-lg transition-all">
+              <div className="flex items-center gap-3 mb-3">
+                <span className="text-2xl">🤖</span>
+                <h3 className="text-xl font-bold text-slate-900 dark:text-white">AI-Powered Solutions</h3>
               </div>
-              <p className="text-slate-300 text-sm mb-3">
+              <p className="text-slate-600 dark:text-slate-300 mb-3">
                 Working on AI agents and chatbots. This is where I&apos;m most excited to learn and build.
               </p>
-              <div className="text-xs text-slate-400" style={{ fontFamily: "'Courier New', monospace" }}>
-                {'// examples: GreenThumb, FCC Bot'}
-              </div>
+              <p className="text-sm text-slate-500 dark:text-slate-400">
+                Examples: GreenThumb, FCC Bot
+              </p>
             </div>
 
             {/* Service Card 2 */}
-            <div className="border border-slate-600 rounded-lg p-5 hover:border-purple-500 transition-colors" style={{ background: '#2a2a2a' }}>
-              <div className="flex items-center gap-2 mb-3">
-                <span className="text-lg">🌐</span>
-                <h3 className="text-lg font-bold text-white">Web Applications</h3>
+            <div className="bg-white dark:bg-slate-800 rounded-lg p-6 border border-slate-200 dark:border-slate-700 hover:border-purple-500 dark:hover:border-purple-400 hover:shadow-lg transition-all">
+              <div className="flex items-center gap-3 mb-3">
+                <span className="text-2xl">🌐</span>
+                <h3 className="text-xl font-bold text-slate-900 dark:text-white">Web Applications</h3>
               </div>
-              <p className="text-slate-300 text-sm mb-3">
+              <p className="text-slate-600 dark:text-slate-300 mb-3">
                 Building web apps with React, Next.js, and Python. Learning as I go, building real projects.
               </p>
-              <div className="text-xs text-slate-400" style={{ fontFamily: "'Courier New', monospace" }}>
-                {'// this portfolio is one example!'}
-              </div>
+              <p className="text-sm text-slate-500 dark:text-slate-400">
+                This portfolio is one example!
+              </p>
             </div>
 
             {/* Service Card 3 */}
-            <div className="border border-slate-600 rounded-lg p-5 hover:border-purple-500 transition-colors" style={{ background: '#2a2a2a' }}>
-              <div className="flex items-center gap-2 mb-3">
-                <span className="text-lg">🔗</span>
-                <h3 className="text-lg font-bold text-white">Blockchain Integration</h3>
+            <div className="bg-white dark:bg-slate-800 rounded-lg p-6 border border-slate-200 dark:border-slate-700 hover:border-purple-500 dark:hover:border-purple-400 hover:shadow-lg transition-all">
+              <div className="flex items-center gap-3 mb-3">
+                <span className="text-2xl">🔗</span>
+                <h3 className="text-xl font-bold text-slate-900 dark:text-white">Blockchain Integration</h3>
               </div>
-              <p className="text-slate-300 text-sm mb-3">
+              <p className="text-slate-600 dark:text-slate-300 mb-3">
                 Exploring blockchain and web3. Built hackathon projects and contributed to open-source.
               </p>
-              <div className="text-xs text-slate-400" style={{ fontFamily: "'Courier New', monospace" }}>
-                {'// hackathons: ETH Denver 2025'}
-              </div>
+              <p className="text-sm text-slate-500 dark:text-slate-400">
+                Hackathons: ETH Denver 2025
+              </p>
             </div>
 
             {/* Service Card 4 */}
-            <div className="border border-slate-600 rounded-lg p-5 hover:border-purple-500 transition-colors" style={{ background: '#2a2a2a' }}>
-              <div className="flex items-center gap-2 mb-3">
-                <span className="text-lg">📚</span>
-                <h3 className="text-lg font-bold text-white">Documentation & Guides</h3>
+            <div className="bg-white dark:bg-slate-800 rounded-lg p-6 border border-slate-200 dark:border-slate-700 hover:border-purple-500 dark:hover:border-purple-400 hover:shadow-lg transition-all">
+              <div className="flex items-center gap-3 mb-3">
+                <span className="text-2xl">📚</span>
+                <h3 className="text-xl font-bold text-slate-900 dark:text-white">Documentation & Guides</h3>
               </div>
-              <p className="text-slate-300 text-sm mb-3">
+              <p className="text-slate-600 dark:text-slate-300 mb-3">
                 Writing guides and docs to help other developers. I love making complex things understandable.
               </p>
-              <div className="text-xs text-slate-400" style={{ fontFamily: "'Courier New', monospace" }}>
-                {'// examples: Coding Playbook, ElizaOS guides'}
-              </div>
+              <p className="text-sm text-slate-500 dark:text-slate-400">
+                Examples: Coding Playbook, ElizaOS guides
+              </p>
             </div>
           </div>
+        </div>
+      </section>
 
-          <h2 id="projects" className="text-2xl font-bold mb-6 text-white">💡 Featured Projects</h2>
+      {/* Featured Projects Section */}
+      <section id="projects" className="relative z-10 py-32">
+        <div className="max-w-6xl mx-auto px-6">
+          <div className="flex items-center gap-3 mb-12">
+            <div className="w-12 h-0.5 bg-purple-600 dark:bg-purple-400" />
+            <h2 className="text-4xl md:text-5xl font-bold text-slate-900 dark:text-white">Featured Projects</h2>
+          </div>
           
           {/* Project Cards */}
-          <div className="space-y-6 mb-6">
+          <div className="grid md:grid-cols-2 gap-6">
             {/* Micah Ministries Project */}
-            <div className="border border-slate-600 rounded-lg overflow-hidden hover:border-purple-500 transition-colors" style={{ background: '#2a2a2a' }}>
-              <div className="p-4 border-b border-slate-700" style={{ background: '#1e1e1e' }}>
-                <div className="flex items-center gap-2 mb-2">
-                  <span className="text-xs text-slate-400">$</span>
-                  <span className="text-sm text-slate-300" style={{ fontFamily: "'Courier New', monospace" }}>project: Micah_Ministries_VMS</span>
-                </div>
-                <h3 className="text-xl font-bold text-white mb-1">Micah Ministries - Volunteer Management System</h3>
-                <p className="text-slate-300 text-sm">Full-stack web application for managing volunteers and events</p>
+            <div className="bg-white dark:bg-slate-800 rounded-lg p-8 border border-slate-200 dark:border-slate-700 hover:border-purple-500 dark:hover:border-purple-400 hover:shadow-xl transition-all">
+              <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-4">Micah Ministries</h3>
+              <p className="text-slate-600 dark:text-slate-300 mb-4 leading-relaxed">
+                Built a complete volunteer management system for Micah Ministries as part of CPSC 450 Software Engineering. 
+                This full-stack application handles user authentication, event management, volunteer scheduling, 
+                and automated notifications.
+              </p>
+              <div className="flex flex-wrap gap-2 mb-4">
+                <span className="px-3 py-1 rounded-md text-sm font-medium bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 border border-purple-200 dark:border-purple-700">PHP</span>
+                <span className="px-3 py-1 rounded-md text-sm font-medium bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 border border-purple-200 dark:border-purple-700">MySQL</span>
+                <span className="px-3 py-1 rounded-md text-sm font-medium bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 border border-purple-200 dark:border-purple-700">JavaScript</span>
+                <span className="px-3 py-1 rounded-md text-sm font-medium bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 border border-purple-200 dark:border-purple-700">Full-Stack</span>
               </div>
-              <div className="p-4">
-                <p className="text-slate-300 mb-3">
-                  Built a complete volunteer management system for Micah Ministries as part of CPSC 450 Software Engineering. 
-                  This full-stack application handles user authentication, event management, volunteer scheduling, 
-                  and automated notifications.
-                </p>
-                
-                <div className="flex flex-wrap gap-2 mb-3">
-                  <span className="px-2 py-1 text-xs rounded" style={{ background: '#1e1e1e', color: '#00ff9d' }}>PHP</span>
-                  <span className="px-2 py-1 text-xs rounded" style={{ background: '#1e1e1e', color: '#00ff9d' }}>MySQL</span>
-                  <span className="px-2 py-1 text-xs rounded" style={{ background: '#1e1e1e', color: '#00ff9d' }}>JavaScript</span>
-                  <span className="px-2 py-1 text-xs rounded" style={{ background: '#1e1e1e', color: '#00ff9d' }}>CSS</span>
-                  <span className="px-2 py-1 text-xs rounded" style={{ background: '#1e1e1e', color: '#00ff9d' }}>Full-Stack</span>
-                </div>
-                <a 
-                  href="https://github.com/ivy864/micah-ministries" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="text-sm text-purple-400 hover:text-purple-300 underline inline-flex items-center gap-1"
-                >
-                  View on GitHub →
-                </a>
-              </div>
+              <a 
+                href="https://github.com/ivy864/micah-ministries" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-purple-600 dark:text-purple-400 hover:text-purple-700 dark:hover:text-purple-300 underline text-sm font-medium inline-flex items-center gap-1"
+              >
+                View on GitHub →
+              </a>
             </div>
 
             {/* GreenThumb Project */}
-            <div className="border border-slate-600 rounded-lg overflow-hidden hover:border-purple-500 transition-colors" style={{ background: '#2a2a2a' }}>
-              <div className="p-4 border-b border-slate-700" style={{ background: '#1e1e1e' }}>
-                <div className="flex items-center gap-2 mb-2">
-                  <span className="text-xs text-slate-400">$</span>
-                  <span className="text-sm text-slate-300" style={{ fontFamily: "'Courier New', monospace" }}>project: GreenThumb</span>
-                </div>
-                <h3 className="text-xl font-bold text-white mb-1">GreenThumb</h3>
-                <p className="text-slate-300 text-sm">AI cultivation and urban farming assistant</p>
+            <div className="bg-white dark:bg-slate-800 rounded-lg p-8 border border-slate-200 dark:border-slate-700 hover:border-purple-500 dark:hover:border-purple-400 hover:shadow-xl transition-all">
+              <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-4">GreenThumb</h3>
+              <p className="text-slate-600 dark:text-slate-300 mb-4 leading-relaxed">
+                Built an AI-powered assistant to help with urban farming and cultivation. 
+                Designed to make sustainable farming more accessible.
+              </p>
+              <div className="flex flex-wrap gap-2 mb-4">
+                <span className="px-3 py-1 rounded-md text-sm font-medium bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 border border-purple-200 dark:border-purple-700">AI</span>
+                <span className="px-3 py-1 rounded-md text-sm font-medium bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 border border-purple-200 dark:border-purple-700">Python</span>
+                <span className="px-3 py-1 rounded-md text-sm font-medium bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 border border-purple-200 dark:border-purple-700">ETH Denver 2025</span>
               </div>
-              <div className="p-4">
-                <p className="text-slate-300 mb-3">
-                  Built an AI-powered assistant to help with urban farming and cultivation. 
-                  Designed to make sustainable farming more accessible.
-                </p>
-                <div className="flex flex-wrap gap-2 mb-3">
-                  <span className="px-2 py-1 text-xs rounded" style={{ background: '#1e1e1e', color: '#00ff9d' }}>AI</span>
-                  <span className="px-2 py-1 text-xs rounded" style={{ background: '#1e1e1e', color: '#00ff9d' }}>Python</span>
-                  <span className="px-2 py-1 text-xs rounded" style={{ background: '#1e1e1e', color: '#00ff9d' }}>ETH Denver 2025</span>
-                </div>
-                <div className="text-sm" style={{ color: '#00ff9d' }}>
-                  <span className="font-bold">🏆 Top 10</span> in AI community track at ETH Denver 2025 hackathon
-                </div>
+              <div className="text-sm text-purple-600 dark:text-purple-400 font-medium">
+                🏆 Top 10 in AI community track at ETH Denver 2025 hackathon
               </div>
             </div>
 
             {/* FCC Bot Project */}
-            <div className="border border-slate-600 rounded-lg overflow-hidden hover:border-purple-500 transition-colors" style={{ background: '#2a2a2a' }}>
-              <div className="p-4 border-b border-slate-700" style={{ background: '#1e1e1e' }}>
-                <div className="flex items-center gap-2 mb-2">
-                  <span className="text-xs text-slate-400">$</span>
-                  <span className="text-sm text-slate-300" style={{ fontFamily: "'Courier New', monospace" }}>project: FCC_Bot</span>
-                </div>
-                <h3 className="text-xl font-bold text-white mb-1">FCC Bot</h3>
-                <p className="text-slate-300 text-sm">AI agent for Emergency Alert System improvement</p>
-              </div>
-              <div className="p-4">
-                <p className="text-slate-300 mb-3">
-                  Developed an AI agent to assist the US Federal Communications Commission 
-                  in improving the safety and reliability of the Emergency Alert System.
-                </p>
-                <div className="flex flex-wrap gap-2">
-                  <span className="px-2 py-1 text-xs rounded" style={{ background: '#1e1e1e', color: '#00ff9d' }}>AI Agent</span>
-                  <span className="px-2 py-1 text-xs rounded" style={{ background: '#1e1e1e', color: '#00ff9d' }}>Python</span>
-                  <span className="px-2 py-1 text-xs rounded" style={{ background: '#1e1e1e', color: '#00ff9d' }}>Government Tech</span>
-                </div>
+            <div className="bg-white dark:bg-slate-800 rounded-lg p-8 border border-slate-200 dark:border-slate-700 hover:border-purple-500 dark:hover:border-purple-400 hover:shadow-xl transition-all">
+              <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-4">FCC Bot</h3>
+              <p className="text-slate-600 dark:text-slate-300 mb-4 leading-relaxed">
+                Developed an AI agent to assist the US Federal Communications Commission 
+                in improving the safety and reliability of the Emergency Alert System.
+              </p>
+              <div className="flex flex-wrap gap-2">
+                <span className="px-3 py-1 rounded-md text-sm font-medium bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 border border-purple-200 dark:border-purple-700">AI Agent</span>
+                <span className="px-3 py-1 rounded-md text-sm font-medium bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 border border-purple-200 dark:border-purple-700">Python</span>
+                <span className="px-3 py-1 rounded-md text-sm font-medium bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 border border-purple-200 dark:border-purple-700">Government Tech</span>
               </div>
             </div>
 
-            {/* ElizaOS Projects */}
-            <div className="border border-slate-600 rounded-lg overflow-hidden hover:border-purple-500 transition-colors" style={{ background: '#2a2a2a' }}>
-              <div className="p-4 border-b border-slate-700" style={{ background: '#1e1e1e' }}>
-                <div className="flex items-center gap-2 mb-2">
-                  <span className="text-xs text-slate-400">$</span>
-                  <span className="text-sm text-slate-300" style={{ fontFamily: "'Courier New', monospace" }}>project: OpenSource_Contributions</span>
+            {/*Projects *
+            <div className="bg-white dark:bg-slate-800 rounded-lg p-8 border border-slate-200 dark:border-slate-700 hover:border-purple-500 dark:hover:border-purple-400 hover:shadow-xl transition-all">
+              <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-4">OpenSource Contributions</h3>
+              <p className="text-slate-600 dark:text-slate-300 mb-4 leading-relaxed">
+                Built plugins and documentation for the ElizaOS ecosystem, 
+                making it easier for developers to build AI agents.
+              </p>
+              <div className="space-y-2 mb-4">
+                <div className="text-sm">
+                  <span className="text-slate-900 dark:text-white font-medium">Plugin Documentation</span>
+                  <span className="text-slate-500 dark:text-slate-400"> - Added README files to 41 plugins</span>
+                  <a 
+                    href="https://github.com/elizaOS/eliza/commit/f515f1f2bc07005617663ef58d8119d2b86245fb" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="text-purple-600 dark:text-purple-400 hover:text-purple-700 dark:hover:text-purple-300 underline ml-2"
+                  >
+                    View commit →
+                  </a>
                 </div>
-                <h3 className="text-xl font-bold text-white mb-1">OpenSource Contributions</h3>
-                <p className="text-slate-300 text-sm"> Contributed to open-source projects by building plugins and developer resources</p>
+                <div className="text-sm">
+                  <span className="text-slate-900 dark:text-white font-medium">News Plugin</span>
+                  <span className="text-slate-500 dark:text-slate-400"> - Fetch latest news on any topic</span>
+                </div>
+                <div className="text-sm">
+                  <span className="text-slate-900 dark:text-white font-medium">WSL Installation Guide</span>
+                  <span className="text-slate-500 dark:text-slate-400"> - Developer onboarding resource</span>
+                </div>
               </div>
-              <div className="p-4">
-                <p className="text-slate-300 mb-3">
-                  Built plugins and documentation for the ElizaOS ecosystem, 
-                  making it easier for developers to build AI agents.
-                </p>
-                <div className="space-y-2 mb-3">
-                  <div className="text-sm">
-                    <span className="text-white font-medium">Plugin Documentation</span>
-                    <span className="text-slate-400"> - Added README files to 41 plugins</span>
-                    <a 
-                      href="https://github.com/elizaOS/eliza/commit/f515f1f2bc07005617663ef58d8119d2b86245fb" 
-                      target="_blank" 
-                      rel="noopener noreferrer"
-                      className="text-purple-400 hover:text-purple-300 underline ml-2 text-xs"
-                    >
-                      View commit →
-                    </a>
-                  </div>
-                  <div className="text-sm">
-                    <span className="text-white font-medium">News Plugin</span>
-                    <span className="text-slate-400"> - Fetch latest news on any topic</span>
-                    <a href="#" className="text-purple-400 hover:text-purple-300 underline ml-2 text-xs">
-                      View commit →
-                    </a>
-                  </div>
-                  <div className="text-sm">
-                    <span className="text-white font-medium">WSL Installation Guide</span>
-                    <span className="text-slate-400"> - Developer onboarding resource</span>
-                    <a href="#" className="text-purple-400 hover:text-purple-300 underline ml-2 text-xs">
-                      View commit →
-                    </a>
-                  </div>
-                </div>
-                <div className="flex flex-wrap gap-2 mb-3">
-                  <span className="px-2 py-1 text-xs rounded" style={{ background: '#1e1e1e', color: '#00ff9d' }}>Open Source</span>
-                  <span className="px-2 py-1 text-xs rounded" style={{ background: '#1e1e1e', color: '#00ff9d' }}>Documentation</span>
-                  <span className="px-2 py-1 text-xs rounded" style={{ background: '#1e1e1e', color: '#00ff9d' }}>ElizaOS</span>
-                </div>
+              <div className="flex flex-wrap gap-2">
+                <span className="px-3 py-1 rounded-md text-sm font-medium bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 border border-purple-200 dark:border-purple-700">Open Source</span>
+                <span className="px-3 py-1 rounded-md text-sm font-medium bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 border border-purple-200 dark:border-purple-700">Documentation</span>
+                <span className="px-3 py-1 rounded-md text-sm font-medium bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 border border-purple-200 dark:border-purple-700">ElizaOS</span>
               </div>
             </div>
 
             {/* Game Programming Projects */}
-            <div className="border border-slate-600 rounded-lg overflow-hidden hover:border-purple-500 transition-colors" style={{ background: '#2a2a2a' }}>
-              <div className="p-4 border-b border-slate-700" style={{ background: '#1e1e1e' }}>
-                <div className="flex items-center gap-2 mb-2">
-                  <span className="text-xs text-slate-400">$</span>
-                  <span className="text-sm text-slate-300" style={{ fontFamily: "'Courier New', monospace" }}>project: CPSC440_Game_Programming</span>
-                </div>
-                <h3 className="text-xl font-bold text-white mb-1">Game Programming Collection</h3>
-                <p className="text-slate-300 text-sm">Five games built in C for CPSC 440 Game Programming</p>
-              </div>
-              <div className="p-4">
-                <p className="text-slate-300 mb-3">
-                  Built a collection of interactive games in C, exploring game mechanics, graphics programming, 
-                  and user interaction. Each game demonstrates different programming concepts and game design principles.
-                </p>
-                <div className="space-y-2 mb-3">
-                  <div className="text-sm">
-                    <span className="text-white font-medium">FlappyTeeth</span>
-                    <a 
-                      href="https://github.com/ileana-pr/CPSC440-Game-Programming/tree/main/FlappyTeeth" 
-                      target="_blank" 
-                      rel="noopener noreferrer"
-                      className="text-purple-400 hover:text-purple-300 underline ml-2 text-xs"
-                    >
-                      View →
-                    </a>
-                  </div>
-                  <div className="text-sm">
-                    <span className="text-white font-medium">HedgeMaze</span>
-                    <a 
-                      href="https://github.com/ileana-pr/CPSC440-Game-Programming/tree/main/HedgeMaze" 
-                      target="_blank" 
-                      rel="noopener noreferrer"
-                      className="text-purple-400 hover:text-purple-300 underline ml-2 text-xs"
-                    >
-                      View →
-                    </a>
-                  </div>
-                  <div className="text-sm">
-                    <span className="text-white font-medium">Memory</span>
-                    <a 
-                      href="https://github.com/ileana-pr/CPSC440-Game-Programming/tree/main/Memory" 
-                      target="_blank" 
-                      rel="noopener noreferrer"
-                      className="text-purple-400 hover:text-purple-300 underline ml-2 text-xs"
-                    >
-                      View →
-                    </a>
-                  </div>
-                  <div className="text-sm">
-                    <span className="text-white font-medium">PenguDefence</span>
-                    <a 
-                      href="https://github.com/ileana-pr/CPSC440-Game-Programming/tree/main/PenguDefence" 
-                      target="_blank" 
-                      rel="noopener noreferrer"
-                      className="text-purple-400 hover:text-purple-300 underline ml-2 text-xs"
-                    >
-                      View →
-                    </a>
-                  </div>
-                  <div className="text-sm">
-                    <span className="text-white font-medium">TicTacToe25</span>
-                    <a 
-                      href="https://github.com/ileana-pr/CPSC440-Game-Programming/tree/main/TicTacToe25/TicTacToe25" 
-                      target="_blank" 
-                      rel="noopener noreferrer"
-                      className="text-purple-400 hover:text-purple-300 underline ml-2 text-xs"
-                    >
-                      View →
-                    </a>
-                  </div>
-                </div>
-                <div className="flex flex-wrap gap-2 mb-3">
-                  <span className="px-2 py-1 text-xs rounded" style={{ background: '#1e1e1e', color: '#00ff9d' }}>C</span>
-                  <span className="px-2 py-1 text-xs rounded" style={{ background: '#1e1e1e', color: '#00ff9d' }}>Game Development</span>
-                  <span className="px-2 py-1 text-xs rounded" style={{ background: '#1e1e1e', color: '#00ff9d' }}>Graphics</span>
-                </div>
-                <a 
-                  href="https://github.com/ileana-pr/CPSC440-Game-Programming" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="text-sm text-purple-400 hover:text-purple-300 underline inline-flex items-center gap-1"
-                >
-                  View repository on GitHub →
-                </a>
-              </div>
-            </div>
-          </div>
-
-          <div id="contact" className="mt-12">
-            <h2 className="text-2xl font-bold mb-8 text-white">🔗 Let&apos;s Connect</h2>
-            
-            {/* Availability Status Card */}
-            <div className="mb-6 border border-slate-600 rounded-lg overflow-hidden" style={{ background: '#2a2a2a' }}>
-              <div className="p-5" style={{ background: '#1e1e1e', borderBottom: '1px solid #333' }}>
-                <div className="flex items-center gap-2 mb-3" style={{ color: '#888' }}>
-                  <span className="text-xs">$</span>
-                  <span className="text-sm font-medium" style={{ fontFamily: "'Courier New', monospace" }}>contact --available</span>
-                </div>
-                <div className="space-y-2" style={{ color: '#00ff9d', fontFamily: "'Courier New', monospace" }}>
-                  <div className="text-sm">
-                    <span className="text-slate-400">status:</span> <span className="text-white font-semibold">available_for_work</span>
-                  </div>
-                  <div className="text-sm">
-                    <span className="text-slate-400">freelance:</span> <span className="text-white font-semibold">true</span>
-                  </div>
-                  <div className="text-sm">
-                    <span className="text-slate-400">full_time:</span> <span className="text-white font-semibold">true</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-            
-            {/* Call to Action Section */}
-            <div className="mb-8 text-center">
-              <p className="text-lg text-slate-200 mb-2 font-medium">
-                Ready to build something together?
+            <div className="bg-white dark:bg-slate-800 rounded-lg p-8 border border-slate-200 dark:border-slate-700 hover:border-purple-500 dark:hover:border-purple-400 hover:shadow-xl transition-all">
+              <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-4">Game Programming Collection</h3>
+              <p className="text-slate-600 dark:text-slate-300 mb-4 leading-relaxed">
+                Built a collection of interactive games in C, exploring game mechanics, graphics programming, 
+                and user interaction. Each game demonstrates different programming concepts and game design principles.
               </p>
-              <p className="text-base text-slate-400">
-                Let&apos;s talk about your project!
-              </p>
-            </div>
-            
-            {/* Action Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-stretch sm:items-center mb-8">
-              <a
-                href="https://linktr.ee/spacemakerslab"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="px-8 py-4 bg-purple-600 hover:bg-purple-700 text-white font-bold rounded-lg transition-all shadow-lg hover:shadow-xl transform hover:scale-105 text-center"
-                style={{ fontFamily: "'Courier New', monospace" }}
-              >
-                &gt; Get In Touch
-              </a>
-              <a
-                href="mailto:perezruizileana@gmail.com"
-                className="px-8 py-4 bg-transparent border-2 border-purple-600 text-purple-400 hover:bg-purple-900/20 font-bold rounded-lg transition-all text-center"
-                style={{ fontFamily: "'Courier New', monospace" }}
-              >
-                &gt; Email Me
-              </a>
-            </div>
-            
-            {/* Additional Links */}
-            <div className="border-t border-slate-700 pt-6 text-center">
-              <p className="text-sm text-slate-400 mb-3 font-medium">Or find me on:</p>
+              <div className="space-y-2 mb-4">
+                <div className="text-sm">
+                  <span className="text-slate-900 dark:text-white font-medium">FlappyTeeth</span>
+                  <a 
+                    href="https://github.com/ileana-pr/CPSC440-Game-Programming/tree/main/FlappyTeeth" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="text-purple-600 dark:text-purple-400 hover:text-purple-700 dark:hover:text-purple-300 underline ml-2"
+                  >
+                    View →
+                  </a>
+                </div>
+                <div className="text-sm">
+                  <span className="text-slate-900 dark:text-white font-medium">HedgeMaze</span>
+                  <a 
+                    href="https://github.com/ileana-pr/CPSC440-Game-Programming/tree/main/HedgeMaze" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="text-purple-600 dark:text-purple-400 hover:text-purple-700 dark:hover:text-purple-300 underline ml-2"
+                  >
+                    View →
+                  </a>
+                </div>
+                <div className="text-sm">
+                  <span className="text-slate-900 dark:text-white font-medium">Memory</span>
+                  <a 
+                    href="https://github.com/ileana-pr/CPSC440-Game-Programming/tree/main/Memory" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="text-purple-600 dark:text-purple-400 hover:text-purple-700 dark:hover:text-purple-300 underline ml-2"
+                  >
+                    View →
+                  </a>
+                </div>
+                <div className="text-sm">
+                  <span className="text-slate-900 dark:text-white font-medium">PenguDefence</span>
+                  <a 
+                    href="https://github.com/ileana-pr/CPSC440-Game-Programming/tree/main/PenguDefence" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="text-purple-600 dark:text-purple-400 hover:text-purple-700 dark:hover:text-purple-300 underline ml-2"
+                  >
+                    View →
+                  </a>
+                </div>
+                <div className="text-sm">
+                  <span className="text-slate-900 dark:text-white font-medium">TicTacToe25</span>
+                  <a 
+                    href="https://github.com/ileana-pr/CPSC440-Game-Programming/tree/main/TicTacToe25/TicTacToe25" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="text-purple-600 dark:text-purple-400 hover:text-purple-700 dark:hover:text-purple-300 underline ml-2"
+                  >
+                    View →
+                  </a>
+                </div>
+              </div>
+              <div className="flex flex-wrap gap-2 mb-4">
+                <span className="px-3 py-1 rounded-md text-sm font-medium bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 border border-purple-200 dark:border-purple-700">C</span>
+                <span className="px-3 py-1 rounded-md text-sm font-medium bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 border border-purple-200 dark:border-purple-700">Game Development</span>
+                <span className="px-3 py-1 rounded-md text-sm font-medium bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 border border-purple-200 dark:border-purple-700">Graphics</span>
+              </div>
               <a 
-                href="https://linktr.ee/spacemakerslab" 
+                href="https://github.com/ileana-pr/CPSC440-Game-Programming" 
                 target="_blank" 
-                rel="noopener noreferrer" 
-                className="text-purple-400 hover:text-purple-300 underline text-base font-medium"
+                rel="noopener noreferrer"
+                className="text-purple-600 dark:text-purple-400 hover:text-purple-700 dark:hover:text-purple-300 underline text-sm font-medium inline-flex items-center gap-1"
               >
-                linktr.ee/spacemakerslab
+                View repository on GitHub →
               </a>
             </div>
           </div>
         </div>
-      </div>
+      </section>
+
+      {/* Contact Section */}
+      <section id="contact" className="relative z-10 py-32 bg-slate-50/50 dark:bg-slate-900/30">
+        <div className="max-w-6xl mx-auto px-6">
+          <div className="flex items-center gap-3 mb-12">
+            <div className="w-12 h-0.5 bg-purple-600 dark:bg-purple-400" />
+            <h2 className="text-4xl md:text-5xl font-bold text-slate-900 dark:text-white">Let&apos;s Connect</h2>
+          </div>
+          
+          {/* Availability Status */}
+          <div className="mb-8 bg-white dark:bg-slate-800 rounded-lg p-6 border border-slate-200 dark:border-slate-700">
+            <div className="flex items-center gap-4 mb-4">
+              <div className="w-3 h-3 rounded-full bg-green-500 animate-pulse" />
+              <div>
+                <p className="text-lg font-semibold text-slate-900 dark:text-white">Available for opportunities</p>
+                <p className="text-sm text-slate-600 dark:text-slate-400">Freelance & Full-time positions</p>
+              </div>
+            </div>
+          </div>
+          
+          {/* Call to Action */}
+          <div className="mb-8 text-center">
+            <p className="text-xl text-slate-700 dark:text-slate-200 mb-2 font-medium">
+              Ready to build something together?
+            </p>
+            <p className="text-lg text-slate-600 dark:text-slate-300">
+              Let&apos;s talk about your project!
+            </p>
+          </div>
+          
+          {/* Action Buttons */}
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
+            <a
+              href="https://linktr.ee/spacemakerslab"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-8 py-4 bg-purple-600 hover:bg-purple-700 text-white font-bold rounded-lg transition-all shadow-lg hover:shadow-xl transform hover:scale-105 text-center"
+            >
+              Get In Touch
+            </a>
+            <a
+              href="mailto:perezruizileana@gmail.com"
+              className="px-8 py-4 bg-transparent border-2 border-purple-600 dark:border-purple-400 text-purple-600 dark:text-purple-400 hover:bg-purple-50 dark:hover:bg-purple-900/20 font-bold rounded-lg transition-all text-center"
+            >
+              Email Me
+            </a>
+          </div>
+          
+          
+        </div>
+      </section>
 
       {/* Footer */}
       <footer className="relative z-10 py-8 px-4 sm:px-6 lg:px-8 border-t border-slate-200 dark:border-slate-700">
@@ -535,6 +474,8 @@ export default function CodingPage() {
           <p>&copy; 2025 Ileana Perez. Built by me.</p>
         </div>
       </footer>
+      
+      <ScrollToTop />
     </div>
   );
 }

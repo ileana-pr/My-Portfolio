@@ -26,14 +26,34 @@ export default function CustomCursor() {
     };
 
     const checkHover = (e: MouseEvent) => {
-      const target = e.target as HTMLElement;
-      const isInteractive = 
+      const target = e.target;
+      if (!target || !(target instanceof HTMLElement)) {
+        setIsHovering(false);
+        return;
+      }
+      
+      // check if target is directly interactive
+      const isDirectlyInteractive = 
         target.tagName === 'A' || 
-        target.tagName === 'BUTTON' || 
-        !!target.closest('a') || 
-        !!target.closest('button') ||
+        target.tagName === 'BUTTON' ||
         window.getComputedStyle(target).cursor === 'pointer';
-      setIsHovering(isInteractive);
+      
+      // check if target is inside an interactive element (handles SVG inside buttons)
+      const isInsideInteractive = 
+        target.closest && (!!target.closest('a') || !!target.closest('button'));
+      
+      // check parent elements manually for SVG elements
+      let parent = target.parentElement;
+      let foundInteractiveParent = false;
+      while (parent && !foundInteractiveParent) {
+        if (parent.tagName === 'BUTTON' || parent.tagName === 'A' || window.getComputedStyle(parent).cursor === 'pointer') {
+          foundInteractiveParent = true;
+          break;
+        }
+        parent = parent.parentElement;
+      }
+      
+      setIsHovering(isDirectlyInteractive || isInsideInteractive || foundInteractiveParent);
     };
 
     const handleMouseMove = (e: MouseEvent) => {

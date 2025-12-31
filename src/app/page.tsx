@@ -114,19 +114,33 @@ export default function Home() {
               Coding
             </Link>
 
-            {/*{/* Photography Button - Coming Soon */}
+            {/* Content Creation Button */}
             <button
+              className="block w-full bg-white dark:bg-slate-800 hover:bg-slate-50 dark:hover:bg-slate-700 border border-slate-200 dark:border-slate-700 text-slate-900 dark:text-white px-6 py-4 rounded-lg font-medium transition-all hover:shadow-lg"
+            >
+              Content Creation
+            </button>
+
+            {/* Photography Button - Coming Soon */}
+            {/* <button
               className="block w-full bg-white dark:bg-slate-800 hover:bg-slate-50 dark:hover:bg-slate-700 border border-slate-200 dark:border-slate-700 text-slate-900 dark:text-white px-6 py-4 rounded-lg font-medium transition-all hover:shadow-lg"
             >
               Photography
-            </button>
+            </button> */}
 
             {/* 3D Printing Button - Coming Soon */}
-            <button
+            {/* <button
               className="block w-full bg-white dark:bg-slate-800 hover:bg-slate-50 dark:hover:bg-slate-700 border border-slate-200 dark:border-slate-700 text-slate-900 dark:text-white px-6 py-4 rounded-lg font-medium transition-all hover:shadow-lg"
             >
               3D Printing
-            </button>
+            </button> */}
+
+            {/* Writing & Editing Button */}
+            {/* <button
+              className="block w-full bg-white dark:bg-slate-800 hover:bg-slate-50 dark:hover:bg-slate-700 border border-slate-200 dark:border-slate-700 text-slate-900 dark:text-white px-6 py-4 rounded-lg font-medium transition-all hover:shadow-lg"
+            >
+              Writing & Editing
+            </button> */}
           </div>
         </div>
       </section>

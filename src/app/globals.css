@@ -88,6 +88,11 @@ html {
   background-image: radial-gradient(circle, rgba(139, 92, 246, 0.15) 1px, transparent 1px);
 }
 
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
 /* Custom cursor styles */
 * {
   cursor: none !important;
