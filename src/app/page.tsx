@@ -94,20 +94,14 @@ export default function Home() {
               />
             </div>
           </div>
-          
-          <div className="mb-4">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20">
-              <div className="w-2 h-2 rounded-full bg-primary animate-pulse" />
-              <span className="text-sm font-mono text-primary">Available for opportunities</span>
-            </div>
-          </div>
+  
           
           {/* Name and Title */}
           <h1 className="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white mb-3">
             GM
           </h1>
           <p className="text-lg text-slate-600 dark:text-slate-300 mb-12">
-            Click below to see what I&apos;m up to. 
+            Click below to see my services and projects. 
           </p>
 
           {/* Link Buttons */}

@@ -83,13 +83,13 @@ export default function CodingPage() {
           <h1 className="text-4xl md:text-5xl font-bold mb-4 text-slate-900 dark:text-white" style={{ textShadow: '2px 2px 4px rgba(0,0,0,0.1)' }}>
             Hello World!
           </h1>
-          <p className="text-xl md:text-2xl mb-4 text-slate-700 dark:text-slate-200">
+          <p className="text-xl md:text-2xl mb-11 text-slate-700 dark:text-slate-200">
             My name is Ileana, and I&apos;m a recent CS grad building full-stack web apps and AI projects
           </p>
          
 
           {/* CTA buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-4">
             <a
               href="#contact"
               className="px-8 py-4 bg-white text-purple-600 font-bold rounded-lg hover:bg-purple-50 transition-all shadow-lg hover:shadow-xl transform hover:scale-105"
@@ -107,7 +107,6 @@ export default function CodingPage() {
           </div>
         </div>
       </div>
-
       {/* Main Content */}
       <div className="relative z-10 pb-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-3xl mx-auto" style={{ background: '#363636', padding: '20px', borderRadius: '10px', boxShadow: '0 0 20px rgba(0,0,0,0.3)' }}>

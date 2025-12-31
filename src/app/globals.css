@@ -87,3 +87,12 @@ html {
 .dark .dot-pattern {
   background-image: radial-gradient(circle, rgba(139, 92, 246, 0.15) 1px, transparent 1px);
 }
+
+/* Custom cursor styles */
+* {
+  cursor: none !important;
+}
+
+a, button, [role="button"], input, textarea, select {
+  cursor: none !important;
+}
