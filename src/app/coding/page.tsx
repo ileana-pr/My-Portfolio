@@ -37,7 +37,12 @@ export default function CodingPage() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-50 via-indigo-50 to-purple-100 dark:from-slate-900 dark:via-purple-900 dark:to-indigo-900" style={{ fontFamily: "'Courier New', monospace" }}>
+    <div className="min-h-screen relative overflow-hidden bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 dark:from-slate-900 dark:via-slate-800 dark:to-indigo-900" style={{ fontFamily: "'Courier New', monospace" }}>
+      {/* Animated gradient background */}
+      <div className="absolute inset-0 animate-gradient" />
+      {/* Dot pattern overlay */}
+      <div className="absolute inset-0 dot-pattern" />
+      
       {/* Navigation */}
       <nav className="fixed top-0 w-full bg-white/80 dark:bg-slate-900/80 backdrop-blur-md z-50 border-b border-slate-200 dark:border-slate-700">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -71,7 +76,7 @@ export default function CodingPage() {
       </nav>
 
       {/* Hero Section */}
-      <div className="pt-32 pb-16 px-4 sm:px-6 lg:px-8">
+      <div className="relative z-10 pt-32 pb-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           
           {/* Value proposition */}
@@ -104,7 +109,7 @@ export default function CodingPage() {
       </div>
 
       {/* Main Content */}
-      <div className="pb-20 px-4 sm:px-6 lg:px-8">
+      <div className="relative z-10 pb-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-3xl mx-auto" style={{ background: '#363636', padding: '20px', borderRadius: '10px', boxShadow: '0 0 20px rgba(0,0,0,0.3)' }}>
 
           <h2 className="text-2xl font-bold mb-6 text-white">🚀 Tech Stack</h2>
@@ -526,7 +531,7 @@ export default function CodingPage() {
       </div>
 
       {/* Footer */}
-      <footer className="py-8 px-4 sm:px-6 lg:px-8 border-t border-slate-200 dark:border-slate-700">
+      <footer className="relative z-10 py-8 px-4 sm:px-6 lg:px-8 border-t border-slate-200 dark:border-slate-700">
         <div className="max-w-6xl mx-auto text-center text-slate-600 dark:text-slate-400">
           <p>&copy; 2025 Ileana Perez. Built by me.</p>
         </div>

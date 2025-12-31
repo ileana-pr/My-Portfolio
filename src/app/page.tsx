@@ -38,7 +38,12 @@ export default function Home() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 dark:from-slate-900 dark:via-slate-800 dark:to-indigo-900">
+    <div className="min-h-screen relative overflow-hidden bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 dark:from-slate-900 dark:via-slate-800 dark:to-indigo-900">
+      {/* Animated gradient background */}
+      <div className="absolute inset-0 animate-gradient" />
+      {/* Dot pattern overlay */}
+      <div className="absolute inset-0 dot-pattern" />
+      
       {/* Navigation */}
       <nav className="fixed top-0 w-full bg-white/80 dark:bg-slate-900/80 backdrop-blur-md z-50 border-b border-slate-200 dark:border-slate-700">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -74,11 +79,11 @@ export default function Home() {
       </nav>
 
       {/* Linktree-style Landing Page */}
-      <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8 min-h-screen flex items-center">
-        <div className="max-w-md mx-auto w-full text-center">
+      <section className="relative z-10 pt-32 pb-20 px-4 sm:px-6 lg:px-8 min-h-screen flex items-center">
+        <div className="max-w-md mx-auto w-full text-center"> 
           {/* Avatar */}
-          <div className="mb-8">
-            <div className="w-32 h-32 rounded-full mx-auto mb-6 overflow-hidden border-4 border-slate-200 dark:border-slate-700 shadow-xl ring-4 ring-slate-100 dark:ring-slate-800">
+          <div className="mb-4">
+            <div className="w-32 h-32 rounded-full mx-auto mb-4 overflow-hidden border-4 border-slate-200 dark:border-slate-700 shadow-xl ring-4 ring-slate-100 dark:ring-slate-800">
               <Image
                 src="/avatar.png"
                 alt="Ileana Perez"
@@ -87,6 +92,13 @@ export default function Home() {
                 className="w-full h-full object-cover"
                 priority
               />
+            </div>
+          </div>
+          
+          <div className="mb-4">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20">
+              <div className="w-2 h-2 rounded-full bg-primary animate-pulse" />
+              <span className="text-sm font-mono text-primary">Available for opportunities</span>
             </div>
           </div>
           

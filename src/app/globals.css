@@ -42,3 +42,48 @@ html {
     min-height: -webkit-fill-available;
   }
 }
+
+/* Gradient animation for hero section */
+@keyframes gradient-shift {
+  0%,
+  100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+.animate-gradient {
+  background: linear-gradient(
+    -45deg,
+    rgba(239, 246, 255, 0.8),
+    rgba(224, 231, 255, 0.8),
+    rgba(237, 233, 254, 0.8),
+    rgba(243, 232, 255, 0.8)
+  );
+  background-size: 400% 400%;
+  animation: gradient-shift 8s ease infinite;
+}
+
+.dark .animate-gradient {
+  background: linear-gradient(
+    -45deg,
+    rgba(15, 23, 42, 0.8),
+    rgba(30, 41, 59, 0.8),
+    rgba(30, 27, 75, 0.8),
+    rgba(55, 48, 163, 0.6)
+  );
+  background-size: 400% 400%;
+  animation: gradient-shift 8s ease infinite;
+}
+
+/* Dot pattern background */
+.dot-pattern {
+  background-image: radial-gradient(circle, rgba(99, 102, 241, 0.1) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+.dark .dot-pattern {
+  background-image: radial-gradient(circle, rgba(139, 92, 246, 0.15) 1px, transparent 1px);
+}
