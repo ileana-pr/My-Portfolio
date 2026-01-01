@@ -8,6 +8,7 @@ export default function CustomCursor() {
   const [isHovering, setIsHovering] = useState(false);
   const [showHeart, setShowHeart] = useState(true);
   const lastTouchTimeRef = useRef(0);
+  const hideTimeoutRef = useRef<NodeJS.Timeout | null>(null);
 
   useEffect(() => {
     let trailId = 0;
@@ -64,10 +65,59 @@ export default function CustomCursor() {
       checkHover(e);
     };
 
-    // hide heart on touch/click for mobile
-    const handleTouchStart = () => {
-      setShowHeart(false);
+    // show heart briefly on touch, then hide for mobile
+    const handleTouchStart = (e: TouchEvent) => {
+      const touch = e.touches[0];
+      if (touch) {
+        // update position to touch location
+        setPosition({ x: touch.clientX, y: touch.clientY });
+        
+        // check if touching an interactive element
+        const target = e.target;
+        if (target && target instanceof Element) {
+          const isDirectlyInteractive = 
+            target.tagName === 'A' || 
+            target.tagName === 'BUTTON' ||
+            window.getComputedStyle(target).cursor === 'pointer';
+          
+          const isInsideInteractive = 
+            target.closest && (!!target.closest('a') || !!target.closest('button'));
+          
+          if (isDirectlyInteractive || isInsideInteractive) {
+            // show heart briefly
+            setIsHovering(true);
+            setShowHeart(true);
+            
+            // clear any existing timeout
+            if (hideTimeoutRef.current) {
+              clearTimeout(hideTimeoutRef.current);
+            }
+            
+            // hide after 300ms
+            hideTimeoutRef.current = setTimeout(() => {
+              setShowHeart(false);
+              setIsHovering(false);
+            }, 300);
+          } else {
+            // not interactive, hide immediately
+            setShowHeart(false);
+          }
+        } else {
+          setShowHeart(false);
+        }
+      }
       lastTouchTimeRef.current = Date.now();
+    };
+
+    // handle touchmove - update position but don't show heart
+    const handleTouchMove = (e: TouchEvent) => {
+      const touch = e.touches[0];
+      if (touch) {
+        setPosition({ x: touch.clientX, y: touch.clientY });
+      }
+      // hide heart on any touch movement
+      setShowHeart(false);
+      setIsHovering(false);
     };
 
     // hide heart on scroll for mobile
@@ -90,14 +140,17 @@ export default function CustomCursor() {
     document.body.style.cursor = 'none';
     document.addEventListener('mousemove', handleMouseMoveWithHeart);
     document.addEventListener('touchstart', handleTouchStart);
-    document.addEventListener('touchmove', handleTouchStart);
+    document.addEventListener('touchmove', handleTouchMove);
     document.addEventListener('scroll', handleScroll, true);
 
     return () => {
       document.removeEventListener('mousemove', handleMouseMoveWithHeart);
       document.removeEventListener('touchstart', handleTouchStart);
-      document.removeEventListener('touchmove', handleTouchStart);
+      document.removeEventListener('touchmove', handleTouchMove);
       document.removeEventListener('scroll', handleScroll, true);
+      if (hideTimeoutRef.current) {
+        clearTimeout(hideTimeoutRef.current);
+      }
       document.body.style.cursor = 'auto';
     };
   }, []);
