@@ -1,11 +1,13 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useRef } from 'react';
 
 export default function CustomCursor() {
   const [position, setPosition] = useState({ x: 0, y: 0 });
   const [trail, setTrail] = useState<Array<{ x: number; y: number; id: number }>>([]);
   const [isHovering, setIsHovering] = useState(false);
+  const [showHeart, setShowHeart] = useState(true);
+  const lastTouchTimeRef = useRef(0);
 
   useEffect(() => {
     let trailId = 0;
@@ -62,12 +64,40 @@ export default function CustomCursor() {
       checkHover(e);
     };
 
+    // hide heart on touch/click for mobile
+    const handleTouchStart = () => {
+      setShowHeart(false);
+      lastTouchTimeRef.current = Date.now();
+    };
+
+    // hide heart on scroll for mobile
+    const handleScroll = () => {
+      setShowHeart(false);
+    };
+
+    // show heart again on mouse move (desktop)
+    // but only if there hasn't been a recent touch (to prevent showing after mobile taps)
+    const handleMouseMoveWithHeart = (e: MouseEvent) => {
+      // if touch happened recently (within last 500ms), don't show heart
+      // this prevents heart from appearing after mobile taps that trigger mouse events
+      if (Date.now() - lastTouchTimeRef.current > 500) {
+        setShowHeart(true);
+      }
+      handleMouseMove(e);
+    };
+
     // hide default cursor
     document.body.style.cursor = 'none';
-    document.addEventListener('mousemove', handleMouseMove);
+    document.addEventListener('mousemove', handleMouseMoveWithHeart);
+    document.addEventListener('touchstart', handleTouchStart);
+    document.addEventListener('touchmove', handleTouchStart);
+    document.addEventListener('scroll', handleScroll, true);
 
     return () => {
-      document.removeEventListener('mousemove', handleMouseMove);
+      document.removeEventListener('mousemove', handleMouseMoveWithHeart);
+      document.removeEventListener('touchstart', handleTouchStart);
+      document.removeEventListener('touchmove', handleTouchStart);
+      document.removeEventListener('scroll', handleScroll, true);
       document.body.style.cursor = 'auto';
     };
   }, []);
@@ -96,24 +126,26 @@ export default function CustomCursor() {
         </div>
       ))}
       
-      {/* main cursor */}
-      <div
-        className="fixed pointer-events-none z-[9999]"
-        style={{
-          left: `${position.x}px`,
-          top: `${position.y}px`,
-          transform: 'translate(-50%, -50%)',
-          transition: 'transform 0.1s ease-out',
-        }}
-      >
+      {/* main cursor - hidden on mobile after touch/scroll */}
+      {showHeart && (
         <div
-          className={`text-purple-500 dark:text-purple-400 transition-all duration-200 ${
-            isHovering ? 'scale-125 text-xl' : 'scale-100 text-base'
-          }`}
+          className="fixed pointer-events-none z-[9999]"
+          style={{
+            left: `${position.x}px`,
+            top: `${position.y}px`,
+            transform: 'translate(-50%, -50%)',
+            transition: 'transform 0.1s ease-out',
+          }}
         >
-          {isHovering ? '❤️' : '•'}
+          <div
+            className={`text-purple-500 dark:text-purple-400 transition-all duration-200 ${
+              isHovering ? 'scale-125 text-xl' : 'scale-100 text-base'
+            }`}
+          >
+            {isHovering ? '❤️' : '•'}
+          </div>
         </div>
-      </div>
+      )}
     </>
   );
 }

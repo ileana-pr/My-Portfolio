@@ -64,6 +64,11 @@ html {
   );
   background-size: 400% 400%;
   animation: gradient-shift 8s ease infinite;
+  /* optimize for mobile performance */
+  will-change: background-position;
+  transform: translateZ(0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
 }
 
 .dark .animate-gradient {
@@ -76,6 +81,11 @@ html {
   );
   background-size: 400% 400%;
   animation: gradient-shift 8s ease infinite;
+  /* optimize for mobile performance */
+  will-change: background-position;
+  transform: translateZ(0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
 }
 
 /* Dot pattern background */
@@ -86,6 +96,13 @@ html {
 
 .dark .dot-pattern {
   background-image: radial-gradient(circle, rgba(139, 92, 246, 0.15) 1px, transparent 1px);
+}
+
+/* respect reduced motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  .animate-gradient {
+    animation: none;
+  }
 }
 
 /* Smooth scrolling */
