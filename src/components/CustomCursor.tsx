@@ -27,7 +27,8 @@ export default function CustomCursor() {
 
     const checkHover = (e: MouseEvent) => {
       const target = e.target;
-      if (!target || !(target instanceof HTMLElement)) {
+      // accept both HTMLElement and SVGElement (SVG elements are SVGElement, not HTMLElement)
+      if (!target || !(target instanceof Element)) {
         setIsHovering(false);
         return;
       }
@@ -38,7 +39,7 @@ export default function CustomCursor() {
         target.tagName === 'BUTTON' ||
         window.getComputedStyle(target).cursor === 'pointer';
       
-      // check if target is inside an interactive element (handles SVG inside buttons)
+      // check if target is inside an interactive element (handles SVG inside links/buttons)
       const isInsideInteractive = 
         target.closest && (!!target.closest('a') || !!target.closest('button'));
       
