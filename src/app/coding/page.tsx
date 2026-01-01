@@ -50,7 +50,7 @@ export default function CodingPage() {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center py-4">
             <Link href="/" className="text-xl font-bold text-slate-900 dark:text-white hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
-              cheddarqueso.xyz
+              ileanaperez.net
             </Link>
             <div className="flex items-center space-x-8">
               {/* dark mode toggle */}
@@ -107,6 +107,14 @@ export default function CodingPage() {
           </div>
         </div>
       </div>
+      
+      {/* Glowing Divider */}
+      <div className="relative z-10">
+        <div className="max-w-6xl mx-auto px-6">
+          <div className="glow-divider" />
+        </div>
+      </div>
+      
       {/* Tech Stack Section */}
       <section className="relative z-10 py-32">
         <div className="max-w-6xl mx-auto px-6">
@@ -167,6 +175,13 @@ export default function CodingPage() {
         </div>
       </section>
 
+      {/* Glowing Divider */}
+      <div className="relative z-10">
+        <div className="max-w-6xl mx-auto px-6">
+          <div className="glow-divider" />
+        </div>
+      </div>
+
       {/* What I'm Building Section */}
       <section id="what-im-building" className="relative z-10 py-32 bg-slate-50/50 dark:bg-slate-900/30">
         <div className="max-w-6xl mx-auto px-6">
@@ -194,7 +209,7 @@ export default function CodingPage() {
                 <h3 className="text-xl font-bold text-slate-900 dark:text-white">Web Applications</h3>
               </div>
               <p className="text-slate-600 dark:text-slate-300 mb-3">
-                Building web apps with React, Next.js, and Python. Learning as I go, building real projects.(This portfolio is one example!)
+                Building web apps with React, Next.js, and Python. Learning as I go, building real projects. (This portfolio is one example!)
               </p>
             </div>
 
@@ -222,6 +237,13 @@ export default function CodingPage() {
           </div>
         </div>
       </section>
+
+      {/* Glowing Divider */}
+      <div className="relative z-10">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="glow-divider" />
+        </div>
+      </div>
 
       {/* Featured Projects Section */}
       <section id="projects" className="relative z-10 py-32">
@@ -428,6 +450,13 @@ export default function CodingPage() {
           </div>
         </div>
       </section>
+
+      {/* Glowing Divider */}
+      <div className="relative z-10">
+        <div className="max-w-6xl mx-auto px-6">
+          <div className="glow-divider" />
+        </div>
+      </div>
 
       {/* Contact Section */}
       <section id="contact" className="relative z-10 py-32 bg-slate-50/50 dark:bg-slate-900/30">

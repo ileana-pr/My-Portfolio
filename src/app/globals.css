@@ -103,6 +103,90 @@ html {
   .animate-gradient {
     animation: none;
   }
+  .glow-divider {
+    animation: none;
+  }
+}
+
+/* glowing divider animation */
+@keyframes glow-pulse {
+  0%, 100% {
+    opacity: 0.6;
+    box-shadow: 0 0 10px rgba(139, 92, 246, 0.4), 0 0 20px rgba(139, 92, 246, 0.2);
+  }
+  50% {
+    opacity: 1;
+    box-shadow: 0 0 20px rgba(139, 92, 246, 0.6), 0 0 40px rgba(139, 92, 246, 0.3), 0 0 60px rgba(139, 92, 246, 0.1);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% center;
+  }
+  100% {
+    background-position: 200% center;
+  }
+}
+
+.glow-divider {
+  height: 1px;
+  width: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(139, 92, 246, 0.5),
+    rgba(168, 85, 247, 0.7),
+    rgba(139, 92, 246, 0.5),
+    transparent
+  );
+  background-size: 200% 100%;
+  animation: shimmer 3s ease-in-out infinite, glow-pulse 2s ease-in-out infinite;
+  position: relative;
+  margin: 0;
+}
+
+.glow-divider::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(139, 92, 246, 0.3),
+    rgba(168, 85, 247, 0.5),
+    rgba(139, 92, 246, 0.3),
+    transparent
+  );
+  transform: translateY(-50%);
+  filter: blur(4px);
+  z-index: -1;
+}
+
+.dark .glow-divider {
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(139, 92, 246, 0.6),
+    rgba(168, 85, 247, 0.8),
+    rgba(139, 92, 246, 0.6),
+    transparent
+  );
+  box-shadow: 0 0 10px rgba(139, 92, 246, 0.4), 0 0 20px rgba(139, 92, 246, 0.2);
+}
+
+.dark .glow-divider::before {
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(139, 92, 246, 0.4),
+    rgba(168, 85, 247, 0.6),
+    rgba(139, 92, 246, 0.4),
+    transparent
+  );
 }
 
 /* Smooth scrolling */
