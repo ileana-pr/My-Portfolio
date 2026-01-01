@@ -489,7 +489,7 @@ export default function CodingPage() {
             <button
               onClick={async (e) => {
                 e.preventDefault();
-                const email = 'cheddarqueso3d@gmail.com';
+                const email = 'hello@ileanaperez.net';
                 
                 // try mailto link first
                 window.location.href = `mailto:${email}`;
