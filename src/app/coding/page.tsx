@@ -39,7 +39,7 @@ export default function CodingPage() {
   };
 
   return (
-    <div className="min-h-screen relative overflow-hidden bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 dark:from-slate-900 dark:via-slate-800 dark:to-indigo-900">
+    <div className="min-h-screen relative overflow-hidden bg-gradient-to-br from-blue-100 via-indigo-100 to-purple-100 dark:from-slate-950 dark:via-slate-900 dark:to-indigo-950">
       {/* Animated gradient background */}
       <div className="absolute inset-0 animate-gradient" />
       {/* Dot pattern overlay */}
@@ -82,9 +82,12 @@ export default function CodingPage() {
         <div className="max-w-4xl mx-auto text-center">
           
           {/* Value proposition */}
-          <h1 className="text-4xl md:text-5xl font-bold mb-4 text-slate-900 dark:text-white" style={{ textShadow: '2px 2px 4px rgba(0,0,0,0.1)' }}>
-            👋 Hello World!
-          </h1>
+          <div className="mb-4">
+            <div className="text-5xl md:text-6xl mb-3">👋</div>
+            <h1 className="text-4xl md:text-6xl font-extrabold bg-gradient-to-r from-purple-600 via-indigo-600 to-purple-600 dark:from-purple-400 dark:via-indigo-400 dark:to-purple-400 bg-clip-text text-transparent drop-shadow-lg tracking-tight">
+              Hello World!
+            </h1>
+          </div>
           <p className="text-xl md:text-2xl mb-8 text-slate-700 dark:text-slate-200">
             My name is Ileana, and I&apos;m a recent CS grad building full-stack web apps and AI projects
           </p>
@@ -120,7 +123,7 @@ export default function CodingPage() {
         <div className="max-w-6xl mx-auto px-6">
           <div className="flex items-center justify-center gap-3 mb-16">
             <div className="w-12 h-0.5 bg-purple-600 dark:bg-purple-400" />
-            <h2 className="text-4xl md:text-5xl font-bold text-slate-900 dark:text-white">
+            <h2 className="text-4xl md:text-5xl font-extrabold bg-gradient-to-r from-purple-600 via-indigo-600 to-purple-600 dark:from-purple-400 dark:via-indigo-400 dark:to-purple-400 bg-clip-text text-transparent drop-shadow-lg tracking-tight">
               Right Now
             </h2>
             <div className="w-12 h-0.5 bg-purple-600 dark:bg-purple-400" />
@@ -168,7 +171,7 @@ export default function CodingPage() {
          <div className="max-w-7xl mx-auto px-6">
           <div className="flex items-center justify-center gap-3 mb-12">
             <div className="w-12 h-0.5 bg-purple-600 dark:bg-purple-400" />
-            <h2 className="text-4xl md:text-5xl font-bold text-slate-900 dark:text-white">WIP: Projects and Contributions</h2>
+            <h2 className="text-4xl md:text-5xl font-extrabold bg-gradient-to-r from-purple-600 via-indigo-600 to-purple-600 dark:from-purple-400 dark:via-indigo-400 dark:to-purple-400 bg-clip-text text-transparent drop-shadow-lg tracking-tight">WIP </h2>
             <div className="w-12 h-0.5 bg-purple-600 dark:bg-purple-400" />
           </div>
 
@@ -176,7 +179,7 @@ export default function CodingPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
             {/* GreenThumb Project */}
             <div className="bg-white dark:bg-slate-800 rounded-lg p-8 border border-slate-200 dark:border-slate-700 hover:border-purple-500 dark:hover:border-purple-400 hover:shadow-xl transition-all">
-              <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-4">GreenThumb</h3>
+              <h3 className="text-2xl font-bold bg-gradient-to-r from-purple-600 to-indigo-600 dark:from-purple-400 dark:to-indigo-400 bg-clip-text text-transparent mb-4">GreenThumb</h3>
               <p className="text-slate-600 dark:text-slate-300 mb-4 leading-relaxed">
                 AI-assistant for plant care, gardening and urban farming. Powered by ElizaOS. Built as a proof of concept for the Sozu Haus Denver 2025 hackathon.
                 Designed to make sustainable farming more accessible.
@@ -187,9 +190,7 @@ export default function CodingPage() {
                 <span className="px-3 py-1 rounded-md text-sm font-medium bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 border border-purple-200 dark:border-purple-700">Vite</span>
                 <span className="px-3 py-1 rounded-md text-sm font-medium bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 border border-purple-200 dark:border-purple-700">ElizaOS</span>
                 <span className="px-3 py-1 rounded-md text-sm font-medium bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 border border-purple-200 dark:border-purple-700">Privy</span>
-                <span className="px-3 py-1 rounded-md text-sm font-medium bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 border border-purple-200 dark:border-purple-700">Web3</span>
                 <span className="px-3 py-1 rounded-md text-sm font-medium bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 border border-purple-200 dark:border-purple-700">Tailwind CSS</span>
-                <span className="px-3 py-1 rounded-md text-sm font-medium bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 border border-purple-200 dark:border-purple-700">ETH Denver 2025</span>
               </div>
               <div className="text-sm text-purple-600 dark:text-purple-400 font-medium mb-4">
                 🏆 Top 10 in AI community track at ETH Denver 2025 hackathon
@@ -206,7 +207,7 @@ export default function CodingPage() {
 
             {/* Tip Me Project */}
             <div className="bg-white dark:bg-slate-800 rounded-lg p-8 border border-slate-200 dark:border-slate-700 hover:border-purple-500 dark:hover:border-purple-400 hover:shadow-xl transition-all">
-              <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-4">Tip Me</h3>
+              <h3 className="text-2xl font-bold bg-gradient-to-r from-purple-600 to-indigo-600 dark:from-purple-400 dark:to-indigo-400 bg-clip-text text-transparent mb-4">Tip Me</h3>
               <p className="text-slate-600 dark:text-slate-300 mb-4 leading-relaxed">
                 A modern, multi-chain tipping application supporting cryptocurrency and fiat payments. 
                 Enables tips via Ethereum, Solana, Bitcoin, and traditional payment methods like Cash App, Venmo, and Zelle.
@@ -219,7 +220,6 @@ export default function CodingPage() {
                 <span className="px-3 py-1 rounded-md text-sm font-medium bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 border border-purple-200 dark:border-purple-700">Ethereum</span>
                 <span className="px-3 py-1 rounded-md text-sm font-medium bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 border border-purple-200 dark:border-purple-700">Solana</span>
                 <span className="px-3 py-1 rounded-md text-sm font-medium bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 border border-purple-200 dark:border-purple-700">Bitcoin</span>
-                <span className="px-3 py-1 rounded-md text-sm font-medium bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 border border-purple-200 dark:border-purple-700">Web3</span>
               </div>
               <a 
                 href="https://github.com/ileana-pr/tip-me" 
@@ -233,7 +233,7 @@ export default function CodingPage() {
 
             {/* OpenSource Contributions */}
             <div className="bg-white dark:bg-slate-800 rounded-lg p-8 border border-slate-200 dark:border-slate-700 hover:border-purple-500 dark:hover:border-purple-400 hover:shadow-xl transition-all">
-              <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-4">OpenSource Contributions</h3>
+              <h3 className="text-2xl font-bold bg-gradient-to-r from-purple-600 to-indigo-600 dark:from-purple-400 dark:to-indigo-400 bg-clip-text text-transparent mb-4">OpenSource Contributions</h3>
               <p className="text-slate-600 dark:text-slate-300 mb-4 leading-relaxed">
                 Contributing to open-source projects through code, documentation, and bug reporting.
               </p>
@@ -300,7 +300,7 @@ export default function CodingPage() {
 
             {/* Game Programming Projects */}
             <div className="bg-white dark:bg-slate-800 rounded-lg p-8 border border-slate-200 dark:border-slate-700 hover:border-purple-500 dark:hover:border-purple-400 hover:shadow-xl transition-all">
-              <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-4">Game Programming Collection</h3>
+              <h3 className="text-2xl font-bold bg-gradient-to-r from-purple-600 to-indigo-600 dark:from-purple-400 dark:to-indigo-400 bg-clip-text text-transparent mb-4">Game Programming Collection</h3>
               <p className="text-slate-600 dark:text-slate-300 mb-4 leading-relaxed">
                 Built a collection of interactive games in C, exploring game mechanics, graphics programming, 
                 and user interaction. Each game demonstrates different programming concepts and game design principles.
@@ -364,8 +364,7 @@ export default function CodingPage() {
               </div>
               <div className="flex flex-wrap gap-2 mb-4">
                 <span className="px-3 py-1 rounded-md text-sm font-medium bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 border border-purple-200 dark:border-purple-700">C</span>
-                <span className="px-3 py-1 rounded-md text-sm font-medium bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 border border-purple-200 dark:border-purple-700">Game Development</span>
-                <span className="px-3 py-1 rounded-md text-sm font-medium bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 border border-purple-200 dark:border-purple-700">Graphics</span>
+                <span className="px-3 py-1 rounded-md text-sm font-medium bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 border border-purple-200 dark:border-purple-700">C++</span>
               </div>
               <a 
                 href="https://github.com/ileana-pr/CPSC440-Game-Programming" 
@@ -394,7 +393,7 @@ export default function CodingPage() {
         <div className="max-w-6xl mx-auto px-6">
           <div className="flex items-center justify-center gap-3 mb-12">
             <div className="w-12 h-0.5 bg-purple-600 dark:bg-purple-400" />
-            <h2 className="text-4xl md:text-5xl font-bold text-slate-900 dark:text-white">Let&apos;s Connect</h2>
+            <h2 className="text-4xl md:text-5xl font-extrabold bg-gradient-to-r from-purple-600 via-indigo-600 to-purple-600 dark:from-purple-400 dark:via-indigo-400 dark:to-purple-400 bg-clip-text text-transparent drop-shadow-lg tracking-tight">Let&apos;s Connect</h2>
             <div className="w-12 h-0.5 bg-purple-600 dark:bg-purple-400" />
           </div>
 
