@@ -83,7 +83,7 @@ export default function CodingPage() {
           
           {/* Value proposition */}
           <h1 className="text-4xl md:text-5xl font-bold mb-4 text-slate-900 dark:text-white" style={{ textShadow: '2px 2px 4px rgba(0,0,0,0.1)' }}>
-            Hello World!
+            👋 Hello World!
           </h1>
           <p className="text-xl md:text-2xl mb-8 text-slate-700 dark:text-slate-200">
             My name is Ileana, and I&apos;m a recent CS grad building full-stack web apps and AI projects
@@ -114,61 +114,42 @@ export default function CodingPage() {
           <div className="glow-divider" />
         </div>
       </div>
-      
-      {/* Tech Stack Section */}
+
+      {/* Right Now Section */}
       <section className="relative z-10 py-32">
         <div className="max-w-6xl mx-auto px-6">
-          <div className="flex items-center gap-3 mb-12">
+          <div className="flex items-center justify-center gap-3 mb-16">
             <div className="w-12 h-0.5 bg-purple-600 dark:bg-purple-400" />
-            <h2 className="text-4xl md:text-5xl font-bold text-slate-900 dark:text-white">Tech Stack</h2>
+            <h2 className="text-4xl md:text-5xl font-bold text-slate-900 dark:text-white">
+              Right Now
+            </h2>
+            <div className="w-12 h-0.5 bg-purple-600 dark:bg-purple-400" />
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {/* Languages */}
-            <div className="bg-white dark:bg-slate-800 rounded-lg p-6 border border-slate-200 dark:border-slate-700 hover:shadow-lg transition-all">
-              <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-4">Languages</h3>
-              <div className="flex flex-wrap gap-2">
-                {['Python', 'Java', 'JavaScript', 'HTML', 'CSS', 'SQL'].map((lang) => (
-                  <span key={lang} className="px-3 py-1.5 rounded-md text-sm font-medium bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 border border-purple-200 dark:border-purple-700">
-                    {lang}
-                  </span>
-                ))}
+          <div className="max-w-4xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              {/* Item 1 */}
+              <div className="bg-white/80 dark:bg-slate-800/80 backdrop-blur-sm rounded-xl p-6 border border-purple-200 dark:border-purple-700 hover:border-purple-400 dark:hover:border-purple-500 hover:shadow-lg hover:shadow-purple-200/50 dark:hover:shadow-purple-900/30 transition-all transform hover:scale-105 text-center">
+                <div className="text-3xl mb-3">🌐</div>
+                <p className="text-base md:text-lg font-medium text-slate-800 dark:text-slate-200 leading-relaxed">
+                  Contributing to open source AI and metaverse projects
+                </p>
               </div>
-            </div>
-            
-            {/* Frameworks */}
-            <div className="bg-white dark:bg-slate-800 rounded-lg p-6 border border-slate-200 dark:border-slate-700 hover:shadow-lg transition-all">
-              <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-4">Frameworks</h3>
-              <div className="flex flex-wrap gap-2">
-                {['React', 'Next.js', 'Tailwind CSS', 'Django'].map((framework) => (
-                  <span key={framework} className="px-3 py-1.5 rounded-md text-sm font-medium bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 border border-purple-200 dark:border-purple-700">
-                    {framework}
-                  </span>
-                ))}
+
+              {/* Item 2 */}
+              <div className="bg-white/80 dark:bg-slate-800/80 backdrop-blur-sm rounded-xl p-6 border border-purple-200 dark:border-purple-700 hover:border-purple-400 dark:hover:border-purple-500 hover:shadow-lg hover:shadow-purple-200/50 dark:hover:shadow-purple-900/30 transition-all transform hover:scale-105 text-center">
+                <div className="text-3xl mb-3">🚀</div>
+                <p className="text-base md:text-lg font-medium text-slate-800 dark:text-slate-200 leading-relaxed">
+                  Building GreenThumb and Tip Me
+                </p>
               </div>
-            </div>
-            
-            {/* Tools */}
-            <div className="bg-white dark:bg-slate-800 rounded-lg p-6 border border-slate-200 dark:border-slate-700 hover:shadow-lg transition-all">
-              <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-4">Tools</h3>
-              <div className="flex flex-wrap gap-2">
-                {['Git', 'GitHub', 'VSCode', 'Cursor'].map((tool) => (
-                  <span key={tool} className="px-3 py-1.5 rounded-md text-sm font-medium bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 border border-purple-200 dark:border-purple-700">
-                    {tool}
-                  </span>
-                ))}
-              </div>
-            </div>
-            
-            {/* Databases */}
-            <div className="bg-white dark:bg-slate-800 rounded-lg p-6 border border-slate-200 dark:border-slate-700 hover:shadow-lg transition-all">
-              <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-4">Databases</h3>
-              <div className="flex flex-wrap gap-2">
-                {['MySQL', 'PostgreSQL'].map((db) => (
-                  <span key={db} className="px-3 py-1.5 rounded-md text-sm font-medium bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 border border-purple-200 dark:border-purple-700">
-                    {db}
-                  </span>
-                ))}
+
+              {/* Item 3 */}
+              <div className="bg-white/80 dark:bg-slate-800/80 backdrop-blur-sm rounded-xl p-6 border border-purple-200 dark:border-purple-700 hover:border-purple-400 dark:hover:border-purple-500 hover:shadow-lg hover:shadow-purple-200/50 dark:hover:shadow-purple-900/30 transition-all transform hover:scale-105 text-center">
+                <div className="text-3xl mb-3">🎓</div>
+                <p className="text-base md:text-lg font-medium text-slate-800 dark:text-slate-200 leading-relaxed">
+                  Completing Bachelor of Computer Science Degree <span className="text-purple-600 dark:text-purple-400 font-semibold">(graduate May 2026)</span>
+                </p>
               </div>
             </div>
           </div>
@@ -178,69 +159,6 @@ export default function CodingPage() {
       {/* Glowing Divider */}
       <div className="relative z-10">
         <div className="max-w-6xl mx-auto px-6">
-          <div className="glow-divider" />
-        </div>
-      </div>
-
-      {/* What I'm Building Section */}
-      <section id="what-im-building" className="relative z-10 py-32 bg-slate-50/50 dark:bg-slate-900/30">
-        <div className="max-w-6xl mx-auto px-6">
-          <div className="flex items-center gap-3 mb-12">
-            <div className="w-12 h-0.5 bg-purple-600 dark:bg-purple-400" />
-            <h2 className="text-4xl md:text-5xl font-bold text-slate-900 dark:text-white">What I&apos;m Building & Learning</h2>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {/* Service Card 1 */}
-            <div className="bg-white dark:bg-slate-800 rounded-lg p-6 border border-slate-200 dark:border-slate-700 hover:border-purple-500 dark:hover:border-purple-400 hover:shadow-lg transition-all">
-              <div className="flex items-center gap-3 mb-3">
-                <span className="text-2xl">🤖</span>
-                <h3 className="text-xl font-bold text-slate-900 dark:text-white">AI-Powered Solutions</h3>
-              </div>
-              <p className="text-slate-600 dark:text-slate-300 mb-3">
-                Working on AI agents and chatbots. This is where I&apos;m most excited to learn and build.
-              </p>
-            </div>
-
-            {/* Service Card 2 */}
-            <div className="bg-white dark:bg-slate-800 rounded-lg p-6 border border-slate-200 dark:border-slate-700 hover:border-purple-500 dark:hover:border-purple-400 hover:shadow-lg transition-all">
-              <div className="flex items-center gap-3 mb-3">
-                <span className="text-2xl">🌐</span>
-                <h3 className="text-xl font-bold text-slate-900 dark:text-white">Web Applications</h3>
-              </div>
-              <p className="text-slate-600 dark:text-slate-300 mb-3">
-                Building web apps with React, Next.js, and Python. Learning as I go, building real projects. (This portfolio is one example!)
-              </p>
-            </div>
-
-            {/* Service Card 3 */}
-            <div className="bg-white dark:bg-slate-800 rounded-lg p-6 border border-slate-200 dark:border-slate-700 hover:border-purple-500 dark:hover:border-purple-400 hover:shadow-lg transition-all">
-              <div className="flex items-center gap-3 mb-3">
-                <span className="text-2xl">🔗</span>
-                <h3 className="text-xl font-bold text-slate-900 dark:text-white">Blockchain Integration</h3>
-              </div>
-              <p className="text-slate-600 dark:text-slate-300 mb-3">
-                Exploring blockchain and web3. Built hackathon projects and contributed to open-source.
-              </p>
-            </div>
-
-            {/* Service Card 4 */}
-            <div className="bg-white dark:bg-slate-800 rounded-lg p-6 border border-slate-200 dark:border-slate-700 hover:border-purple-500 dark:hover:border-purple-400 hover:shadow-lg transition-all">
-              <div className="flex items-center gap-3 mb-3">
-                <span className="text-2xl">📚</span>
-                <h3 className="text-xl font-bold text-slate-900 dark:text-white">Documentation & Guides</h3>
-              </div>
-              <p className="text-slate-600 dark:text-slate-300 mb-3">
-                Writing guides and docs to help other developers. I love making complex things understandable.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Glowing Divider */}
-      <div className="relative z-10">
-        <div className="max-w-7xl mx-auto px-6">
           <div className="glow-divider" />
         </div>
       </div>
@@ -248,48 +166,29 @@ export default function CodingPage() {
       {/* Featured Projects Section */}
       <section id="projects" className="relative z-10 py-32">
          <div className="max-w-7xl mx-auto px-6">
-          <div className="flex items-center gap-3 mb-12">
+          <div className="flex items-center justify-center gap-3 mb-12">
             <div className="w-12 h-0.5 bg-purple-600 dark:bg-purple-400" />
-            <h2 className="text-4xl md:text-5xl font-bold text-slate-900 dark:text-white">Featured Projects and Contributions</h2>
+            <h2 className="text-4xl md:text-5xl font-bold text-slate-900 dark:text-white">WIP: Projects and Contributions</h2>
+            <div className="w-12 h-0.5 bg-purple-600 dark:bg-purple-400" />
           </div>
 
           {/* Project Cards */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-            {/* Micah Ministries Project */}
-            <div className="bg-white dark:bg-slate-800 rounded-lg p-8 border border-slate-200 dark:border-slate-700 hover:border-purple-500 dark:hover:border-purple-400 hover:shadow-xl transition-all">
-              <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-4">Micah Ministries</h3>
-              <p className="text-slate-600 dark:text-slate-300 mb-4 leading-relaxed">
-                Built a complete volunteer management system for Micah Ministries as part of CPSC 450 Software Engineering. 
-                This full-stack application handles user authentication, event management, volunteer scheduling, 
-                and automated notifications.
-              </p>
-              <div className="flex flex-wrap gap-2 mb-4">
-                <span className="px-3 py-1 rounded-md text-sm font-medium bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 border border-purple-200 dark:border-purple-700">PHP</span>
-                <span className="px-3 py-1 rounded-md text-sm font-medium bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 border border-purple-200 dark:border-purple-700">MySQL</span>
-                <span className="px-3 py-1 rounded-md text-sm font-medium bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 border border-purple-200 dark:border-purple-700">JavaScript</span>
-                <span className="px-3 py-1 rounded-md text-sm font-medium bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 border border-purple-200 dark:border-purple-700">CSS</span>
-                <span className="px-3 py-1 rounded-md text-sm font-medium bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 border border-purple-200 dark:border-purple-700">HTML</span>
-              </div>
-              <a 
-                href="https://github.com/ivy864/micah-ministries" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="text-purple-600 dark:text-purple-400 hover:text-purple-700 dark:hover:text-purple-300 underline text-sm font-medium inline-flex items-center gap-1"
-              >
-                View on GitHub →
-              </a>
-            </div>
-
             {/* GreenThumb Project */}
             <div className="bg-white dark:bg-slate-800 rounded-lg p-8 border border-slate-200 dark:border-slate-700 hover:border-purple-500 dark:hover:border-purple-400 hover:shadow-xl transition-all">
               <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-4">GreenThumb</h3>
               <p className="text-slate-600 dark:text-slate-300 mb-4 leading-relaxed">
-                Built an AI-powered assistant to help with urban farming and cultivation. 
+                AI-assistant for plant care, gardening and urban farming. Powered by ElizaOS. Built as a proof of concept for the Sozu Haus Denver 2025 hackathon.
                 Designed to make sustainable farming more accessible.
               </p>
               <div className="flex flex-wrap gap-2 mb-5">
-                <span className="px-3 py-1 rounded-md text-sm font-medium bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 border border-purple-200 dark:border-purple-700">AI</span>
-                <span className="px-3 py-1 rounded-md text-sm font-medium bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 border border-purple-200 dark:border-purple-700">Python</span>
+                <span className="px-3 py-1 rounded-md text-sm font-medium bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 border border-purple-200 dark:border-purple-700">TypeScript</span>
+                <span className="px-3 py-1 rounded-md text-sm font-medium bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 border border-purple-200 dark:border-purple-700">React</span>
+                <span className="px-3 py-1 rounded-md text-sm font-medium bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 border border-purple-200 dark:border-purple-700">Vite</span>
+                <span className="px-3 py-1 rounded-md text-sm font-medium bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 border border-purple-200 dark:border-purple-700">ElizaOS</span>
+                <span className="px-3 py-1 rounded-md text-sm font-medium bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 border border-purple-200 dark:border-purple-700">Privy</span>
+                <span className="px-3 py-1 rounded-md text-sm font-medium bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 border border-purple-200 dark:border-purple-700">Web3</span>
+                <span className="px-3 py-1 rounded-md text-sm font-medium bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 border border-purple-200 dark:border-purple-700">Tailwind CSS</span>
                 <span className="px-3 py-1 rounded-md text-sm font-medium bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 border border-purple-200 dark:border-purple-700">ETH Denver 2025</span>
               </div>
               <div className="text-sm text-purple-600 dark:text-purple-400 font-medium mb-4">
@@ -305,13 +204,52 @@ export default function CodingPage() {
               </a>
             </div>
 
+            {/* Tip Me Project */}
+            <div className="bg-white dark:bg-slate-800 rounded-lg p-8 border border-slate-200 dark:border-slate-700 hover:border-purple-500 dark:hover:border-purple-400 hover:shadow-xl transition-all">
+              <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-4">Tip Me</h3>
+              <p className="text-slate-600 dark:text-slate-300 mb-4 leading-relaxed">
+                A modern, multi-chain tipping application supporting cryptocurrency and fiat payments. 
+                Enables tips via Ethereum, Solana, Bitcoin, and traditional payment methods like Cash App, Venmo, and Zelle.
+              </p>
+              <div className="flex flex-wrap gap-2 mb-4">
+                <span className="px-3 py-1 rounded-md text-sm font-medium bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 border border-purple-200 dark:border-purple-700">React</span>
+                <span className="px-3 py-1 rounded-md text-sm font-medium bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 border border-purple-200 dark:border-purple-700">TypeScript</span>
+                <span className="px-3 py-1 rounded-md text-sm font-medium bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 border border-purple-200 dark:border-purple-700">Vite</span>
+                <span className="px-3 py-1 rounded-md text-sm font-medium bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 border border-purple-200 dark:border-purple-700">Tailwind CSS</span>
+                <span className="px-3 py-1 rounded-md text-sm font-medium bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 border border-purple-200 dark:border-purple-700">Ethereum</span>
+                <span className="px-3 py-1 rounded-md text-sm font-medium bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 border border-purple-200 dark:border-purple-700">Solana</span>
+                <span className="px-3 py-1 rounded-md text-sm font-medium bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 border border-purple-200 dark:border-purple-700">Bitcoin</span>
+                <span className="px-3 py-1 rounded-md text-sm font-medium bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 border border-purple-200 dark:border-purple-700">Web3</span>
+              </div>
+              <a 
+                href="https://github.com/ileana-pr/tip-me" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-purple-600 dark:text-purple-400 hover:text-purple-700 dark:hover:text-purple-300 underline text-sm font-medium inline-flex items-center gap-1"
+              >
+                View on GitHub →
+              </a>
+            </div>
+
             {/* OpenSource Contributions */}
             <div className="bg-white dark:bg-slate-800 rounded-lg p-8 border border-slate-200 dark:border-slate-700 hover:border-purple-500 dark:hover:border-purple-400 hover:shadow-xl transition-all">
               <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-4">OpenSource Contributions</h3>
               <p className="text-slate-600 dark:text-slate-300 mb-4 leading-relaxed">
-                Contributing to open-source projects through code, documentation, and bug reporting to improve developer experiences.
+                Contributing to open-source projects through code, documentation, and bug reporting.
               </p>
               <div className="space-y-2 mb-4">
+                <div className="text-sm">
+                  <span className="text-slate-900 dark:text-white font-medium">Decentraland Godot Explorer</span>
+                  <span className="text-slate-500 dark:text-slate-400"> - Bug reports and issue tracking</span>
+                  <a 
+                    href="https://github.com/decentraland/godot-explorer/issues?q=is%3Aissue%20type%3ABug%20author%3A%40me" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="text-purple-600 dark:text-purple-400 hover:text-purple-700 dark:hover:text-purple-300 underline ml-2 whitespace-nowrap inline-block"
+                  >
+                    View issues →
+                  </a>
+                </div>
                 <div className="text-sm">
                   <span className="text-slate-900 dark:text-white font-medium">Plugin Documentation</span>
                   <span className="text-slate-500 dark:text-slate-400"> - Added README files to 41 plugins</span>
@@ -348,24 +286,15 @@ export default function CodingPage() {
                     View commit →
                   </a>
                 </div>
-                <div className="text-sm">
-                  <span className="text-slate-900 dark:text-white font-medium">Decentraland Godot Explorer</span>
-                  <span className="text-slate-500 dark:text-slate-400"> - Bug reports and issue tracking</span>
-                  <a 
-                    href="https://github.com/decentraland/godot-explorer/issues?q=is%3Aissue%20type%3ABug%20author%3A%40me" 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="text-purple-600 dark:text-purple-400 hover:text-purple-700 dark:hover:text-purple-300 underline ml-2 whitespace-nowrap inline-block"
-                  >
-                    View issues →
-                  </a>
-                </div>
               </div>
               <div className="flex flex-wrap gap-2">
-                <span className="px-3 py-1 rounded-md text-sm font-medium bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 border border-purple-200 dark:border-purple-700">Open Source</span>
-                <span className="px-3 py-1 rounded-md text-sm font-medium bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 border border-purple-200 dark:border-purple-700">Documentation</span>
-                <span className="px-3 py-1 rounded-md text-sm font-medium bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 border border-purple-200 dark:border-purple-700">ElizaOS</span>
-                <span className="px-3 py-1 rounded-md text-sm font-medium bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 border border-purple-200 dark:border-purple-700">Decentraland</span>
+                <span className="px-3 py-1 rounded-md text-sm font-medium bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 border border-purple-200 dark:border-purple-700">Python</span>
+                <span className="px-3 py-1 rounded-md text-sm font-medium bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 border border-purple-200 dark:border-purple-700">TypeScript</span>
+                <span className="px-3 py-1 rounded-md text-sm font-medium bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 border border-purple-200 dark:border-purple-700">React</span>
+                <span className="px-3 py-1 rounded-md text-sm font-medium bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 border border-purple-200 dark:border-purple-700">Express.js</span>
+                <span className="px-3 py-1 rounded-md text-sm font-medium bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 border border-purple-200 dark:border-purple-700">PostgreSQL</span>
+                <span className="px-3 py-1 rounded-md text-sm font-medium bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 border border-purple-200 dark:border-purple-700">Godot</span>
+                <span className="px-3 py-1 rounded-md text-sm font-medium bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 border border-purple-200 dark:border-purple-700">GDScript</span>
               </div>
             </div>
 
@@ -447,6 +376,8 @@ export default function CodingPage() {
                 View repository on GitHub →
               </a>
             </div>
+
+            
           </div>
         </div>
       </section>
@@ -461,9 +392,10 @@ export default function CodingPage() {
       {/* Contact Section */}
       <section id="contact" className="relative z-10 py-32 bg-slate-50/50 dark:bg-slate-900/30">
         <div className="max-w-6xl mx-auto px-6">
-          <div className="flex items-center gap-3 mb-12">
+          <div className="flex items-center justify-center gap-3 mb-12">
             <div className="w-12 h-0.5 bg-purple-600 dark:bg-purple-400" />
             <h2 className="text-4xl md:text-5xl font-bold text-slate-900 dark:text-white">Let&apos;s Connect</h2>
+            <div className="w-12 h-0.5 bg-purple-600 dark:bg-purple-400" />
           </div>
 
           {/* Availability Status */}
@@ -474,15 +406,6 @@ export default function CodingPage() {
             </div>
           </div>
 
-          {/* Call to Action */}
-          <div className="mb-8 text-center">
-            <p className="text-xl text-slate-700 dark:text-slate-200 mb-2 font-medium">
-              Ready to build something together?
-            </p>
-            <p className="text-lg text-slate-600 dark:text-slate-300">
-              Let&apos;s talk about your project!
-            </p>
-          </div>
           
           {/* Action Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
@@ -574,7 +497,7 @@ export default function CodingPage() {
       {/* Footer */}
       <footer className="relative z-10 py-8 px-4 sm:px-6 lg:px-8 border-t border-slate-200 dark:border-slate-700">
         <div className="max-w-6xl mx-auto text-center text-slate-600 dark:text-slate-400">
-          <p>&copy; 2025 Ileana Perez. Built by me.</p>
+          <p>&copy; 2025 Ileana Perez. Built by me. <span className="text-purple-600 dark:text-purple-400">💜</span></p>
         </div>
       </footer>
       
