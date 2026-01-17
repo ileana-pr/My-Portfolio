@@ -303,7 +303,7 @@ export default function CodingPage() {
               <h3 className="text-2xl font-bold bg-gradient-to-r from-purple-600 to-indigo-600 dark:from-purple-400 dark:to-indigo-400 bg-clip-text text-transparent mb-4">Game Programming Collection</h3>
               <p className="text-slate-600 dark:text-slate-300 mb-4 leading-relaxed">
                 Built a collection of interactive games in C, exploring game mechanics, graphics programming, 
-                and user interaction. Each game demonstrates different programming concepts and game design principles.
+                and user interaction. 
               </p>
               <div className="space-y-2 mb-4">
                 <div className="text-sm">

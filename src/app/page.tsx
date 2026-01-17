@@ -1,12 +1,19 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import { useRouter } from 'next/navigation';
 import Link from 'next/link';
 import Image from 'next/image';
 
 export default function Home() {
+  const router = useRouter();
   const [isDarkMode, setIsDarkMode] = useState(true);
   const [mounted, setMounted] = useState(false);
+
+  // redirect to coding page
+  useEffect(() => {
+    router.push('/coding');
+  }, [router]);
 
   // load theme from localStorage on mount
   useEffect(() => {
@@ -115,11 +122,11 @@ export default function Home() {
             </Link>
 
             {/* Content Creation Button */}
-            <button
+            {/* <button
               className="block w-full bg-white dark:bg-slate-800 hover:bg-slate-50 dark:hover:bg-slate-700 border border-slate-200 dark:border-slate-700 text-slate-900 dark:text-white px-6 py-4 rounded-lg font-medium transition-all hover:shadow-lg"
             >
               Content Creation
-            </button>
+            </button> */}
 
             {/* Photography Button - Coming Soon */}
             {/* <button
