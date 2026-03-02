@@ -118,6 +118,68 @@ export default function CodingPage() {
         </div>
       </div>
 
+      {/* About Me Section */}
+      <section className="relative z-10 py-32">
+        <div className="max-w-6xl mx-auto px-6">
+          <div className="flex items-center justify-center gap-3 mb-16">
+            <div className="w-12 h-0.5 bg-purple-600 dark:bg-purple-400" />
+            <h2 className="text-4xl md:text-5xl font-extrabold bg-gradient-to-r from-purple-600 via-indigo-600 to-purple-600 dark:from-purple-400 dark:via-indigo-400 dark:to-purple-400 bg-clip-text text-transparent drop-shadow-lg tracking-tight">
+              About Me
+            </h2>
+            <div className="w-12 h-0.5 bg-purple-600 dark:bg-purple-400" />
+          </div>
+
+          <div className="max-w-4xl mx-auto space-y-10">
+            {/* Intro */}
+            <div className="bg-white/80 dark:bg-slate-800/80 backdrop-blur-sm rounded-xl p-6 border border-purple-200 dark:border-purple-700 hover:border-purple-400 dark:hover:border-purple-500 transition-all">
+              <h3 className="text-lg font-semibold text-purple-600 dark:text-purple-400 mb-3">Intro</h3>
+              <p className="text-slate-700 dark:text-slate-300 leading-relaxed">
+                {/* add your intro text here */}
+              </p>
+            </div>
+
+            {/* Interests and current obsessions */}
+            <div className="bg-white/80 dark:bg-slate-800/80 backdrop-blur-sm rounded-xl p-6 border border-purple-200 dark:border-purple-700 hover:border-purple-400 dark:hover:border-purple-500 transition-all">
+              <h3 className="text-lg font-semibold text-purple-600 dark:text-purple-400 mb-3">Interests and current obsessions</h3>
+              <p className="text-slate-700 dark:text-slate-300 leading-relaxed">
+                {/* add your interests here */}
+              </p>
+            </div>
+
+            {/* Current roles and active memberships */}
+            <div className="bg-white/80 dark:bg-slate-800/80 backdrop-blur-sm rounded-xl p-6 border border-purple-200 dark:border-purple-700 hover:border-purple-400 dark:hover:border-purple-500 transition-all">
+              <h3 className="text-lg font-semibold text-purple-600 dark:text-purple-400 mb-3">Current roles and active memberships (where you might find me)</h3>
+              <p className="text-slate-700 dark:text-slate-300 leading-relaxed">
+                {/* add your roles and memberships here */}
+              </p>
+            </div>
+
+            {/* Previously */}
+            <div className="bg-white/80 dark:bg-slate-800/80 backdrop-blur-sm rounded-xl p-6 border border-purple-200 dark:border-purple-700 hover:border-purple-400 dark:hover:border-purple-500 transition-all">
+              <h3 className="text-lg font-semibold text-purple-600 dark:text-purple-400 mb-3">Previously</h3>
+              <p className="text-slate-700 dark:text-slate-300 leading-relaxed">
+                {/* add your previous experience here */}
+              </p>
+            </div>
+
+            {/* My ask */}
+            <div className="bg-white/80 dark:bg-slate-800/80 backdrop-blur-sm rounded-xl p-6 border border-purple-200 dark:border-purple-700 hover:border-purple-400 dark:hover:border-purple-500 transition-all">
+              <h3 className="text-lg font-semibold text-purple-600 dark:text-purple-400 mb-3">My ask: currently looking for...</h3>
+              <p className="text-slate-700 dark:text-slate-300 leading-relaxed">
+                {/* add what you're looking for here */}
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Glowing Divider */}
+      <div className="relative z-10">
+        <div className="max-w-6xl mx-auto px-6">
+          <div className="glow-divider" />
+        </div>
+      </div>
+
       {/* Right Now Section */}
       <section className="relative z-10 py-32">
         <div className="max-w-6xl mx-auto px-6">
