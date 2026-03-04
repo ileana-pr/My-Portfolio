@@ -77,8 +77,8 @@ export default function CodingPage() {
         </div>
       </nav>
 
-      {/* Hero Section - Full Viewport */}
-      <div className="relative z-10 min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8">
+      {/* Hero Section */}
+      <div className="relative z-10 pt-24 sm:pt-32 pb-6 sm:pb-2 flex items-center justify-center px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           
           {/* Value proposition */}
@@ -89,28 +89,12 @@ export default function CodingPage() {
             </h1>
           </div>
           <p className="text-xl md:text-2xl mb-8 text-slate-700 dark:text-slate-200">
-            My name is Ileana, and I&apos;m a recent CS grad building full-stack web apps and AI projects
+            My name is Tati, and I&apos;m a digital builder.  
           </p>
          
-
-          {/* CTA buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <a
-              href="#contact"
-              className="px-8 py-4 bg-white dark:bg-slate-800 text-purple-600 dark:text-purple-400 font-bold rounded-lg hover:bg-purple-50 dark:hover:bg-purple-900/20 transition-all shadow-lg hover:shadow-xl transform hover:scale-105"
-            >
-              Let&apos;s Build Something
-            </a>
-            <a
-              href="#projects"
-              className="px-8 py-4 bg-transparent border-2 border-purple-600 dark:border-purple-400 text-purple-600 dark:text-purple-300 font-bold rounded-lg hover:bg-purple-50 dark:hover:bg-purple-900/20 transition-all"
-            >
-              View My Work
-            </a>
-          </div>
         </div>
       </div>
-      
+
       {/* Glowing Divider */}
       <div className="relative z-10">
         <div className="max-w-6xl mx-auto px-6">
@@ -119,37 +103,34 @@ export default function CodingPage() {
       </div>
 
       {/* About Me Section */}
-      <section className="relative z-10 py-32">
+      <section className="relative z-10 py-18">
         <div className="max-w-6xl mx-auto px-6">
-          <div className="flex items-center justify-center gap-3 mb-16">
-            <div className="w-12 h-0.5 bg-purple-600 dark:bg-purple-400" />
-            <h2 className="text-4xl md:text-5xl font-extrabold bg-gradient-to-r from-purple-600 via-indigo-600 to-purple-600 dark:from-purple-400 dark:via-indigo-400 dark:to-purple-400 bg-clip-text text-transparent drop-shadow-lg tracking-tight">
-              About Me
-            </h2>
-            <div className="w-12 h-0.5 bg-purple-600 dark:bg-purple-400" />
-          </div>
-
+         
           <div className="max-w-4xl mx-auto">
             <div className="bg-white/80 dark:bg-slate-800/80 backdrop-blur-sm rounded-xl p-8 border border-purple-200 dark:border-purple-700 hover:border-purple-400 dark:hover:border-purple-500 transition-all">
               <div className="space-y-6">
                 <div>
                   <h3 className="text-lg font-semibold text-purple-600 dark:text-purple-400 mb-2">👋 Intro</h3>
                   <p className="text-slate-700 dark:text-slate-300 leading-relaxed">
-                    Digital builder, content creator, 3D maker, plant advocate, passionate about building for antifragility and mainstream web3. 
+                    Currently finishing my Bachelor of Computer Science at the University of Mary Washington and looking for a role as a full-stack engineer or developer advocate. 
                   </p>
                 </div>
                 <div>
                   <h3 className="text-lg font-semibold text-purple-600 dark:text-purple-400 mb-2">✨ Interests and current obsessions</h3>
                   <ul className="text-slate-700 dark:text-slate-300 leading-relaxed space-y-2 list-disc pl-6">
-                    <li>Decentralized protocols, AI for good, greentech and spatial computing</li>
-                    <li>Antifragile systems, regenerative and urban farming</li>
+                    <li>Decentralized protocols</li>
+                    <li>AI agents</li>
+                    <li>Spatial computing</li>
+                    <li>Antifragile systems</li>
+                    <li>Regenerative and urban farming</li>
                     <li>Food, travel, culture</li>
                   </ul>
                 </div>
                 <div>
                   <h3 className="text-lg font-semibold text-purple-600 dark:text-purple-400 mb-2">📍 Where You Might Find Me</h3>
                   <ul className="text-slate-700 dark:text-slate-300 leading-relaxed space-y-2 list-disc pl-6">
-                    <li><span className="font-medium text-slate-800 dark:text-slate-200">PizzaDAO Tech Crew</span> — building DAO infrastructure and bringing the pizza industry on chain</li>
+                  <li><span className="font-medium text-slate-800 dark:text-slate-200">Core Contributor @VDAO</span> — building antifragile food systems, cities and education for the future of humanity </li>
+                    <li><span className="font-medium text-slate-800 dark:text-slate-200">PizzaDAO Tech Crew</span> — building DAO infrastructure and making digital pizza art</li>
                     <li><span className="font-medium text-slate-800 dark:text-slate-200">Ambassador @_HerDAO</span> — automating community management workflows</li>
                     <li><span className="font-medium text-slate-800 dark:text-slate-200">Hacking the World</span> — traveling to hackathons and building with likeminded people</li>
                   </ul>
