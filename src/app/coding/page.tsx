@@ -129,45 +129,50 @@ export default function CodingPage() {
             <div className="w-12 h-0.5 bg-purple-600 dark:bg-purple-400" />
           </div>
 
-          <div className="max-w-4xl mx-auto space-y-10">
-            {/* Intro */}
-            <div className="bg-white/80 dark:bg-slate-800/80 backdrop-blur-sm rounded-xl p-6 border border-purple-200 dark:border-purple-700 hover:border-purple-400 dark:hover:border-purple-500 transition-all">
-              <h3 className="text-lg font-semibold text-purple-600 dark:text-purple-400 mb-3">Intro</h3>
-              <p className="text-slate-700 dark:text-slate-300 leading-relaxed">
-                {/* add your intro text here */}
-              </p>
-            </div>
-
-            {/* Interests and current obsessions */}
-            <div className="bg-white/80 dark:bg-slate-800/80 backdrop-blur-sm rounded-xl p-6 border border-purple-200 dark:border-purple-700 hover:border-purple-400 dark:hover:border-purple-500 transition-all">
-              <h3 className="text-lg font-semibold text-purple-600 dark:text-purple-400 mb-3">Interests and current obsessions</h3>
-              <p className="text-slate-700 dark:text-slate-300 leading-relaxed">
-                {/* add your interests here */}
-              </p>
-            </div>
-
-            {/* Current roles and active memberships */}
-            <div className="bg-white/80 dark:bg-slate-800/80 backdrop-blur-sm rounded-xl p-6 border border-purple-200 dark:border-purple-700 hover:border-purple-400 dark:hover:border-purple-500 transition-all">
-              <h3 className="text-lg font-semibold text-purple-600 dark:text-purple-400 mb-3">Current roles and active memberships (where you might find me)</h3>
-              <p className="text-slate-700 dark:text-slate-300 leading-relaxed">
-                {/* add your roles and memberships here */}
-              </p>
-            </div>
-
-            {/* Previously */}
-            <div className="bg-white/80 dark:bg-slate-800/80 backdrop-blur-sm rounded-xl p-6 border border-purple-200 dark:border-purple-700 hover:border-purple-400 dark:hover:border-purple-500 transition-all">
-              <h3 className="text-lg font-semibold text-purple-600 dark:text-purple-400 mb-3">Previously</h3>
-              <p className="text-slate-700 dark:text-slate-300 leading-relaxed">
-                {/* add your previous experience here */}
-              </p>
-            </div>
-
-            {/* My ask */}
-            <div className="bg-white/80 dark:bg-slate-800/80 backdrop-blur-sm rounded-xl p-6 border border-purple-200 dark:border-purple-700 hover:border-purple-400 dark:hover:border-purple-500 transition-all">
-              <h3 className="text-lg font-semibold text-purple-600 dark:text-purple-400 mb-3">My ask: currently looking for...</h3>
-              <p className="text-slate-700 dark:text-slate-300 leading-relaxed">
-                {/* add what you're looking for here */}
-              </p>
+          <div className="max-w-4xl mx-auto">
+            <div className="bg-white/80 dark:bg-slate-800/80 backdrop-blur-sm rounded-xl p-8 border border-purple-200 dark:border-purple-700 hover:border-purple-400 dark:hover:border-purple-500 transition-all">
+              <div className="space-y-6">
+                <div>
+                  <h3 className="text-lg font-semibold text-purple-600 dark:text-purple-400 mb-2">Intro</h3>
+                  <p className="text-slate-700 dark:text-slate-300 leading-relaxed">
+                    Digital builder, content creator, 3D maker, plant advocate, passionate about building for antifragility and mainstream web3. I&apos;m currently working on a project called GreenThumb, an AI-powered urban farming assistant. 
+                  </p>
+                </div>
+                <div>
+                  <h3 className="text-lg font-semibold text-purple-600 dark:text-purple-400 mb-2">Interests and current obsessions</h3>
+                  <p className="text-slate-700 dark:text-slate-300 leading-relaxed">
+                    I live at the intersection of tech, people, and planet.
+                  </p>
+                </div>
+                <div>
+                  <h3 className="text-lg font-semibold text-purple-600 dark:text-purple-400 mb-2">Where You Might Find Me</h3>
+                  <ul className="text-slate-700 dark:text-slate-300 leading-relaxed space-y-2">
+                    <li><span className="font-medium text-slate-800 dark:text-slate-200">PizzaDAO Tech Crew</span> — building DAO infrastructure and bringing the pizza industry on chain</li>
+                    <li><span className="font-medium text-slate-800 dark:text-slate-200">Ambassador @_HerDAO</span> — automating community management workflows</li>
+                    <li><span className="font-medium text-slate-800 dark:text-slate-200">Hacking the World</span> — traveling to hackathons and building with likeminded people</li>
+                  </ul>
+                </div>
+                <div>
+                  <h3 className="text-lg font-semibold text-purple-600 dark:text-purple-400 mb-2">Previously</h3>
+                  <ul className="text-slate-700 dark:text-slate-300 leading-relaxed space-y-2">
+                    
+                    <li><span className="font-medium text-slate-800 dark:text-slate-200">Based Hackerhouse Denver 2026</span> — 2nd place in Monad Blitz & PizzaDAO hackathon</li>
+                    <li><span className="font-medium text-slate-800 dark:text-slate-200">Hacker @SozuHaus Denver 2025</span> — Top 10 in AI community track</li>
+                    <li><span className="font-medium text-slate-800 dark:text-slate-200">Pop-up city @OzCity Cannes 2025</span> — and hopping from one @ETHGlobal hackathon to the next</li>
+                    <li><span className="font-medium text-slate-800 dark:text-slate-200">SheFi Scholar</span> — Cohort 11</li>
+                    <li><span className="font-medium text-slate-800 dark:text-slate-200">University of Mary Washington</span> — Bachelor of Computer Science</li>
+                    <li><span className="font-medium text-slate-800 dark:text-slate-200">Chi Beta Phi</span> — National STEM Honorary</li>
+                    <li><span className="font-medium text-slate-800 dark:text-slate-200">Phi Eta Sigma</span> — National Honor Society</li>
+                    
+                  </ul>
+                </div>
+                <div>
+                  <h3 className="text-lg font-semibold text-purple-600 dark:text-purple-400 mb-2">My Ask</h3>
+                  <ul className="text-slate-700 dark:text-slate-300 leading-relaxed space-y-2">
+                    <li><span className="font-medium text-slate-800 dark:text-slate-200">Opportunity to work on a project that aligns with my values and interests</span> — I&apos;m looking for a role that allows me to grow and learn, and that challenges me to think creatively</li>
+                  </ul>
+                </div>
+              </div>
             </div>
           </div>
         </div>
