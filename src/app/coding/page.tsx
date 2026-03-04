@@ -110,7 +110,7 @@ export default function CodingPage() {
             <div className="bg-white/80 dark:bg-slate-800/80 backdrop-blur-sm rounded-xl p-8 border border-purple-200 dark:border-purple-700 hover:border-purple-400 dark:hover:border-purple-500 transition-all">
               <div className="space-y-6">
                 <div>
-                  <h3 className="text-lg font-semibold text-purple-600 dark:text-purple-400 mb-2">👋 Intro</h3>
+                  <h3 className="text-lg font-semibold text-purple-600 dark:text-purple-400 mb-2">🛠️ Intro</h3>
                   <p className="text-slate-700 dark:text-slate-300 leading-relaxed">
                     Currently finishing my Bachelor of Computer Science at the University of Mary Washington and looking for a role as a full-stack engineer or developer advocate. 
                   </p>
@@ -129,23 +129,24 @@ export default function CodingPage() {
                 <div>
                   <h3 className="text-lg font-semibold text-purple-600 dark:text-purple-400 mb-2">📍 Where You Might Find Me</h3>
                   <ul className="text-slate-700 dark:text-slate-300 leading-relaxed space-y-2 list-disc pl-6">
-                  <li><span className="font-medium text-slate-800 dark:text-slate-200">Core Contributor @VDAO</span> — building antifragile food systems, cities and education for the future of humanity </li>
-                    <li><span className="font-medium text-slate-800 dark:text-slate-200">PizzaDAO Tech Crew</span> — building DAO infrastructure and making digital pizza art</li>
-                    <li><span className="font-medium text-slate-800 dark:text-slate-200">Ambassador @_HerDAO</span> — automating community management workflows</li>
-                    <li><span className="font-medium text-slate-800 dark:text-slate-200">Hacking the World</span> — traveling to hackathons and building with likeminded people</li>
+                  
+                    <li><span className="font-medium text-slate-800 dark:text-slate-200">Core Contributor @VDAO</span></li>
+                    <li><span className="font-medium text-slate-800 dark:text-slate-200">Tech Crew @PizzaDAO</span></li>
+                    <li><span className="font-medium text-slate-800 dark:text-slate-200">Ambassador @HerDAO</span></li>
+                   
                   </ul>
                 </div>
                 <div>
                   <h3 className="text-lg font-semibold text-purple-600 dark:text-purple-400 mb-2">📜 Previously</h3>
                   <ul className="text-slate-700 dark:text-slate-300 leading-relaxed space-y-2 list-disc pl-6">
-                    
+                    <li><span className="font-medium text-slate-800 dark:text-slate-200">Internship: Quality Assurance Engineer @Regenesis Labs</span></li>
                     <li><span className="font-medium text-slate-800 dark:text-slate-200">Based Hackerhouse Denver 2026</span> — 2nd place in Monad Blitz & PizzaDAO hackathon</li>
-                    <li><span className="font-medium text-slate-800 dark:text-slate-200">Hacker @SozuHaus Denver 2025</span> — Top 10 in AI community track</li>
+                    <li><span className="font-medium text-slate-800 dark:text-slate-200">SozuHaus Denver 2025</span> — Top 10 in AI community track</li>
                     <li><span className="font-medium text-slate-800 dark:text-slate-200">Pop-up city @OzCity</span> — ETHGlobal Cannes 2025</li>
-                    <li><span className="font-medium text-slate-800 dark:text-slate-200">SheFi Scholar</span> — Cohort 11</li>
-                    <li><span className="font-medium text-slate-800 dark:text-slate-200">University of Mary Washington</span> — Bachelor of Computer Science</li>
-                    <li><span className="font-medium text-slate-800 dark:text-slate-200">Chi Beta Phi</span> — National STEM Honorary</li>
-                    <li><span className="font-medium text-slate-800 dark:text-slate-200">Phi Eta Sigma</span> — National Honor Society</li>
+                    <li><span className="font-medium text-slate-800 dark:text-slate-200">Alumni @SheFi</span></li>
+                    
+                    <li><span className="font-medium text-slate-800 dark:text-slate-200">Member @Chi Beta Phi</span>, <span className="font-medium text-slate-800 dark:text-slate-200">Phi Eta Sigma</span></li>
+                    
                     
                   </ul>
                 </div>
@@ -171,7 +172,7 @@ export default function CodingPage() {
       </div>
 
       {/* Featured Projects Section */}
-      <section id="projects" className="relative z-10 py-32">
+      <section id="projects" className="relative z-10 py-18">
          <div className="max-w-7xl mx-auto px-6">
           <div className="flex items-center justify-center gap-3 mb-12">
             <div className="w-12 h-0.5 bg-purple-600 dark:bg-purple-400" />
