@@ -135,18 +135,20 @@ export default function CodingPage() {
                 <div>
                   <h3 className="text-lg font-semibold text-purple-600 dark:text-purple-400 mb-2">👋 Intro</h3>
                   <p className="text-slate-700 dark:text-slate-300 leading-relaxed">
-                    Digital builder, content creator, 3D maker, plant advocate, passionate about building for antifragility and mainstream web3. I&apos;m currently working on a project called GreenThumb, an AI-powered urban farming assistant. 
+                    Digital builder, content creator, 3D maker, plant advocate, passionate about building for antifragility and mainstream web3. 
                   </p>
                 </div>
                 <div>
                   <h3 className="text-lg font-semibold text-purple-600 dark:text-purple-400 mb-2">✨ Interests and current obsessions</h3>
-                  <p className="text-slate-700 dark:text-slate-300 leading-relaxed">
-                    I live at the intersection of tech, people, and planet.
-                  </p>
+                  <ul className="text-slate-700 dark:text-slate-300 leading-relaxed space-y-2 list-disc pl-6">
+                    <li>Decentralized protocols, AI for good, greentech and spatial computing</li>
+                    <li>Antifragile systems, regenerative and urban farming</li>
+                    <li>Food, travel, culture</li>
+                  </ul>
                 </div>
                 <div>
                   <h3 className="text-lg font-semibold text-purple-600 dark:text-purple-400 mb-2">📍 Where You Might Find Me</h3>
-                  <ul className="text-slate-700 dark:text-slate-300 leading-relaxed space-y-2">
+                  <ul className="text-slate-700 dark:text-slate-300 leading-relaxed space-y-2 list-disc pl-6">
                     <li><span className="font-medium text-slate-800 dark:text-slate-200">PizzaDAO Tech Crew</span> — building DAO infrastructure and bringing the pizza industry on chain</li>
                     <li><span className="font-medium text-slate-800 dark:text-slate-200">Ambassador @_HerDAO</span> — automating community management workflows</li>
                     <li><span className="font-medium text-slate-800 dark:text-slate-200">Hacking the World</span> — traveling to hackathons and building with likeminded people</li>
@@ -154,11 +156,11 @@ export default function CodingPage() {
                 </div>
                 <div>
                   <h3 className="text-lg font-semibold text-purple-600 dark:text-purple-400 mb-2">📜 Previously</h3>
-                  <ul className="text-slate-700 dark:text-slate-300 leading-relaxed space-y-2">
+                  <ul className="text-slate-700 dark:text-slate-300 leading-relaxed space-y-2 list-disc pl-6">
                     
                     <li><span className="font-medium text-slate-800 dark:text-slate-200">Based Hackerhouse Denver 2026</span> — 2nd place in Monad Blitz & PizzaDAO hackathon</li>
                     <li><span className="font-medium text-slate-800 dark:text-slate-200">Hacker @SozuHaus Denver 2025</span> — Top 10 in AI community track</li>
-                    <li><span className="font-medium text-slate-800 dark:text-slate-200">Pop-up city @OzCity Cannes 2025</span> — and hopping from one @ETHGlobal hackathon to the next</li>
+                    <li><span className="font-medium text-slate-800 dark:text-slate-200">Pop-up city @OzCity</span> — ETHGlobal Cannes 2025</li>
                     <li><span className="font-medium text-slate-800 dark:text-slate-200">SheFi Scholar</span> — Cohort 11</li>
                     <li><span className="font-medium text-slate-800 dark:text-slate-200">University of Mary Washington</span> — Bachelor of Computer Science</li>
                     <li><span className="font-medium text-slate-800 dark:text-slate-200">Chi Beta Phi</span> — National STEM Honorary</li>
@@ -168,8 +170,10 @@ export default function CodingPage() {
                 </div>
                 <div>
                   <h3 className="text-lg font-semibold text-purple-600 dark:text-purple-400 mb-2">💼 My Ask</h3>
-                  <ul className="text-slate-700 dark:text-slate-300 leading-relaxed space-y-2">
-                    <li><span className="font-medium text-slate-800 dark:text-slate-200">Opportunity to work on a project that aligns with my values and interests</span> — I&apos;m looking for a role that allows me to grow and learn, and that challenges me to think creatively</li>
+                  <ul className="text-slate-700 dark:text-slate-300 leading-relaxed space-y-2 list-disc pl-6">
+                    <li>Get introduced to grant opportunities or sponsors backing female builders/founders</li>
+                    <li>Gain experience at a decentralized protocol startup or company</li>
+                    <li>Connect with other founders and builders interested in AI for common good</li>
                   </ul>
                 </div>
               </div>
