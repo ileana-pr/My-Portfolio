@@ -133,19 +133,19 @@ export default function CodingPage() {
             <div className="bg-white/80 dark:bg-slate-800/80 backdrop-blur-sm rounded-xl p-8 border border-purple-200 dark:border-purple-700 hover:border-purple-400 dark:hover:border-purple-500 transition-all">
               <div className="space-y-6">
                 <div>
-                  <h3 className="text-lg font-semibold text-purple-600 dark:text-purple-400 mb-2">Intro</h3>
+                  <h3 className="text-lg font-semibold text-purple-600 dark:text-purple-400 mb-2">👋 Intro</h3>
                   <p className="text-slate-700 dark:text-slate-300 leading-relaxed">
                     Digital builder, content creator, 3D maker, plant advocate, passionate about building for antifragility and mainstream web3. I&apos;m currently working on a project called GreenThumb, an AI-powered urban farming assistant. 
                   </p>
                 </div>
                 <div>
-                  <h3 className="text-lg font-semibold text-purple-600 dark:text-purple-400 mb-2">Interests and current obsessions</h3>
+                  <h3 className="text-lg font-semibold text-purple-600 dark:text-purple-400 mb-2">✨ Interests and current obsessions</h3>
                   <p className="text-slate-700 dark:text-slate-300 leading-relaxed">
                     I live at the intersection of tech, people, and planet.
                   </p>
                 </div>
                 <div>
-                  <h3 className="text-lg font-semibold text-purple-600 dark:text-purple-400 mb-2">Where You Might Find Me</h3>
+                  <h3 className="text-lg font-semibold text-purple-600 dark:text-purple-400 mb-2">📍 Where You Might Find Me</h3>
                   <ul className="text-slate-700 dark:text-slate-300 leading-relaxed space-y-2">
                     <li><span className="font-medium text-slate-800 dark:text-slate-200">PizzaDAO Tech Crew</span> — building DAO infrastructure and bringing the pizza industry on chain</li>
                     <li><span className="font-medium text-slate-800 dark:text-slate-200">Ambassador @_HerDAO</span> — automating community management workflows</li>
@@ -153,7 +153,7 @@ export default function CodingPage() {
                   </ul>
                 </div>
                 <div>
-                  <h3 className="text-lg font-semibold text-purple-600 dark:text-purple-400 mb-2">Previously</h3>
+                  <h3 className="text-lg font-semibold text-purple-600 dark:text-purple-400 mb-2">📜 Previously</h3>
                   <ul className="text-slate-700 dark:text-slate-300 leading-relaxed space-y-2">
                     
                     <li><span className="font-medium text-slate-800 dark:text-slate-200">Based Hackerhouse Denver 2026</span> — 2nd place in Monad Blitz & PizzaDAO hackathon</li>
@@ -167,59 +167,11 @@ export default function CodingPage() {
                   </ul>
                 </div>
                 <div>
-                  <h3 className="text-lg font-semibold text-purple-600 dark:text-purple-400 mb-2">My Ask</h3>
+                  <h3 className="text-lg font-semibold text-purple-600 dark:text-purple-400 mb-2">💼 My Ask</h3>
                   <ul className="text-slate-700 dark:text-slate-300 leading-relaxed space-y-2">
                     <li><span className="font-medium text-slate-800 dark:text-slate-200">Opportunity to work on a project that aligns with my values and interests</span> — I&apos;m looking for a role that allows me to grow and learn, and that challenges me to think creatively</li>
                   </ul>
                 </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Glowing Divider */}
-      <div className="relative z-10">
-        <div className="max-w-6xl mx-auto px-6">
-          <div className="glow-divider" />
-        </div>
-      </div>
-
-      {/* Right Now Section */}
-      <section className="relative z-10 py-32">
-        <div className="max-w-6xl mx-auto px-6">
-          <div className="flex items-center justify-center gap-3 mb-16">
-            <div className="w-12 h-0.5 bg-purple-600 dark:bg-purple-400" />
-            <h2 className="text-4xl md:text-5xl font-extrabold bg-gradient-to-r from-purple-600 via-indigo-600 to-purple-600 dark:from-purple-400 dark:via-indigo-400 dark:to-purple-400 bg-clip-text text-transparent drop-shadow-lg tracking-tight">
-              Right Now
-            </h2>
-            <div className="w-12 h-0.5 bg-purple-600 dark:bg-purple-400" />
-          </div>
-
-          <div className="max-w-4xl mx-auto">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              {/* Item 1 */}
-              <div className="bg-white/80 dark:bg-slate-800/80 backdrop-blur-sm rounded-xl p-6 border border-purple-200 dark:border-purple-700 hover:border-purple-400 dark:hover:border-purple-500 hover:shadow-lg hover:shadow-purple-200/50 dark:hover:shadow-purple-900/30 transition-all transform hover:scale-105 text-center">
-                <div className="text-3xl mb-3">🌐</div>
-                <p className="text-base md:text-lg font-medium text-slate-800 dark:text-slate-200 leading-relaxed">
-                  Contributing to open source AI and metaverse projects
-                </p>
-              </div>
-
-              {/* Item 2 */}
-              <div className="bg-white/80 dark:bg-slate-800/80 backdrop-blur-sm rounded-xl p-6 border border-purple-200 dark:border-purple-700 hover:border-purple-400 dark:hover:border-purple-500 hover:shadow-lg hover:shadow-purple-200/50 dark:hover:shadow-purple-900/30 transition-all transform hover:scale-105 text-center">
-                <div className="text-3xl mb-3">🚀</div>
-                <p className="text-base md:text-lg font-medium text-slate-800 dark:text-slate-200 leading-relaxed">
-                  Building GreenThumb and Tip Me
-                </p>
-              </div>
-
-              {/* Item 3 */}
-              <div className="bg-white/80 dark:bg-slate-800/80 backdrop-blur-sm rounded-xl p-6 border border-purple-200 dark:border-purple-700 hover:border-purple-400 dark:hover:border-purple-500 hover:shadow-lg hover:shadow-purple-200/50 dark:hover:shadow-purple-900/30 transition-all transform hover:scale-105 text-center">
-                <div className="text-3xl mb-3">🎓</div>
-                <p className="text-base md:text-lg font-medium text-slate-800 dark:text-slate-200 leading-relaxed">
-                  Completing Bachelor of Computer Science Degree <span className="text-purple-600 dark:text-purple-400 font-semibold">(graduate May 2026)</span>
-                </p>
               </div>
             </div>
           </div>
