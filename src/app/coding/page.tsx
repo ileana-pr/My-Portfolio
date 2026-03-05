@@ -129,7 +129,7 @@ export default function CodingPage() {
                 <div>
                   <h3 className="text-lg font-semibold text-purple-600 dark:text-purple-400 mb-2">📍 Where You Might Find Me</h3>
                   <ul className="text-slate-700 dark:text-slate-300 leading-relaxed space-y-2 list-disc pl-6">
-                  
+                    <li><span className="font-medium text-slate-800 dark:text-slate-200">Freelance: Digital Builder</span></li>
                     <li><span className="font-medium text-slate-800 dark:text-slate-200">Core Contributor @VDAO</span></li>
                     <li><span className="font-medium text-slate-800 dark:text-slate-200">Tech Crew @PizzaDAO</span></li>
                     <li><span className="font-medium text-slate-800 dark:text-slate-200">Ambassador @HerDAO</span></li>
@@ -393,8 +393,11 @@ export default function CodingPage() {
         </div>
       </div>
 
+      
+
       {/* Contact Section */}
       <section id="contact" className="relative z-10 py-32 bg-slate-50/50 dark:bg-slate-900/30">
+      
         <div className="max-w-6xl mx-auto px-6">
           <div className="flex items-center justify-center gap-3 mb-12">
             <div className="w-12 h-0.5 bg-purple-600 dark:bg-purple-400" />
@@ -402,15 +405,6 @@ export default function CodingPage() {
             <div className="w-12 h-0.5 bg-purple-600 dark:bg-purple-400" />
           </div>
 
-          {/* Availability Status */}
-          <div className="mb-8 text-center">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-purple-100 dark:bg-purple-900/30 border border-purple-200 dark:border-purple-700">
-              <div className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
-              <span className="text-sm font-medium text-purple-700 dark:text-purple-300">Available for opportunities</span>
-            </div>
-          </div>
-
-          
           {/* Action Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
             <button
@@ -434,7 +428,7 @@ export default function CodingPage() {
               }}
               className="px-8 py-4 bg-transparent border-2 border-purple-600 dark:border-purple-400 text-purple-600 dark:text-purple-400 hover:bg-purple-50 dark:hover:bg-purple-900/20 font-bold rounded-lg transition-all text-center relative z-10"
             >
-              {emailCopied ? 'Email Copied!' : 'Email Me'}
+              {emailCopied ? 'Email Copied!' : 'Get in touch'}
             </button>
           </div>
           
@@ -455,7 +449,7 @@ export default function CodingPage() {
 
             {/* X (Twitter) */}
             <a
-              href="https://x.com/CheddarQueso3D"
+              href="https://x.com/adigitaltati"
               target="_blank"
               rel="noopener noreferrer"
               className="text-slate-600 dark:text-slate-400 hover:text-purple-600 dark:hover:text-purple-400 transition-colors cursor-pointer"
@@ -468,7 +462,7 @@ export default function CodingPage() {
 
             {/* Instagram */}
             <a
-              href="https://www.instagram.com/cheddarqueso3d/"
+              href="https://www.instagram.com/adigitaltati/"
               target="_blank"
               rel="noopener noreferrer"
               className="text-slate-600 dark:text-slate-400 hover:text-purple-600 dark:hover:text-purple-400 transition-colors cursor-pointer"
