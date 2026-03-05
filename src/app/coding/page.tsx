@@ -77,8 +77,8 @@ export default function CodingPage() {
         </div>
       </nav>
 
-      {/* Hero Section */}
-      <div className="relative z-10 pt-24 sm:pt-32 pb-6 sm:pb-2 flex items-center justify-center px-4 sm:px-6 lg:px-8">
+      {/* Hero Section - full viewport, content below requires scroll */}
+      <div className="relative z-10 min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           
           {/* Value proposition */}
@@ -89,7 +89,7 @@ export default function CodingPage() {
             </h1>
           </div>
           <p className="text-xl md:text-2xl mb-8 text-slate-700 dark:text-slate-200">
-            My name is Tati, and I&apos;m a digital builder.  
+            My name is Ileana, and I&apos;m a digital builder.  
           </p>
          
         </div>
@@ -155,7 +155,7 @@ export default function CodingPage() {
                   <ul className="text-slate-700 dark:text-slate-300 leading-relaxed space-y-2 list-disc pl-6">
                     <li>Get introduced to grant opportunities or sponsors backing female builders/founders</li>
                     <li>Gain experience at a decentralized protocol startup or company</li>
-                    <li>Connect with other founders and builders interested in AI for common good</li>
+                    <li>Connect with other founders and builders interested in AI for good</li>
                   </ul>
                 </div>
               </div>
@@ -176,7 +176,7 @@ export default function CodingPage() {
          <div className="max-w-7xl mx-auto px-6">
           <div className="flex items-center justify-center gap-3 mb-12">
             <div className="w-12 h-0.5 bg-purple-600 dark:bg-purple-400" />
-            <h2 className="text-4xl md:text-5xl font-extrabold bg-gradient-to-r from-purple-600 via-indigo-600 to-purple-600 dark:from-purple-400 dark:via-indigo-400 dark:to-purple-400 bg-clip-text text-transparent drop-shadow-lg tracking-tight">WIP </h2>
+            <h2 className="text-4xl md:text-5xl font-extrabold bg-gradient-to-r from-purple-600 via-indigo-600 to-purple-600 dark:from-purple-400 dark:via-indigo-400 dark:to-purple-400 bg-clip-text text-transparent drop-shadow-lg tracking-tight">Projects</h2>
             <div className="w-12 h-0.5 bg-purple-600 dark:bg-purple-400" />
           </div>
 
