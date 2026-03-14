@@ -210,12 +210,11 @@ export default function CodingPage() {
               </a>
             </div>
 
-            {/* Tip Me Project */}
+            {/* Piri Pay (Tip Me) Project */}
             <div className="bg-white dark:bg-slate-800 rounded-lg p-8 border border-slate-200 dark:border-slate-700 hover:border-purple-500 dark:hover:border-purple-400 hover:shadow-xl transition-all">
-              <h3 className="text-2xl font-bold bg-gradient-to-r from-purple-600 to-indigo-600 dark:from-purple-400 dark:to-indigo-400 bg-clip-text text-transparent mb-4">Tip Me</h3>
+              <h3 className="text-2xl font-bold bg-gradient-to-r from-purple-600 to-indigo-600 dark:from-purple-400 dark:to-indigo-400 bg-clip-text text-transparent mb-4">Piri Pay</h3>
               <p className="text-slate-600 dark:text-slate-300 mb-4 leading-relaxed">
-                A modern, multi-chain tipping application supporting cryptocurrency and fiat payments. 
-                Enables tips via Ethereum, Solana, Bitcoin, and traditional payment methods like Cash App, Venmo, and Zelle.
+                One QR code, every way to pay—unify fiat and crypto in a single link. One profile, one QR: add your addresses and handles (ETH, SOL, BTC, Base, Cash App, Venmo, Zelle); anyone who scans sees all options and pays with what they use. Fiat deep-links into apps; crypto via wallet (MetaMask, Phantom, WalletConnect).
               </p>
               <div className="flex flex-wrap gap-2 mb-4">
                 <span className="px-3 py-1 rounded-md text-sm font-medium bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 border border-purple-200 dark:border-purple-700">React</span>
@@ -223,17 +222,28 @@ export default function CodingPage() {
                 <span className="px-3 py-1 rounded-md text-sm font-medium bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 border border-purple-200 dark:border-purple-700">Vite</span>
                 <span className="px-3 py-1 rounded-md text-sm font-medium bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 border border-purple-200 dark:border-purple-700">Tailwind CSS</span>
                 <span className="px-3 py-1 rounded-md text-sm font-medium bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 border border-purple-200 dark:border-purple-700">Ethereum</span>
+                <span className="px-3 py-1 rounded-md text-sm font-medium bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 border border-purple-200 dark:border-purple-700">Base</span>
                 <span className="px-3 py-1 rounded-md text-sm font-medium bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 border border-purple-200 dark:border-purple-700">Solana</span>
                 <span className="px-3 py-1 rounded-md text-sm font-medium bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 border border-purple-200 dark:border-purple-700">Bitcoin</span>
               </div>
-              <a 
-                href="https://github.com/ileana-pr/tip-me" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="text-purple-600 dark:text-purple-400 hover:text-purple-700 dark:hover:text-purple-300 underline text-sm font-medium inline-flex items-center gap-1"
-              >
-                View on GitHub →
-              </a>
+              <div className="flex flex-wrap gap-4">
+                <a 
+                  href="https://github.com/ileana-pr/piri-pay" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="text-purple-600 dark:text-purple-400 hover:text-purple-700 dark:hover:text-purple-300 underline text-sm font-medium inline-flex items-center gap-1"
+                >
+                  View on GitHub →
+                </a>
+                <a 
+                  href="https://piri-pay.vercel.app" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="text-purple-600 dark:text-purple-400 hover:text-purple-700 dark:hover:text-purple-300 underline text-sm font-medium inline-flex items-center gap-1"
+                >
+                  Live demo →
+                </a>
+              </div>
             </div>
 
             {/* OpenSource Contributions */}
@@ -486,7 +496,7 @@ export default function CodingPage() {
               </svg>
             </a>
 
-            {/* YouTube */}
+             {/* YouTube */}
             <a
               href="https://www.youtube.com/@adigitaltati"
               target="_blank"
