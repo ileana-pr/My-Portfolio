@@ -7,7 +7,7 @@ import ScrollToTop from '@/components/ScrollToTop';
 import { styles } from '@/lib/styles';
 
 export default function CodingPage() {
-  const [isDarkMode, setIsDarkMode] = useState(true);
+  const [isDarkMode, setIsDarkMode] = useState(false);
   const [mounted, setMounted] = useState(false);
   const [emailCopied, setEmailCopied] = useState(false);
 
@@ -16,13 +16,13 @@ export default function CodingPage() {
     setMounted(true);
     const savedTheme = localStorage.getItem('theme');
     
-    if (savedTheme === 'light') {
-      setIsDarkMode(false);
-      document.documentElement.classList.remove('dark');
-    } else {
-      // default to dark mode
+    if (savedTheme === 'dark') {
       setIsDarkMode(true);
       document.documentElement.classList.add('dark');
+    } else {
+      // default to light mode
+      setIsDarkMode(false);
+      document.documentElement.classList.remove('dark');
     }
   }, []);
 

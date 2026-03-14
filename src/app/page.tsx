@@ -8,7 +8,7 @@ import { styles } from '@/lib/styles';
 
 export default function Home() {
   const router = useRouter();
-  const [isDarkMode, setIsDarkMode] = useState(true);
+  const [isDarkMode, setIsDarkMode] = useState(false);
   const [mounted, setMounted] = useState(false);
 
   // redirect to coding page
@@ -21,13 +21,13 @@ export default function Home() {
     setMounted(true);
     const savedTheme = localStorage.getItem('theme');
     
-    if (savedTheme === 'light') {
-      setIsDarkMode(false);
-      document.documentElement.classList.remove('dark');
-    } else {
-      // default to dark mode
+    if (savedTheme === 'dark') {
       setIsDarkMode(true);
       document.documentElement.classList.add('dark');
+    } else {
+      // default to light mode
+      setIsDarkMode(false);
+      document.documentElement.classList.remove('dark');
     }
   }, []);
 
