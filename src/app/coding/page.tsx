@@ -122,7 +122,7 @@ export default function CodingPage() {
                 <div>
                   <h3 className={styles.subheading}>🛠️ Intro</h3>
                   <p className={styles.body}>
-                    Currently finishing my Bachelor of Computer Science at the University of Mary Washington and looking for a role as a full-stack engineer or developer advocate. 
+                    Currently finishing my Bachelor&apos;s in Computer Science at the University of Mary Washington and looking for a role as a full-stack engineer or developer advocate. 
                   </p>
                 </div>
                 <div>
@@ -194,7 +194,7 @@ export default function CodingPage() {
             <div className={styles.card}>
               <h3 className={styles.cardTitle}>GreenThumb</h3>
               <p className={`${styles.body} mb-4`}>
-                AI-assistant for plant care, gardening and urban farming. Powered by ElizaOS. Built as a proof of concept for the Sozu Haus Denver 2025 hackathon.
+                AI assistant for plant care, gardening and urban farming. Powered by ElizaOS. Built as a proof of concept for the Sozu Haus Denver 2025 hackathon.
                 Designed to make sustainable farming more accessible.
               </p>
               <div className="flex flex-wrap gap-2 mb-5">
@@ -222,7 +222,7 @@ export default function CodingPage() {
             <div className={styles.card}>
               <h3 className={styles.cardTitle}>Piri Pay</h3>
               <p className={`${styles.body} mb-4`}>
-                One QR code, every way to pay—unify fiat and crypto in a single link. Piri handles (ETH, SOL, BTC, Base, Cash App, Venmo, Zelle); anyone who scans sees all options and pays with what they use.
+                One QR code, every way to pay—unify fiat and crypto in a single link. Piri supports ETH, SOL, BTC, Base, Cash App, Venmo, and Zelle; anyone who scans sees all options and pays with what they use.
               </p>
               <div className="text-sm text-purple-600 dark:text-purple-400 font-medium mb-4">
                 Built for <a href="https://x.com/homebasedotlove" target="_blank" rel="noopener noreferrer" className={styles.linkInline}>Based House</a> @ ETH Denver 2026
@@ -247,7 +247,7 @@ export default function CodingPage() {
             <div className={styles.card}>
               <h3 className={styles.cardTitle}>DAO-Slice</h3>
               <p className={`${styles.body} mb-4`}>
-                DAO automation tool that tokenizes attendance at workgroup meetings and distributes soulbound NFT tokens to contributors. Discord bot → Google Sheet → backend → Monad smart contract; no link dropping, no farming.
+                DAO automation tool that tokenizes attendance at workgroup meetings and distributes soulbound NFT tokens to contributors. Discord bot → Google Sheets → backend → Monad smart contract; no link dropping, no farming.
               </p>
               <div className="flex flex-wrap gap-2 mb-4">
                 <span className={styles.tag}>TypeScript</span>
@@ -268,9 +268,9 @@ export default function CodingPage() {
               </a>
             </div>
 
-            {/* OpenSource Contributions */}
+            {/* Open Source Contributions */}
             <div className={styles.card}>
-              <h3 className={styles.cardTitle}>OpenSource Contributions</h3>
+              <h3 className={styles.cardTitle}>Open Source Contributions</h3>
               <p className={`${styles.body} mb-4`}>
                 Contributing to open-source projects through code, documentation, and bug reporting.
               </p>
@@ -289,7 +289,7 @@ export default function CodingPage() {
                 </div>
                 <div className="text-sm">
                   <span className="text-slate-900 dark:text-white font-medium">FlamaBB</span>
-                  <span className="text-slate-500 dark:text-slate-400"> - Fullstack; Web3 social platform for authentic urban experiences (Base, Aleph Hackathon)</span>
+                  <span className="text-slate-500 dark:text-slate-400"> - Full-stack Web3 social platform for authentic urban experiences (Base, Aleph Hackathon)</span>
                   <a 
                     href="https://github.com/JulioMCruz/FlamaBB" 
                     target="_blank" 
@@ -301,7 +301,7 @@ export default function CodingPage() {
                 </div>
                 <div className="text-sm">
                   <span className="text-slate-900 dark:text-white font-medium">Hacker House Protocol</span>
-                  <span className="text-slate-500 dark:text-slate-400"> - Decentralized hackerhouse platform; cross-chain PYUSD payments, roommate matching, Hyperlane + The Graph</span>
+                  <span className="text-slate-500 dark:text-slate-400"> - Decentralized hackerhouse platform with cross-chain PYUSD payments, roommate matching, Hyperlane + The Graph</span>
                   <a 
                     href="https://github.com/Shaivpidadi/hacker-house-protocol" 
                     target="_blank" 
