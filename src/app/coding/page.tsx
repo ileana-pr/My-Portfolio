@@ -266,6 +266,30 @@ export default function CodingPage() {
                   </a>
                 </div>
                 <div className="text-sm">
+                  <span className="text-slate-900 dark:text-white font-medium">FlamaBB</span>
+                  <span className="text-slate-500 dark:text-slate-400"> - Fullstack; Web3 social platform for authentic urban experiences (Base, Aleph Hackathon)</span>
+                  <a 
+                    href="https://github.com/JulioMCruz/FlamaBB" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="text-purple-600 dark:text-purple-400 hover:text-purple-700 dark:hover:text-purple-300 underline ml-2"
+                  >
+                    View repo →
+                  </a>
+                </div>
+                <div className="text-sm">
+                  <span className="text-slate-900 dark:text-white font-medium">Hacker House Protocol</span>
+                  <span className="text-slate-500 dark:text-slate-400"> - Decentralized hackerhouse platform; cross-chain PYUSD payments, roommate matching, Hyperlane + The Graph</span>
+                  <a 
+                    href="https://github.com/Shaivpidadi/hacker-house-protocol" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="text-purple-600 dark:text-purple-400 hover:text-purple-700 dark:hover:text-purple-300 underline ml-2"
+                  >
+                    View repo →
+                  </a>
+                </div>
+                <div className="text-sm">
                   <span className="text-slate-900 dark:text-white font-medium">Plugin Documentation</span>
                   <span className="text-slate-500 dark:text-slate-400"> - Added README files to 41 plugins</span>
                   <a 
@@ -311,6 +335,28 @@ export default function CodingPage() {
                 <span className="px-3 py-1 rounded-md text-sm font-medium bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 border border-purple-200 dark:border-purple-700">Godot</span>
                 <span className="px-3 py-1 rounded-md text-sm font-medium bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 border border-purple-200 dark:border-purple-700">GDScript</span>
               </div>
+            </div>
+
+            {/* DAO-Slice (Pizza POAP) */}
+            <div className="bg-white dark:bg-slate-800 rounded-lg p-8 border border-slate-200 dark:border-slate-700 hover:border-purple-500 dark:hover:border-purple-400 hover:shadow-xl transition-all">
+              <h3 className="text-2xl font-bold bg-gradient-to-r from-purple-600 to-indigo-600 dark:from-purple-400 dark:to-indigo-400 bg-clip-text text-transparent mb-4">DAO-Slice</h3>
+              <p className="text-slate-600 dark:text-slate-300 mb-4 leading-relaxed">
+                DAO automation tool that tokenizes attendance at workgroup meetings and distributes soulbound NFT tokens to contributors. Discord bot → Google Sheet → backend → Monad smart contract; no link dropping, no farming.
+              </p>
+              <div className="flex flex-wrap gap-2 mb-4">
+                <span className="px-3 py-1 rounded-md text-sm font-medium bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 border border-purple-200 dark:border-purple-700">TypeScript</span>
+                <span className="px-3 py-1 rounded-md text-sm font-medium bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 border border-purple-200 dark:border-purple-700">Solidity</span>
+                <span className="px-3 py-1 rounded-md text-sm font-medium bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 border border-purple-200 dark:border-purple-700">Hardhat</span>
+                <span className="px-3 py-1 rounded-md text-sm font-medium bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 border border-purple-200 dark:border-purple-700">Monad</span>
+              </div>
+              <a 
+                href="https://github.com/ileana-pr/DAO-Slice" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-purple-600 dark:text-purple-400 hover:text-purple-700 dark:hover:text-purple-300 underline text-sm font-medium inline-flex items-center gap-1"
+              >
+                View on GitHub →
+              </a>
             </div>
 
             {/* Game Programming Projects */}
