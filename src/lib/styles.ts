@@ -1,0 +1,21 @@
+// shared tailwind class strings — change once, update everywhere
+export const styles = {
+  pageBg: 'min-h-screen relative overflow-hidden bg-gradient-to-br from-blue-100 via-indigo-100 to-purple-100 dark:from-slate-950 dark:via-slate-900 dark:to-indigo-950',
+  nav: 'fixed top-0 w-full bg-white/80 dark:bg-slate-900/80 backdrop-blur-md z-50 border-b border-slate-200 dark:border-slate-700',
+  navLink: 'text-xl font-bold text-slate-900 dark:text-white hover:text-blue-600 dark:hover:text-blue-400 transition-colors',
+  heroTitle: 'text-4xl md:text-6xl font-extrabold bg-gradient-to-r from-purple-600 via-indigo-600 to-purple-600 dark:from-purple-400 dark:via-indigo-400 dark:to-purple-400 bg-clip-text text-transparent drop-shadow-lg tracking-tight',
+  sectionHeading: 'text-4xl md:text-5xl font-extrabold bg-gradient-to-r from-purple-600 via-indigo-600 to-purple-600 dark:from-purple-400 dark:via-indigo-400 dark:to-purple-400 bg-clip-text text-transparent drop-shadow-lg tracking-tight',
+  sectionHeadingLine: 'w-12 h-0.5 bg-purple-600 dark:bg-purple-400',
+  card: 'bg-white dark:bg-slate-800 rounded-lg p-8 border border-slate-200 dark:border-slate-700 hover:border-purple-500 dark:hover:border-purple-400 hover:shadow-xl transition-all',
+  cardTitle: 'text-2xl font-bold bg-gradient-to-r from-purple-600 to-indigo-600 dark:from-purple-400 dark:to-indigo-400 bg-clip-text text-transparent mb-4',
+  body: 'text-slate-700 dark:text-slate-300 leading-relaxed',
+  tag: 'px-3 py-1 rounded-md text-sm font-medium bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 border border-purple-200 dark:border-purple-700',
+  link: 'text-purple-600 dark:text-purple-400 hover:text-purple-700 dark:hover:text-purple-300 underline text-sm font-medium inline-flex items-center gap-1',
+  linkInline: 'text-purple-600 dark:text-purple-400 hover:text-purple-700 dark:hover:text-purple-300 underline ml-2',
+  subheading: 'text-lg font-semibold text-purple-600 dark:text-purple-400 mb-2',
+  list: 'text-slate-700 dark:text-slate-300 leading-relaxed space-y-2 list-disc pl-6',
+  listLabel: 'font-medium text-slate-800 dark:text-slate-200',
+  glowDividerWrap: 'relative z-10',
+  glowDividerInner: 'max-w-6xl mx-auto px-6',
+  socialLink: 'text-slate-600 dark:text-slate-400 hover:text-purple-600 dark:hover:text-purple-400 transition-colors cursor-pointer',
+} as const;

@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import ScrollToTop from '@/components/ScrollToTop';
+import { styles } from '@/lib/styles';
 
 export default function CodingPage() {
   const [isDarkMode, setIsDarkMode] = useState(true);
@@ -39,17 +40,17 @@ export default function CodingPage() {
   };
 
   return (
-    <div className="min-h-screen relative overflow-hidden bg-gradient-to-br from-blue-100 via-indigo-100 to-purple-100 dark:from-slate-950 dark:via-slate-900 dark:to-indigo-950">
+    <div className={styles.pageBg}>
       {/* Animated gradient background */}
       <div className="absolute inset-0 animate-gradient" />
       {/* Dot pattern overlay */}
       <div className="absolute inset-0 dot-pattern" />
       
       {/* Navigation */}
-      <nav className="fixed top-0 w-full bg-white/80 dark:bg-slate-900/80 backdrop-blur-md z-50 border-b border-slate-200 dark:border-slate-700">
+      <nav className={styles.nav}>
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center py-4">
-            <Link href="/" className="text-xl font-bold text-slate-900 dark:text-white hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
+            <Link href="/" className={styles.navLink}>
               ileanaperez.net
             </Link>
             <div className="flex items-center space-x-8">
@@ -84,11 +85,11 @@ export default function CodingPage() {
           {/* Value proposition */}
           <div className="mb-4">
             <div className="text-5xl md:text-6xl mb-3">👋</div>
-            <h1 className="text-4xl md:text-6xl font-extrabold bg-gradient-to-r from-purple-600 via-indigo-600 to-purple-600 dark:from-purple-400 dark:via-indigo-400 dark:to-purple-400 bg-clip-text text-transparent drop-shadow-lg tracking-tight">
+            <h1 className={styles.heroTitle}>
               Hello World!
             </h1>
           </div>
-          <p className="text-xl md:text-2xl mb-8 text-slate-700 dark:text-slate-200">
+          <p className={`text-xl md:text-2xl mb-8 ${styles.body}`}>
             My name is Ileana, and I&apos;m a digital builder.  
           </p>
          
@@ -96,8 +97,8 @@ export default function CodingPage() {
       </div>
 
       {/* Glowing Divider */}
-      <div className="relative z-10">
-        <div className="max-w-6xl mx-auto px-6">
+      <div className={styles.glowDividerWrap}>
+        <div className={styles.glowDividerInner}>
           <div className="glow-divider" />
         </div>
       </div>
@@ -110,14 +111,14 @@ export default function CodingPage() {
             <div className="bg-white/80 dark:bg-slate-800/80 backdrop-blur-sm rounded-xl p-8 border border-purple-200 dark:border-purple-700 hover:border-purple-400 dark:hover:border-purple-500 transition-all">
               <div className="space-y-6">
                 <div>
-                  <h3 className="text-lg font-semibold text-purple-600 dark:text-purple-400 mb-2">🛠️ Intro</h3>
-                  <p className="text-slate-700 dark:text-slate-300 leading-relaxed">
+                  <h3 className={styles.subheading}>🛠️ Intro</h3>
+                  <p className={styles.body}>
                     Currently finishing my Bachelor of Computer Science at the University of Mary Washington and looking for a role as a full-stack engineer or developer advocate. 
                   </p>
                 </div>
                 <div>
-                  <h3 className="text-lg font-semibold text-purple-600 dark:text-purple-400 mb-2">✨ Interests and current obsessions</h3>
-                  <ul className="text-slate-700 dark:text-slate-300 leading-relaxed space-y-2 list-disc pl-6">
+                  <h3 className={styles.subheading}>✨ Interests and current obsessions</h3>
+                  <ul className={styles.list}>
                     <li>Decentralized protocols</li>
                     <li>AI agents</li>
                     <li>Spatial computing</li>
@@ -127,32 +128,30 @@ export default function CodingPage() {
                   </ul>
                 </div>
                 <div>
-                  <h3 className="text-lg font-semibold text-purple-600 dark:text-purple-400 mb-2">📍 Where You Might Find Me</h3>
-                  <ul className="text-slate-700 dark:text-slate-300 leading-relaxed space-y-2 list-disc pl-6">
-                    
-                    <li><span className="font-medium text-slate-800 dark:text-slate-200">Core Contributor </span><a href="https://x.com/joinvdao" target="_blank" rel="noopener noreferrer" className="font-medium text-purple-600 dark:text-purple-400 hover:underline">@VDAO</a></li>
-                    <li><span className="font-medium text-slate-800 dark:text-slate-200">Tech Crew </span><a href="https://x.com/Pizza_DAO" target="_blank" rel="noopener noreferrer" className="font-medium text-purple-600 dark:text-purple-400 hover:underline">@PizzaDAO</a></li>
-                    <li><span className="font-medium text-slate-800 dark:text-slate-200">Ambassador </span><a href="https://x.com/_HerDAO" target="_blank" rel="noopener noreferrer" className="font-medium text-purple-600 dark:text-purple-400 hover:underline">@HerDAO</a></li>
+                  <h3 className={styles.subheading}>📍 Where You Might Find Me</h3>
+                  <ul className={styles.list}>
+                    <li><span className={styles.listLabel}>Core Contributor </span><a href="https://x.com/joinvdao" target="_blank" rel="noopener noreferrer" className={`${styles.link} font-medium`}>@VDAO</a></li>
+                    <li><span className={styles.listLabel}>Tech Crew </span><a href="https://x.com/Pizza_DAO" target="_blank" rel="noopener noreferrer" className={`${styles.link} font-medium`}>@PizzaDAO</a></li>
+                    <li><span className={styles.listLabel}>Ambassador </span><a href="https://x.com/_HerDAO" target="_blank" rel="noopener noreferrer" className={`${styles.link} font-medium`}>@HerDAO</a></li>
                    
                   </ul>
                 </div>
                 <div>
-                  <h3 className="text-lg font-semibold text-purple-600 dark:text-purple-400 mb-2">📜 Previously</h3>
-                  <ul className="text-slate-700 dark:text-slate-300 leading-relaxed space-y-2 list-disc pl-6">
-                    <li><span className="font-medium text-slate-800 dark:text-slate-200">Internship: Quality Assurance Engineer </span><a href="https://decentraland.org/blog/announcements/introducing-dcl-regenesis-labs" target="_blank" rel="noopener noreferrer" className="font-medium text-purple-600 dark:text-purple-400 hover:underline">@Regenesis Labs</a></li>
-                    <li><a href="https://x.com/homebasedotlove" target="_blank" rel="noopener noreferrer" className="font-medium text-purple-600 dark:text-purple-400 hover:underline">Based Hackerhouse</a> — 2nd place in Monad Blitz & PizzaDAO hackathon</li>
-                    <li><a href="https://x.com/sozuhaus" target="_blank" rel="noopener noreferrer" className="font-medium text-purple-600 dark:text-purple-400 hover:underline">SozuHaus</a> — Top 10 in AI community track</li>
-                    <li><span className="font-medium text-slate-800 dark:text-slate-200">Pop-up city </span><a href="https://x.com/buildozcity" target="_blank" rel="noopener noreferrer" className="font-medium text-purple-600 dark:text-purple-400 hover:underline">@OzCity</a> — ETHGlobal Cannes 2025</li>
-                    <li><span className="font-medium text-slate-800 dark:text-slate-200">Alumni </span><a href="https://x.com/shefiorg" target="_blank" rel="noopener noreferrer" className="font-medium text-purple-600 dark:text-purple-400 hover:underline">@SheFi</a></li>
-                    
-                    <li><span className="font-medium text-slate-800 dark:text-slate-200">Member: Chi Beta Phi</span>, <span className="font-medium text-slate-800 dark:text-slate-200">Phi Eta Sigma</span></li>
+                  <h3 className={styles.subheading}>📜 Previously</h3>
+                  <ul className={styles.list}>
+                    <li><span className={styles.listLabel}>Internship: Quality Assurance Engineer </span><a href="https://decentraland.org/blog/announcements/introducing-dcl-regenesis-labs" target="_blank" rel="noopener noreferrer" className={`${styles.link} font-medium`}>@Regenesis Labs</a></li>
+                    <li><a href="https://x.com/homebasedotlove" target="_blank" rel="noopener noreferrer" className={`${styles.link} font-medium`}>Based Hackerhouse</a> — 2nd place in Monad Blitz & PizzaDAO hackathon</li>
+                    <li><a href="https://x.com/sozuhaus" target="_blank" rel="noopener noreferrer" className={`${styles.link} font-medium`}>SozuHaus</a> — Top 10 in AI community track</li>
+                    <li><span className={styles.listLabel}>Pop-up city </span><a href="https://x.com/buildozcity" target="_blank" rel="noopener noreferrer" className={`${styles.link} font-medium`}>@OzCity</a> — ETHGlobal Cannes 2025</li>
+                    <li><span className={styles.listLabel}>Alumni </span><a href="https://x.com/shefiorg" target="_blank" rel="noopener noreferrer" className={`${styles.link} font-medium`}>@SheFi</a></li>
+                    <li><span className={styles.listLabel}>Member: Chi Beta Phi</span>, <span className={styles.listLabel}>Phi Eta Sigma</span></li>
                     
                     
                   </ul>
                 </div>
                 <div>
-                  <h3 className="text-lg font-semibold text-purple-600 dark:text-purple-400 mb-2">💼 My Ask</h3>
-                  <ul className="text-slate-700 dark:text-slate-300 leading-relaxed space-y-2 list-disc pl-6">
+                  <h3 className={styles.subheading}>💼 My Ask</h3>
+                  <ul className={styles.list}>
                     <li>Gain experience at a decentralized protocol startup or company</li>
                     <li>Get introduced to grant opportunities or sponsors backing female builders/founders</li>
                     <li>Connect with other founders and builders interested in AI for good</li>
@@ -165,8 +164,8 @@ export default function CodingPage() {
       </section>
 
       {/* Glowing Divider */}
-      <div className="relative z-10">
-        <div className="max-w-6xl mx-auto px-6">
+      <div className={styles.glowDividerWrap}>
+        <div className={styles.glowDividerInner}>
           <div className="glow-divider" />
         </div>
       </div>
@@ -175,27 +174,27 @@ export default function CodingPage() {
       <section id="projects" className="relative z-10 py-18">
          <div className="max-w-7xl mx-auto px-6">
           <div className="flex items-center justify-center gap-3 mb-12">
-            <div className="w-12 h-0.5 bg-purple-600 dark:bg-purple-400" />
-            <h2 className="text-4xl md:text-5xl font-extrabold bg-gradient-to-r from-purple-600 via-indigo-600 to-purple-600 dark:from-purple-400 dark:via-indigo-400 dark:to-purple-400 bg-clip-text text-transparent drop-shadow-lg tracking-tight">Projects</h2>
-            <div className="w-12 h-0.5 bg-purple-600 dark:bg-purple-400" />
+            <div className={styles.sectionHeadingLine} />
+            <h2 className={styles.sectionHeading}>Projects</h2>
+            <div className={styles.sectionHeadingLine} />
           </div>
 
           {/* Project Cards */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
             {/* GreenThumb Project */}
-            <div className="bg-white dark:bg-slate-800 rounded-lg p-8 border border-slate-200 dark:border-slate-700 hover:border-purple-500 dark:hover:border-purple-400 hover:shadow-xl transition-all">
-              <h3 className="text-2xl font-bold bg-gradient-to-r from-purple-600 to-indigo-600 dark:from-purple-400 dark:to-indigo-400 bg-clip-text text-transparent mb-4">GreenThumb</h3>
-              <p className="text-slate-600 dark:text-slate-300 mb-4 leading-relaxed">
+            <div className={styles.card}>
+              <h3 className={styles.cardTitle}>GreenThumb</h3>
+              <p className={`${styles.body} mb-4`}>
                 AI-assistant for plant care, gardening and urban farming. Powered by ElizaOS. Built as a proof of concept for the Sozu Haus Denver 2025 hackathon.
                 Designed to make sustainable farming more accessible.
               </p>
               <div className="flex flex-wrap gap-2 mb-5">
-                <span className="px-3 py-1 rounded-md text-sm font-medium bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 border border-purple-200 dark:border-purple-700">TypeScript</span>
-                <span className="px-3 py-1 rounded-md text-sm font-medium bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 border border-purple-200 dark:border-purple-700">React</span>
-                <span className="px-3 py-1 rounded-md text-sm font-medium bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 border border-purple-200 dark:border-purple-700">Vite</span>
-                <span className="px-3 py-1 rounded-md text-sm font-medium bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 border border-purple-200 dark:border-purple-700">ElizaOS</span>
-                <span className="px-3 py-1 rounded-md text-sm font-medium bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 border border-purple-200 dark:border-purple-700">Privy</span>
-                <span className="px-3 py-1 rounded-md text-sm font-medium bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 border border-purple-200 dark:border-purple-700">Tailwind CSS</span>
+                <span className={styles.tag}>TypeScript</span>
+                <span className={styles.tag}>React</span>
+                <span className={styles.tag}>Vite</span>
+                <span className={styles.tag}>ElizaOS</span>
+                <span className={styles.tag}>Privy</span>
+                <span className={styles.tag}>Tailwind CSS</span>
               </div>
               <div className="text-sm text-purple-600 dark:text-purple-400 font-medium mb-4">
                 🏆 Top 10 in AI community track at ETH Denver 2025 hackathon
@@ -204,52 +203,40 @@ export default function CodingPage() {
                 href="https://github.com/ileana-pr/greenthumb-V0.1" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="text-purple-600 dark:text-purple-400 hover:text-purple-700 dark:hover:text-purple-300 underline text-sm font-medium inline-flex items-center gap-1"
+                className={styles.link}
               >
                 View on GitHub →
               </a>
             </div>
 
             {/* Piri Pay (Tip Me) Project */}
-            <div className="bg-white dark:bg-slate-800 rounded-lg p-8 border border-slate-200 dark:border-slate-700 hover:border-purple-500 dark:hover:border-purple-400 hover:shadow-xl transition-all">
-              <h3 className="text-2xl font-bold bg-gradient-to-r from-purple-600 to-indigo-600 dark:from-purple-400 dark:to-indigo-400 bg-clip-text text-transparent mb-4">Piri Pay</h3>
-              <p className="text-slate-600 dark:text-slate-300 mb-4 leading-relaxed">
-                One QR code, every way to pay—unify fiat and crypto in a single link. Piri handles (ETH, SOL, BTC, Base, Cash App, Venmo, Zelle); anyone who scans sees all options and pays with what they use. 
+            <div className={styles.card}>
+              <h3 className={styles.cardTitle}>Piri Pay</h3>
+              <p className={`${styles.body} mb-4`}>
+                One QR code, every way to pay—unify fiat and crypto in a single link. Piri handles (ETH, SOL, BTC, Base, Cash App, Venmo, Zelle); anyone who scans sees all options and pays with what they use.
               </p>
+              <div className="text-sm text-purple-600 dark:text-purple-400 font-medium mb-4">
+                Built for <a href="https://x.com/homebasedotlove" target="_blank" rel="noopener noreferrer" className={styles.linkInline}>Based House</a> @ ETH Denver 2026
+              </div>
               <div className="flex flex-wrap gap-2 mb-4">
-                <span className="px-3 py-1 rounded-md text-sm font-medium bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 border border-purple-200 dark:border-purple-700">React</span>
-                <span className="px-3 py-1 rounded-md text-sm font-medium bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 border border-purple-200 dark:border-purple-700">TypeScript</span>
-                <span className="px-3 py-1 rounded-md text-sm font-medium bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 border border-purple-200 dark:border-purple-700">Vite</span>
-                <span className="px-3 py-1 rounded-md text-sm font-medium bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 border border-purple-200 dark:border-purple-700">Tailwind CSS</span>
-                <span className="px-3 py-1 rounded-md text-sm font-medium bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 border border-purple-200 dark:border-purple-700">Ethereum</span>
-                <span className="px-3 py-1 rounded-md text-sm font-medium bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 border border-purple-200 dark:border-purple-700">Base</span>
-                <span className="px-3 py-1 rounded-md text-sm font-medium bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 border border-purple-200 dark:border-purple-700">Solana</span>
-                <span className="px-3 py-1 rounded-md text-sm font-medium bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 border border-purple-200 dark:border-purple-700">Bitcoin</span>
+                <span className={styles.tag}>React</span>
+                <span className={styles.tag}>TypeScript</span>
+                <span className={styles.tag}>Vite</span>
+                <span className={styles.tag}>Tailwind CSS</span>
+                <span className={styles.tag}>Ethereum</span>
+                <span className={styles.tag}>Base</span>
+                <span className={styles.tag}>Solana</span>
+                <span className={styles.tag}>Bitcoin</span>
               </div>
-              <div className="flex flex-wrap gap-4">
-                <a 
-                  href="https://github.com/ileana-pr/piri-pay" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="text-purple-600 dark:text-purple-400 hover:text-purple-700 dark:hover:text-purple-300 underline text-sm font-medium inline-flex items-center gap-1"
-                >
-                  View on GitHub →
-                </a>
-                <a 
-                  href="https://piri-pay.vercel.app" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="text-purple-600 dark:text-purple-400 hover:text-purple-700 dark:hover:text-purple-300 underline text-sm font-medium inline-flex items-center gap-1"
-                >
-                  Live demo →
-                </a>
-              </div>
+              <a href="https://github.com/ileana-pr/piri-pay" target="_blank" rel="noopener noreferrer" className={styles.link}>
+                View on GitHub →
+              </a>
             </div>
 
             {/* OpenSource Contributions */}
-            <div className="bg-white dark:bg-slate-800 rounded-lg p-8 border border-slate-200 dark:border-slate-700 hover:border-purple-500 dark:hover:border-purple-400 hover:shadow-xl transition-all">
-              <h3 className="text-2xl font-bold bg-gradient-to-r from-purple-600 to-indigo-600 dark:from-purple-400 dark:to-indigo-400 bg-clip-text text-transparent mb-4">OpenSource Contributions</h3>
-              <p className="text-slate-600 dark:text-slate-300 mb-4 leading-relaxed">
+            <div className={styles.card}>
+              <h3 className={styles.cardTitle}>OpenSource Contributions</h3>
+              <p className={`${styles.body} mb-4`}>
                 Contributing to open-source projects through code, documentation, and bug reporting.
               </p>
               <div className="space-y-2 mb-4">
@@ -260,7 +247,7 @@ export default function CodingPage() {
                     href="https://github.com/decentraland/godot-explorer/issues?q=is%3Aissue%20type%3ABug%20author%3A%40me" 
                     target="_blank" 
                     rel="noopener noreferrer"
-                    className="text-purple-600 dark:text-purple-400 hover:text-purple-700 dark:hover:text-purple-300 underline ml-2 whitespace-nowrap inline-block"
+                    className={`${styles.linkInline} whitespace-nowrap inline-block`}
                   >
                     View issues →
                   </a>
@@ -272,7 +259,7 @@ export default function CodingPage() {
                     href="https://github.com/JulioMCruz/FlamaBB" 
                     target="_blank" 
                     rel="noopener noreferrer"
-                    className="text-purple-600 dark:text-purple-400 hover:text-purple-700 dark:hover:text-purple-300 underline ml-2"
+                    className={styles.linkInline}
                   >
                     View repo →
                   </a>
@@ -284,7 +271,7 @@ export default function CodingPage() {
                     href="https://github.com/Shaivpidadi/hacker-house-protocol" 
                     target="_blank" 
                     rel="noopener noreferrer"
-                    className="text-purple-600 dark:text-purple-400 hover:text-purple-700 dark:hover:text-purple-300 underline ml-2"
+                    className={styles.linkInline}
                   >
                     View repo →
                   </a>
@@ -296,7 +283,7 @@ export default function CodingPage() {
                     href="https://github.com/elizaOS/eliza/commit/f515f1f2bc07005617663ef58d8119d2b86245fb" 
                     target="_blank" 
                     rel="noopener noreferrer"
-                    className="text-purple-600 dark:text-purple-400 hover:text-purple-700 dark:hover:text-purple-300 underline ml-2"
+                    className={styles.linkInline}
                   >
                     View commit →
                   </a>
@@ -308,7 +295,7 @@ export default function CodingPage() {
                     href="https://github.com/elizaOS/eliza/commit/cb587b44f89ad8558acf88f11a8f82ab901a1389" 
                     target="_blank" 
                     rel="noopener noreferrer"
-                    className="text-purple-600 dark:text-purple-400 hover:text-purple-700 dark:hover:text-purple-300 underline ml-2"
+                    className={styles.linkInline}
                   >
                     View commit →
                   </a>
@@ -320,49 +307,52 @@ export default function CodingPage() {
                     href="https://github.com/elizaOS/eliza/commit/de1236bdc264a7b3a93863e00964de7abff32baa" 
                     target="_blank" 
                     rel="noopener noreferrer"
-                    className="text-purple-600 dark:text-purple-400 hover:text-purple-700 dark:hover:text-purple-300 underline ml-2"
+                    className={styles.linkInline}
                   >
                     View commit →
                   </a>
                 </div>
               </div>
               <div className="flex flex-wrap gap-2">
-                <span className="px-3 py-1 rounded-md text-sm font-medium bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 border border-purple-200 dark:border-purple-700">Python</span>
-                <span className="px-3 py-1 rounded-md text-sm font-medium bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 border border-purple-200 dark:border-purple-700">TypeScript</span>
-                <span className="px-3 py-1 rounded-md text-sm font-medium bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 border border-purple-200 dark:border-purple-700">React</span>
-                <span className="px-3 py-1 rounded-md text-sm font-medium bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 border border-purple-200 dark:border-purple-700">Express.js</span>
-                <span className="px-3 py-1 rounded-md text-sm font-medium bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 border border-purple-200 dark:border-purple-700">PostgreSQL</span>
-                <span className="px-3 py-1 rounded-md text-sm font-medium bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 border border-purple-200 dark:border-purple-700">Godot</span>
-                <span className="px-3 py-1 rounded-md text-sm font-medium bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 border border-purple-200 dark:border-purple-700">GDScript</span>
+                <span className={styles.tag}>Python</span>
+                <span className={styles.tag}>TypeScript</span>
+                <span className={styles.tag}>React</span>
+                <span className={styles.tag}>Express.js</span>
+                <span className={styles.tag}>PostgreSQL</span>
+                <span className={styles.tag}>Godot</span>
+                <span className={styles.tag}>GDScript</span>
               </div>
             </div>
 
             {/* DAO-Slice (Pizza POAP) */}
-            <div className="bg-white dark:bg-slate-800 rounded-lg p-8 border border-slate-200 dark:border-slate-700 hover:border-purple-500 dark:hover:border-purple-400 hover:shadow-xl transition-all">
-              <h3 className="text-2xl font-bold bg-gradient-to-r from-purple-600 to-indigo-600 dark:from-purple-400 dark:to-indigo-400 bg-clip-text text-transparent mb-4">DAO-Slice</h3>
-              <p className="text-slate-600 dark:text-slate-300 mb-4 leading-relaxed">
+            <div className={styles.card}>
+              <h3 className={styles.cardTitle}>DAO-Slice</h3>
+              <p className={`${styles.body} mb-4`}>
                 DAO automation tool that tokenizes attendance at workgroup meetings and distributes soulbound NFT tokens to contributors. Discord bot → Google Sheet → backend → Monad smart contract; no link dropping, no farming.
               </p>
               <div className="flex flex-wrap gap-2 mb-4">
-                <span className="px-3 py-1 rounded-md text-sm font-medium bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 border border-purple-200 dark:border-purple-700">TypeScript</span>
-                <span className="px-3 py-1 rounded-md text-sm font-medium bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 border border-purple-200 dark:border-purple-700">Solidity</span>
-                <span className="px-3 py-1 rounded-md text-sm font-medium bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 border border-purple-200 dark:border-purple-700">Hardhat</span>
-                <span className="px-3 py-1 rounded-md text-sm font-medium bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 border border-purple-200 dark:border-purple-700">Monad</span>
+                <span className={styles.tag}>TypeScript</span>
+                <span className={styles.tag}>Solidity</span>
+                <span className={styles.tag}>Hardhat</span>
+                <span className={styles.tag}>Monad</span>
+              </div>
+              <div className="text-sm text-purple-600 dark:text-purple-400 font-medium mb-4">
+                🏆 2nd place in Monad PizzaDAO hackathon at ETH Denver 2026
               </div>
               <a 
                 href="https://github.com/ileana-pr/DAO-Slice" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="text-purple-600 dark:text-purple-400 hover:text-purple-700 dark:hover:text-purple-300 underline text-sm font-medium inline-flex items-center gap-1"
+                className={styles.link}
               >
                 View on GitHub →
               </a>
             </div>
 
             {/* Game Programming Projects */}
-            <div className="bg-white dark:bg-slate-800 rounded-lg p-8 border border-slate-200 dark:border-slate-700 hover:border-purple-500 dark:hover:border-purple-400 hover:shadow-xl transition-all">
-              <h3 className="text-2xl font-bold bg-gradient-to-r from-purple-600 to-indigo-600 dark:from-purple-400 dark:to-indigo-400 bg-clip-text text-transparent mb-4">Game Collection</h3>
-              <p className="text-slate-600 dark:text-slate-300 mb-4 leading-relaxed">
+            <div className={styles.card}>
+              <h3 className={styles.cardTitle}>Game Collection</h3>
+              <p className={`${styles.body} mb-4`}>
                 Built a collection of interactive games in C, exploring game mechanics, graphics programming, 
                 and user interaction. 
               </p>
@@ -373,7 +363,7 @@ export default function CodingPage() {
                     href="https://github.com/ileana-pr/CPSC440-Game-Programming/tree/main/FlappyTeeth" 
                     target="_blank" 
                     rel="noopener noreferrer"
-                    className="text-purple-600 dark:text-purple-400 hover:text-purple-700 dark:hover:text-purple-300 underline ml-2"
+                    className={styles.linkInline}
                   >
                     View →
                   </a>
@@ -384,7 +374,7 @@ export default function CodingPage() {
                     href="https://github.com/ileana-pr/CPSC440-Game-Programming/tree/main/HedgeMaze" 
                     target="_blank" 
                     rel="noopener noreferrer"
-                    className="text-purple-600 dark:text-purple-400 hover:text-purple-700 dark:hover:text-purple-300 underline ml-2"
+                    className={styles.linkInline}
                   >
                     View →
                   </a>
@@ -395,7 +385,7 @@ export default function CodingPage() {
                     href="https://github.com/ileana-pr/CPSC440-Game-Programming/tree/main/Memory" 
                     target="_blank" 
                     rel="noopener noreferrer"
-                    className="text-purple-600 dark:text-purple-400 hover:text-purple-700 dark:hover:text-purple-300 underline ml-2"
+                    className={styles.linkInline}
                   >
                     View →
                   </a>
@@ -406,7 +396,7 @@ export default function CodingPage() {
                     href="https://github.com/ileana-pr/CPSC440-Game-Programming/tree/main/PenguDefence" 
                     target="_blank" 
                     rel="noopener noreferrer"
-                    className="text-purple-600 dark:text-purple-400 hover:text-purple-700 dark:hover:text-purple-300 underline ml-2"
+                    className={styles.linkInline}
                   >
                     View →
                   </a>
@@ -417,21 +407,21 @@ export default function CodingPage() {
                     href="https://github.com/ileana-pr/CPSC440-Game-Programming/tree/main/TicTacToe25/TicTacToe25" 
                     target="_blank" 
                     rel="noopener noreferrer"
-                    className="text-purple-600 dark:text-purple-400 hover:text-purple-700 dark:hover:text-purple-300 underline ml-2"
+                    className={styles.linkInline}
                   >
                     View →
                   </a>
                 </div>
               </div>
               <div className="flex flex-wrap gap-2 mb-4">
-                <span className="px-3 py-1 rounded-md text-sm font-medium bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 border border-purple-200 dark:border-purple-700">C</span>
-                <span className="px-3 py-1 rounded-md text-sm font-medium bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 border border-purple-200 dark:border-purple-700">C++</span>
+                <span className={styles.tag}>C</span>
+                <span className={styles.tag}>C++</span>
               </div>
               <a 
                 href="https://github.com/ileana-pr/CPSC440-Game-Programming" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="text-purple-600 dark:text-purple-400 hover:text-purple-700 dark:hover:text-purple-300 underline text-sm font-medium inline-flex items-center gap-1"
+                className={styles.link}
               >
                 View repository on GitHub →
               </a>
@@ -443,8 +433,8 @@ export default function CodingPage() {
       </section>
 
       {/* Glowing Divider */}
-      <div className="relative z-10">
-        <div className="max-w-6xl mx-auto px-6">
+      <div className={styles.glowDividerWrap}>
+        <div className={styles.glowDividerInner}>
           <div className="glow-divider" />
         </div>
       </div>
@@ -456,9 +446,9 @@ export default function CodingPage() {
       
         <div className="max-w-6xl mx-auto px-6">
           <div className="flex items-center justify-center gap-3 mb-12">
-            <div className="w-12 h-0.5 bg-purple-600 dark:bg-purple-400" />
-            <h2 className="text-4xl md:text-5xl font-extrabold bg-gradient-to-r from-purple-600 via-indigo-600 to-purple-600 dark:from-purple-400 dark:via-indigo-400 dark:to-purple-400 bg-clip-text text-transparent drop-shadow-lg tracking-tight">Let&apos;s Connect</h2>
-            <div className="w-12 h-0.5 bg-purple-600 dark:bg-purple-400" />
+            <div className={styles.sectionHeadingLine} />
+            <h2 className={styles.sectionHeading}>Let&apos;s Connect</h2>
+            <div className={styles.sectionHeadingLine} />
           </div>
 
           {/* Action Buttons */}
@@ -495,7 +485,7 @@ export default function CodingPage() {
               href="https://github.com/ileana-pr"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-slate-600 dark:text-slate-400 hover:text-purple-600 dark:hover:text-purple-400 transition-colors cursor-pointer"
+              className={styles.socialLink}
               aria-label="GitHub"
             >
               <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
@@ -508,7 +498,7 @@ export default function CodingPage() {
               href="https://x.com/adigitaltati"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-slate-600 dark:text-slate-400 hover:text-purple-600 dark:hover:text-purple-400 transition-colors cursor-pointer"
+              className={styles.socialLink}
               aria-label="X (Twitter)"
             >
               <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
@@ -521,7 +511,7 @@ export default function CodingPage() {
               href="https://www.instagram.com/adigitaltati/"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-slate-600 dark:text-slate-400 hover:text-purple-600 dark:hover:text-purple-400 transition-colors cursor-pointer"
+              className={styles.socialLink}
               aria-label="Instagram"
             >
               <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
@@ -534,7 +524,7 @@ export default function CodingPage() {
               href="https://www.linkedin.com/in/ileanaperez/"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-slate-600 dark:text-slate-400 hover:text-purple-600 dark:hover:text-purple-400 transition-colors cursor-pointer"
+              className={styles.socialLink}
               aria-label="LinkedIn"
             >
               <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
@@ -547,7 +537,7 @@ export default function CodingPage() {
               href="https://www.youtube.com/@adigitaltati"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-slate-600 dark:text-slate-400 hover:text-purple-600 dark:hover:text-purple-400 transition-colors cursor-pointer"
+              className={styles.socialLink}
               aria-label="YouTube"
             >
               <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
