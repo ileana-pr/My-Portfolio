@@ -161,9 +161,9 @@ export default function CodingPage() {
                 <div>
                   <h3 className={styles.subheading}>💼 My Ask</h3>
                   <ul className={styles.list}>
-                    <li>Gain experience at a decentralized protocol startup or company</li>
+                    <li>Gain experience as a full-stack engineer or developer advocate</li>
                     <li>Get introduced to grant opportunities or sponsors backing female builders/founders</li>
-                    <li>Connect with other founders and builders interested in AI for good</li>
+                    <li>Connect with other builders interested in AI for good, antifragility, and regenerative systems</li>
                   </ul>
                 </div>
               </div>
@@ -238,6 +238,32 @@ export default function CodingPage() {
                 <span className={styles.tag}>Bitcoin</span>
               </div>
               <a href="https://github.com/ileana-pr/piri-pay" target="_blank" rel="noopener noreferrer" className={styles.link}>
+                View on GitHub →
+              </a>
+            </div>
+
+
+            {/* DAO-Slice (Pizza POAP) */}
+            <div className={styles.card}>
+              <h3 className={styles.cardTitle}>DAO-Slice</h3>
+              <p className={`${styles.body} mb-4`}>
+                DAO automation tool that tokenizes attendance at workgroup meetings and distributes soulbound NFT tokens to contributors. Discord bot → Google Sheet → backend → Monad smart contract; no link dropping, no farming.
+              </p>
+              <div className="flex flex-wrap gap-2 mb-4">
+                <span className={styles.tag}>TypeScript</span>
+                <span className={styles.tag}>Solidity</span>
+                <span className={styles.tag}>Hardhat</span>
+                <span className={styles.tag}>Monad</span>
+              </div>
+              <div className="text-sm text-purple-600 dark:text-purple-400 font-medium mb-4">
+                🏆 2nd place in Monad PizzaDAO hackathon at ETH Denver 2026
+              </div>
+              <a 
+                href="https://github.com/ileana-pr/DAO-Slice" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className={styles.link}
+              >
                 View on GitHub →
               </a>
             </div>
@@ -331,31 +357,6 @@ export default function CodingPage() {
                 <span className={styles.tag}>Godot</span>
                 <span className={styles.tag}>GDScript</span>
               </div>
-            </div>
-
-            {/* DAO-Slice (Pizza POAP) */}
-            <div className={styles.card}>
-              <h3 className={styles.cardTitle}>DAO-Slice</h3>
-              <p className={`${styles.body} mb-4`}>
-                DAO automation tool that tokenizes attendance at workgroup meetings and distributes soulbound NFT tokens to contributors. Discord bot → Google Sheet → backend → Monad smart contract; no link dropping, no farming.
-              </p>
-              <div className="flex flex-wrap gap-2 mb-4">
-                <span className={styles.tag}>TypeScript</span>
-                <span className={styles.tag}>Solidity</span>
-                <span className={styles.tag}>Hardhat</span>
-                <span className={styles.tag}>Monad</span>
-              </div>
-              <div className="text-sm text-purple-600 dark:text-purple-400 font-medium mb-4">
-                🏆 2nd place in Monad PizzaDAO hackathon at ETH Denver 2026
-              </div>
-              <a 
-                href="https://github.com/ileana-pr/DAO-Slice" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className={styles.link}
-              >
-                View on GitHub →
-              </a>
             </div>
 
             {/* Game Programming Projects */}
