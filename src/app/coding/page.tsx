@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import Image from 'next/image';
 import Link from 'next/link';
 import ScrollToTop from '@/components/ScrollToTop';
 import { styles } from '@/lib/styles';
@@ -84,7 +85,15 @@ export default function CodingPage() {
           
           {/* Value proposition */}
           <div className="mb-4">
-            <div className="text-5xl md:text-6xl mb-3">👋</div>
+            <div className="mb-3 flex justify-center">
+              <Image
+                src="/avatar.png"
+                alt=""
+                width={80}
+                height={80}
+                className={styles.avatar}
+              />
+            </div>
             <h1 className={styles.heroTitle}>
               Hello World!
             </h1>

@@ -18,6 +18,10 @@ export const metadata: Metadata = {
   description: "Computer Science student with a passion for AI, decentralized systems, and community. Dedicated to continuous learning, networking and building.",
   keywords: ["Computer Science", "Web3", "AI", "Blockchain", "Developer", "Student"],
   authors: [{ name: "Ileana Perez" }],
+  icons: {
+    icon: "/avatar.png",
+    apple: "/avatar.png",
+  },
   openGraph: {
     title: "Ileana Perez - Computer Science Student & Web3 Developer",
     description: "Computer Science student with a passion for AI, decentralized systems, and community.",

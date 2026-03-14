@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
 import Image from 'next/image';
+import { styles } from '@/lib/styles';
 
 export default function Home() {
   const router = useRouter();
@@ -96,7 +97,7 @@ export default function Home() {
                 alt="Ileana Perez"
                 width={128}
                 height={128}
-                className="w-full h-full object-cover"
+                className={`w-full h-full ${styles.avatar}`}
                 priority
               />
             </div>

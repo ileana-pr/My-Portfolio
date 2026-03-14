@@ -18,4 +18,6 @@ export const styles = {
   glowDividerWrap: 'relative z-10',
   glowDividerInner: 'max-w-6xl mx-auto px-6',
   socialLink: 'text-slate-600 dark:text-slate-400 hover:text-purple-600 dark:hover:text-purple-400 transition-colors cursor-pointer',
+  // reusable avatar image (use with next/image; set width/height per usage)
+  avatar: 'rounded-full object-cover',
 } as const;
