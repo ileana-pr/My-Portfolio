@@ -214,7 +214,7 @@ export default function CodingPage() {
             <div className="bg-white dark:bg-slate-800 rounded-lg p-8 border border-slate-200 dark:border-slate-700 hover:border-purple-500 dark:hover:border-purple-400 hover:shadow-xl transition-all">
               <h3 className="text-2xl font-bold bg-gradient-to-r from-purple-600 to-indigo-600 dark:from-purple-400 dark:to-indigo-400 bg-clip-text text-transparent mb-4">Piri Pay</h3>
               <p className="text-slate-600 dark:text-slate-300 mb-4 leading-relaxed">
-                One QR code, every way to pay—unify fiat and crypto in a single link. One profile, one QR: add your addresses and handles (ETH, SOL, BTC, Base, Cash App, Venmo, Zelle); anyone who scans sees all options and pays with what they use. Fiat deep-links into apps; crypto via wallet (MetaMask, Phantom, WalletConnect).
+                One QR code, every way to pay—unify fiat and crypto in a single link. Piri handles (ETH, SOL, BTC, Base, Cash App, Venmo, Zelle); anyone who scans sees all options and pays with what they use. 
               </p>
               <div className="flex flex-wrap gap-2 mb-4">
                 <span className="px-3 py-1 rounded-md text-sm font-medium bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 border border-purple-200 dark:border-purple-700">React</span>
