@@ -99,7 +99,7 @@ export default function CodingPage() {
             </h1>
           </div>
           <p className={`text-xl md:text-2xl mb-8 ${styles.body}`}>
-            My name is Ileana, and I&apos;m a digital builder.  
+            My name is Ileana. I&apos;m a senior Computer Science student and full-stack engineer building at the intersection of Web3, AI and antifragile systems.  
           </p>
          
         </div>
@@ -122,7 +122,9 @@ export default function CodingPage() {
                 <div>
                   <h3 className={styles.subheading}>🛠️ Intro</h3>
                   <p className={styles.body}>
-                    Currently finishing my Bachelor&apos;s in Computer Science at the University of Mary Washington and looking for a role as a full-stack engineer or developer advocate. 
+                    I&apos;m obsessed with building things that solve real problems. My focus is on designing and delivering software that is easy to use, easy to extend and creating resilient systems that get stronger under pressure.
+                    <br />
+                    I&apos;m looking for full-time opportunities where I can contribute to ambitious projects at the frontier of technology. I thrive in environments that challenge me to grow and ship meaningful products.
                   </p>
                 </div>
                 <div>
