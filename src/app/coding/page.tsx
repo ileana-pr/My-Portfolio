@@ -270,6 +270,60 @@ export default function CodingPage() {
               </a>
             </div>
 
+            {/* FlamaBB Project */}
+            <div className={styles.card}>
+              <h3 className={styles.cardTitle}>FlamaBB</h3>
+              <p className={`${styles.body} mb-4`}>
+                Full-stack Web3 social platform for authentic urban experiences. Built for the Aleph Hackathon on Base, with anonymous profiles, reputation signals, and smart-contract powered payments for local experiences.
+              </p>
+              <div className="flex flex-wrap gap-2 mb-4">
+                <span className={styles.tag}>Next.js</span>
+                <span className={styles.tag}>TypeScript</span>
+                <span className={styles.tag}>Tailwind CSS</span>
+                <span className={styles.tag}>Base</span>
+                <span className={styles.tag}>Solidity</span>
+                <span className={styles.tag}>Firebase</span>
+              </div>
+              <div className="text-sm text-purple-600 dark:text-purple-400 font-medium mb-4">
+                Built for the Aleph Hackathon with Julio M Cruz and 0xOucan
+              </div>
+              <a
+                href="https://github.com/JulioMCruz/FlamaBB"
+                target="_blank"
+                rel="noopener noreferrer"
+                className={styles.link}
+              >
+                View on GitHub →
+              </a>
+            </div>
+
+            {/* Hacker House Protocol Project */}
+            <div className={styles.card}>
+              <h3 className={styles.cardTitle}>Hacker House Protocol</h3>
+              <p className={`${styles.body} mb-4`}>
+                Decentralized hackerhouse platform with cross-chain payments for hackathon accommodations. Designed to help hackers find roommates, split costs, and pay with crypto across chains in a more flexible way.
+              </p>
+              <div className="flex flex-wrap gap-2 mb-4">
+                <span className={styles.tag}>Next.js</span>
+                <span className={styles.tag}>TypeScript</span>
+                <span className={styles.tag}>Solidity</span>
+                <span className={styles.tag}>Hyperlane</span>
+                <span className={styles.tag}>The Graph</span>
+                <span className={styles.tag}>PYUSD</span>
+              </div>
+              <div className="text-sm text-purple-600 dark:text-purple-400 font-medium mb-4">
+                Built for the hackathon community with cross-chain accommodation payments
+              </div>
+              <a
+                href="https://github.com/Shaivpidadi/hacker-house-protocol"
+                target="_blank"
+                rel="noopener noreferrer"
+                className={styles.link}
+              >
+                View on GitHub →
+              </a>
+            </div>
+
             {/* Open Source Contributions */}
             <div className={styles.card}>
               <h3 className={styles.cardTitle}>Open Source Contributions</h3>
@@ -518,6 +572,18 @@ export default function CodingPage() {
               </svg>
             </a>
 
+            {/* Community at SheFi */}
+            <a
+              href="https://x.com/shefiorg"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={styles.socialLink}
+              aria-label="Community at SheFi"
+              title="Community at SheFi"
+            >
+              <span className="text-sm font-medium">SheFi</span>
+            </a>
+
             {/* Instagram */}
             <a
               href="https://www.instagram.com/adigitaltati/"
@@ -568,6 +634,21 @@ export default function CodingPage() {
               <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
                 <path d="M22.539 8.242H1.46V5.406h21.08v2.836zM1.46 10.812V24L12 18.11 22.54 24V10.812H1.46zM22.54 0H1.46v2.836h21.08V0z"/>
               </svg>
+            </a>
+            <a
+              href="https://linktr.ee/adigitaltati"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={styles.socialLink}
+              aria-label="Linktree"
+            >
+              <Image
+                src="/linktree.png"
+                alt=""
+                width={24}
+                height={24}
+                className="h-6 w-6 object-contain"
+              />
             </a>
           </div>
         

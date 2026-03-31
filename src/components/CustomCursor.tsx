@@ -9,60 +9,52 @@ export default function CustomCursor() {
   const [showHeart, setShowHeart] = useState(true);
   const lastTouchTimeRef = useRef(0);
   const hideTimeoutRef = useRef<NodeJS.Timeout | null>(null);
+  const rafRef = useRef<number | null>(null);
+  const latestPositionRef = useRef({ x: 0, y: 0 });
+  const latestHoverRef = useRef(false);
 
   useEffect(() => {
     let trailId = 0;
     const trailPoints: Array<{ x: number; y: number; id: number }> = [];
 
-    const updateCursor = (e: MouseEvent) => {
-      setPosition({ x: e.clientX, y: e.clientY });
-      
+    const isInteractiveTarget = (target: EventTarget | null) => {
+      if (!target || !(target instanceof Element)) {
+        return false;
+      }
+
+      return Boolean(
+        target.closest('a, button, [role="button"], input, textarea, select, summary')
+      );
+    };
+
+    const flushCursorFrame = () => {
+      rafRef.current = null;
+      setPosition({ ...latestPositionRef.current });
+      setIsHovering(latestHoverRef.current);
+      setTrail([...trailPoints]);
+    };
+
+    const scheduleCursorFrame = () => {
+      if (rafRef.current !== null) {
+        return;
+      }
+
+      rafRef.current = requestAnimationFrame(flushCursorFrame);
+    };
+
+    const handleMouseMove = (e: MouseEvent) => {
+      latestPositionRef.current = { x: e.clientX, y: e.clientY };
+      latestHoverRef.current = isInteractiveTarget(e.target);
+
       // add trail point
       trailPoints.push({ x: e.clientX, y: e.clientY, id: trailId++ });
-      
+
       // keep only last 8 points
       if (trailPoints.length > 8) {
         trailPoints.shift();
       }
-      
-      setTrail([...trailPoints]);
-    };
 
-    const checkHover = (e: MouseEvent) => {
-      const target = e.target;
-      // accept both HTMLElement and SVGElement (SVG elements are SVGElement, not HTMLElement)
-      if (!target || !(target instanceof Element)) {
-        setIsHovering(false);
-        return;
-      }
-      
-      // check if target is directly interactive
-      const isDirectlyInteractive = 
-        target.tagName === 'A' || 
-        target.tagName === 'BUTTON' ||
-        window.getComputedStyle(target).cursor === 'pointer';
-      
-      // check if target is inside an interactive element (handles SVG inside links/buttons)
-      const isInsideInteractive = 
-        target.closest && (!!target.closest('a') || !!target.closest('button'));
-      
-      // check parent elements manually for SVG elements
-      let parent = target.parentElement;
-      let foundInteractiveParent = false;
-      while (parent && !foundInteractiveParent) {
-        if (parent.tagName === 'BUTTON' || parent.tagName === 'A' || window.getComputedStyle(parent).cursor === 'pointer') {
-          foundInteractiveParent = true;
-          break;
-        }
-        parent = parent.parentElement;
-      }
-      
-      setIsHovering(isDirectlyInteractive || isInsideInteractive || foundInteractiveParent);
-    };
-
-    const handleMouseMove = (e: MouseEvent) => {
-      updateCursor(e);
-      checkHover(e);
+      scheduleCursorFrame();
     };
 
     // show heart briefly on touch, then hide for mobile
@@ -70,39 +62,27 @@ export default function CustomCursor() {
       const touch = e.touches[0];
       if (touch) {
         // update position to touch location
+        latestPositionRef.current = { x: touch.clientX, y: touch.clientY };
         setPosition({ x: touch.clientX, y: touch.clientY });
         
         // check if touching an interactive element
-        const target = e.target;
-        if (target && target instanceof Element) {
-          const isDirectlyInteractive = 
-            target.tagName === 'A' || 
-            target.tagName === 'BUTTON' ||
-            window.getComputedStyle(target).cursor === 'pointer';
+        if (isInteractiveTarget(e.target)) {
+          // show heart briefly
+          setIsHovering(true);
+          setShowHeart(true);
           
-          const isInsideInteractive = 
-            target.closest && (!!target.closest('a') || !!target.closest('button'));
-          
-          if (isDirectlyInteractive || isInsideInteractive) {
-            // show heart briefly
-            setIsHovering(true);
-            setShowHeart(true);
-            
-            // clear any existing timeout
-            if (hideTimeoutRef.current) {
-              clearTimeout(hideTimeoutRef.current);
-            }
-            
-            // hide after 300ms
-            hideTimeoutRef.current = setTimeout(() => {
-              setShowHeart(false);
-              setIsHovering(false);
-            }, 300);
-          } else {
-            // not interactive, hide immediately
-            setShowHeart(false);
+          // clear any existing timeout
+          if (hideTimeoutRef.current) {
+            clearTimeout(hideTimeoutRef.current);
           }
+          
+          // hide after 300ms
+          hideTimeoutRef.current = setTimeout(() => {
+            setShowHeart(false);
+            setIsHovering(false);
+          }, 300);
         } else {
+          // not interactive, hide immediately
           setShowHeart(false);
         }
       }
@@ -151,6 +131,9 @@ export default function CustomCursor() {
       if (hideTimeoutRef.current) {
         clearTimeout(hideTimeoutRef.current);
       }
+      if (rafRef.current !== null) {
+        cancelAnimationFrame(rafRef.current);
+      }
       document.body.style.cursor = 'auto';
     };
   }, []);
@@ -187,7 +170,6 @@ export default function CustomCursor() {
             left: `${position.x}px`,
             top: `${position.y}px`,
             transform: 'translate(-50%, -50%)',
-            transition: 'transform 0.1s ease-out',
           }}
         >
           <div
