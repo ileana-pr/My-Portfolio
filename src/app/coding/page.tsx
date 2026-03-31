@@ -144,7 +144,12 @@ export default function CodingPage() {
                     <li><span className={styles.listLabel}>Core Contributor </span><a href="https://x.com/joinvdao" target="_blank" rel="noopener noreferrer" className={`${styles.link} font-medium`}>@VDAO</a></li>
                     <li><span className={styles.listLabel}>Tech Crew </span><a href="https://x.com/Pizza_DAO" target="_blank" rel="noopener noreferrer" className={`${styles.link} font-medium`}>@PizzaDAO</a></li>
                     <li><span className={styles.listLabel}>Ambassador </span><a href="https://x.com/_HerDAO" target="_blank" rel="noopener noreferrer" className={`${styles.link} font-medium`}>@HerDAO</a></li>
-                    <li><span className={styles.listLabel}>Builder </span><a href="https://x.com/theWIPmeetup" target="_blank" rel="noopener noreferrer" className={`${styles.link} font-medium`}>@theWIPmeetup</a></li>
+                    <li>
+                      <span className={styles.listLabel}>Tinkering </span>
+                      <a href="https://x.com/theWIPmeetup" target="_blank" rel="noopener noreferrer" className={`${styles.link} font-medium`}>@theWIPmeetup</a>{' '}
+                      <a href="https://decentraland.org/invite/cheddarqueso" target="_blank" rel="noopener noreferrer" className={`${styles.link} font-medium`}>@Decentraland</a>{' '}
+                      <a href="https://x.com/hyperfy_io" target="_blank" rel="noopener noreferrer" className={`${styles.link} font-medium`}>@Hyperfy</a>
+                    </li>
                    
                   </ul>
                 </div>
