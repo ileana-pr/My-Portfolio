@@ -144,13 +144,14 @@ export default function CodingPage() {
                     <li><span className={styles.listLabel}>Core Contributor </span><a href="https://x.com/joinvdao" target="_blank" rel="noopener noreferrer" className={`${styles.link} font-medium`}>@VDAO</a></li>
                     <li><span className={styles.listLabel}>Tech Crew </span><a href="https://x.com/Pizza_DAO" target="_blank" rel="noopener noreferrer" className={`${styles.link} font-medium`}>@PizzaDAO</a></li>
                     <li><span className={styles.listLabel}>Ambassador </span><a href="https://x.com/_HerDAO" target="_blank" rel="noopener noreferrer" className={`${styles.link} font-medium`}>@HerDAO</a></li>
+                    <li><span className={styles.listLabel}>Builder </span><a href="https://x.com/theWIPmeetup" target="_blank" rel="noopener noreferrer" className={`${styles.link} font-medium`}>@theWIPmeetup</a></li>
                    
                   </ul>
                 </div>
                 <div>
                   <h3 className={styles.subheading}>📜 Previously</h3>
                   <ul className={styles.list}>
-                    <li><span className={styles.listLabel}>Internship: Quality Assurance Engineer </span><a href="https://decentraland.org/blog/announcements/introducing-dcl-regenesis-labs" target="_blank" rel="noopener noreferrer" className={`${styles.link} font-medium`}>@Regenesis Labs</a></li>
+                    <li><span className={styles.listLabel}>Internship: Quality Assurance Engineer </span><a href="https://x.com/RegenesisLabs" target="_blank" rel="noopener noreferrer" className={`${styles.link} font-medium`}>@Regenesis Labs</a></li>
                     <li><a href="https://x.com/homebasedotlove" target="_blank" rel="noopener noreferrer" className={`${styles.link} font-medium`}>Based Hackerhouse</a> — 2nd place in Monad Blitz & PizzaDAO hackathon</li>
                     <li><a href="https://x.com/sozuhaus" target="_blank" rel="noopener noreferrer" className={`${styles.link} font-medium`}>SozuHaus</a> — Top 10 in AI community track</li>
                     <li><span className={styles.listLabel}>Pop-up city </span><a href="https://x.com/buildozcity" target="_blank" rel="noopener noreferrer" className={`${styles.link} font-medium`}>@OzCity</a> — ETHGlobal Cannes 2025</li>
@@ -572,18 +573,6 @@ export default function CodingPage() {
               </svg>
             </a>
 
-            {/* Community at SheFi */}
-            <a
-              href="https://x.com/shefiorg"
-              target="_blank"
-              rel="noopener noreferrer"
-              className={styles.socialLink}
-              aria-label="Community at SheFi"
-              title="Community at SheFi"
-            >
-              <span className="text-sm font-medium">SheFi</span>
-            </a>
-
             {/* Instagram */}
             <a
               href="https://www.instagram.com/adigitaltati/"
@@ -647,7 +636,7 @@ export default function CodingPage() {
                 alt=""
                 width={24}
                 height={24}
-                className="h-6 w-6 object-contain"
+                className="h-6 w-6 object-contain dark:invert dark:brightness-125"
               />
             </a>
           </div>
