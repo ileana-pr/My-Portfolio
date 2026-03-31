@@ -350,30 +350,6 @@ export default function CodingPage() {
                   </a>
                 </div>
                 <div className="text-sm">
-                  <span className="text-slate-900 dark:text-white font-medium">FlamaBB</span>
-                  <span className="text-slate-500 dark:text-slate-400"> - Full-stack Web3 social platform for authentic urban experiences (Base, Aleph Hackathon)</span>
-                  <a 
-                    href="https://github.com/JulioMCruz/FlamaBB" 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className={styles.linkInline}
-                  >
-                    View repo →
-                  </a>
-                </div>
-                <div className="text-sm">
-                  <span className="text-slate-900 dark:text-white font-medium">Hacker House Protocol</span>
-                  <span className="text-slate-500 dark:text-slate-400"> - Decentralized hackerhouse platform with cross-chain PYUSD payments, roommate matching, Hyperlane + The Graph</span>
-                  <a 
-                    href="https://github.com/Shaivpidadi/hacker-house-protocol" 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className={styles.linkInline}
-                  >
-                    View repo →
-                  </a>
-                </div>
-                <div className="text-sm">
                   <span className="text-slate-900 dark:text-white font-medium">Plugin Documentation</span>
                   <span className="text-slate-500 dark:text-slate-400"> - Added README files to 41 plugins</span>
                   <a 
